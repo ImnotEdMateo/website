@@ -1,6 +1,6 @@
 body {
     font-family: 'Hack';
-    background-color: #1d2021
+    background-color: #1d2021;
 }
 
 .navegation {
@@ -8,21 +8,27 @@ body {
 }
 
 .centro {
-    padding-top: 5px; 
-    padding-left: 180px;
-    padding-right: 35px;
+    padding: 5px 35px 0 180px;
     text-align: left;
-    color: #ebdbb2
+    color: #ebdbb2;
 }
 
 .centro a,
+.centro a:visited {
+    color: #83a598;
+}
 
-.centro a:visited{
-    color:#83a598;
+.pins {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.pins img {
+    margin-bottom: 10px;
 }
 
 iframe {
-    text-align: center;
     display: inline-block;
 }
 
@@ -30,7 +36,8 @@ li {
     list-style-position: outside;
 }
 
-#lista {
+#lista,
+ul {
     padding-left: 15px;
 }
 
@@ -38,23 +45,22 @@ ul {
     z-index: 1;
     top: 65px;
     overflow-x: hidden;
-    text-align: left; 
-    width: 150px; 
-    padding-left: 15px;
+    text-align: left;
+    width: 150px;
     font-size: 22px;
     line-height: 50px;
 }
 
 ul a,
-
-ul a:visited{
+ul a:visited {
     display: block;
-    color:#458588;
+    color: #458588;
     text-decoration: none;
 }
-ul a:hover{
-    color:#d3969b;
-    font-style:italic;
-    text-decoration:none
+
+ul a:hover {
+    color: #d3969b;
+    font-style: italic;
+    text-decoration: none;
 }
 
