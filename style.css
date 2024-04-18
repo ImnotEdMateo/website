@@ -18,13 +18,13 @@ body {
     color: #83a598;
 }
 
-.pins {
+#pins {
     display: flex;
     flex-direction: column;
     margin-left: 15px;
 }
 
-.pins img {
+#pins img {
     margin-bottom: 10px;
 }
 
