@@ -48,7 +48,7 @@ iframe {
 
 }
 
-ul a,
+.navigation ul a,
 .navigation ul a:visited {
     display: block;
     color: #458588;
