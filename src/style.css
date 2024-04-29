@@ -1,0 +1,62 @@
+body {
+    font-family: 'Hack';
+    background-color: #1d2021;
+}
+
+.navigation {
+    position: fixed;
+}
+
+.centro {
+    padding: 5px 35px 0 180px;
+    text-align: left;
+    color: #ebdbb2;
+}
+
+.centro a,
+.centro a:visited {
+    color: #83a598;
+}
+
+.centro ul {
+    padding-left: 15px;
+}
+
+#pins {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+#pins img {
+    margin-bottom: 10px;
+}
+
+iframe {
+    display: inline-block;
+}
+
+.navigation ul {
+    padding-left: 15px;
+    z-index: 1;
+    top: 65px;
+    overflow-x: hidden;
+    text-align: left;
+    width: 150px;
+    font-size: 22px;
+    line-height: 50px;
+
+}
+
+ul a,
+.navigation ul a:visited {
+    display: block;
+    color: #458588;
+    text-decoration: none;
+}
+
+.navigation ul a:hover {
+    color: #d3969b;
+    font-style: italic;
+    text-decoration: none;
+}
