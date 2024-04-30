@@ -1,13 +1,8 @@
 ---
 layout: ../layouts/LongPageLayout.astro
 title: 'Acerca de Mateo'
-pubDate: 2022-07-01
-description: 'Este es la primera publicación de mi nuevo blog Astro.'
-author: 'Alumno de Astro'
-image:
-    url: 'https://docs.astro.build/assets/full-logo-light.png'
-    alt: 'El logotipo completo de Astro.'
-tags: ["astro", "bloguear", "aprender en público"]
+description: 'Página que habla un poco de Mateo.'
+author: 'Mateo'
 ---
 
 ### Soy un joven promedio que hace cosas que los jóvenes promedio hacen.
