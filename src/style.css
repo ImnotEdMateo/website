@@ -3,7 +3,7 @@ body {
     background-color: #1d2021;
 }
 
-.navegation {
+.navigation {
     position: fixed;
 }
 
@@ -16,6 +16,10 @@ body {
 .centro a,
 .centro a:visited {
     color: #83a598;
+}
+
+.centro ul {
+    padding-left: 15px;
 }
 
 #pins {
@@ -32,16 +36,8 @@ iframe {
     display: inline-block;
 }
 
-li {
-    list-style-position: outside;
-}
-
-#lista,
-ul {
+.navigation ul {
     padding-left: 15px;
-}
-
-ul {
     z-index: 1;
     top: 65px;
     overflow-x: hidden;
@@ -49,18 +45,18 @@ ul {
     width: 150px;
     font-size: 22px;
     line-height: 50px;
+
 }
 
-ul a,
-ul a:visited {
+.navigation ul a,
+.navigation ul a:visited {
     display: block;
     color: #458588;
     text-decoration: none;
 }
 
-ul a:hover {
+.navigation ul a:hover {
     color: #d3969b;
     font-style: italic;
     text-decoration: none;
 }
-

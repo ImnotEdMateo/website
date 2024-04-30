@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const allPosts = await Astro.glob('../pages/post/*.md');
+const pageTitle = "Blog de Mateo";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <p>He aquí una compilación de todos mis post, están ordenados en orden cronológico y eso...</p>
+    <ul>
+    {allPosts.map((post) => (
+        <li>
+            [{post.frontmatter && post.frontmatter.pubDate ? post.frontmatter.pubDate.toString().slice(0,10) : 'No hay fecha'}] 
+            <a href={post.url}>{post.frontmatter ? post.frontmatter.title : 'Título no definido'}</a>
+        </li>
+    ))}
+    </ul>
+</BaseLayout>
