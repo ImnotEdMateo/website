@@ -1,8 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const allPosts = await Astro.glob('../pages/post/*.md');
 const pageTitle = "Sitio de Mateo";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <p>Este sitio solo tiene una función, ser el "refugio" personal de <a href="/about">un tal Mateo</a>. A pesar de esto, su código fuente está abierto a todo el mundo en <a href="https://codeberg.org/Imnot_EdMateo/website">este repositorio de codeberg</a>.</p>
+    <h3>Posts recientes</h3>
+    <ul>
+        {allPosts.slice(0,4).map((post) => (
+        <li>
+            [{post.frontmatter && post.frontmatter.pubDate ? post.frontmatter.pubDate.toString().slice(0,10) : 'No hay fecha'}] 
+            <a href={post.url}>{post.frontmatter ? post.frontmatter.title : 'Título no definido'}</a>
+        </li>
+    ))}
+    </ul>
+
+    <h3>Actualizaciones</h3>
+    <ul>
+        <li>[01/05/2024] - Se ha reescrito toda la página a AstroJS</li>
+    </ul>
 </BaseLayout>
