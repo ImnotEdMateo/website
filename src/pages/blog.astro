@@ -10,7 +10,7 @@ const { frontmatter } = Astro.props;
     <ul>
     {allPosts.map((post) => (
         <li>
-            [{post.frontmatter && post.frontmatter.pubDate ? post.frontmatter.pubDate.toString().slice(0,1000) : 'No hay fecha'}] 
+            [{post.frontmatter && post.frontmatter.pubDate ? post.frontmatter.pubDate.toString().slice(0,4) : 'No hay fecha'}] 
             <a href={post.url}>{post.frontmatter ? post.frontmatter.title : 'Título no definido'}</a>
         </li>
     ))}
