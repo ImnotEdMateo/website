@@ -29,3 +29,8 @@ Utilizo muy pocas redes sociales y las que uso están abandonadas o las utilizo 
 
 - [XMPP - imnot_edmateo@dismail.de](xmpp:imnot_edmateo@dismail.de)
 - [ProtonMail - mineestasedmateo@proton.me](mailto:mineestasedmateo@proton.me)
+
+## Limosna
+
+Si te gusta lo que hago y quieres apoyarme, puedes enviarme dinero a mi billetera de Monero hacia esta dirección:
+[44oHR1cLwmhSLF2SF8A34WTxCd29PMsqnWyRZDhFqAvxXj6JUaskaRhWkAsfTnNajTQ1e7gfNsD2EPDV1bTHtRc56cRzH2f](https://edmateo.neocities.org/src/QR.png)
