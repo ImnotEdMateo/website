@@ -32,5 +32,8 @@ Utilizo muy pocas redes sociales y las que uso están abandonadas o las utilizo 
 
 ## Limosna
 
-Si te gusta lo que hago y quieres apoyarme, puedes enviarme dinero a mi billetera de Monero hacia esta dirección:
-[44oHR1cLwmhSLF2SF8A34WTxCd29PMsqnWyRZDhFqAvxXj6JUaskaRhWkAsfTnNajTQ1e7gfNsD2EPDV1bTHtRc56cRzH2f](https://edmateo.neocities.org/src/QR.png)
+Todos los seres humanos tienen un soporte físico: Ya sea comida, ropa, un techo, etc. Si eres capaz y quieres apoyar lo que hago, puedes enviarme dinero mediante Monero a mi billetera: 
+
+[![44oHR1cLwmhSLF2SF8A34WTxCd29PMsqnWyRZDhFqAvxXj6JUaskaRhWkAsfTnNajTQ1e7gfNsD2EPDV1bTHtRc56cRzH2f](https://edmateo.neocities.org/src/MONERO.jpg)](/monero)
+
+Si no cuentas con este medio y vives en Colombia, puedes escribirme por alguno de mis medios de contacto para que te envie mi nequi.
