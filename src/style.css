@@ -80,12 +80,18 @@ nav ul a:hover {
     .wrapper {
         flex-direction: column;
     }
+
     .navigation {
         position: static;
-        
+        width: 50%;
+        margin: 0 auto; 
+    }
+
+    .navigation ul {
+        text-align: center;
     }
 
     main {
-        padding: 0;        
+        padding: 5px;        
     }
 }
