@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/PostLayout.astro
 title: 'Post de Prueba'
-pubDate: 29/04/2024
+pubDate: 04-29-2024
 description: 'TEST'
 author: 'Mateo'
 ---

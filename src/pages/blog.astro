@@ -7,6 +7,7 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={pageTitle}>
     <p>He aquí una compilación de todos mis post, están ordenados en orden cronológico y eso...</p>
+    <p>Si quieres suscribirte, tienes el <a href="/rss.xml">RSS</a></p>
     <ul>
     {allPosts.map((post) => (
         <li>
