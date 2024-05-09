@@ -10,7 +10,7 @@ const pageTitle = "Sitio de Mateo";
     <ul>
         {allPosts.slice(0,4).map((post) => (
         <li>
-            [{post.frontmatter && post.frontmatter.pubDate ? post.frontmatter.pubDate.toString().slice(0,10) : 'No hay fecha'}] 
+            [{post.frontmatter && post.frontmatter.pubDate ? post.frontmatter.pubDate.toString().slice(0,10) : 'No hay fecha'}] - 
             <a href={post.url}>{post.frontmatter ? post.frontmatter.title : 'Título no definido'}</a>
         </li>
     ))}
