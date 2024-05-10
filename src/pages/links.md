@@ -9,9 +9,9 @@ En esta sección, podrás encontrar gran variedad de enlaces útiles recopilados
 
 ### Mis sitios
 
-- [Sitio de Mateo](https://edmateo.site) - No hay mucha ciencia, estás aquí 
-- [Instancia de 4get](https://4get.edmateo.site) - "Metabuscador que no apesta" alojado en mi servidor y dominio
-- [Mi canal de YouTube](https://www.youtube.com/channel/UCqpoeinlFGDwa_b60qnLDWw) - Por favor, vean mis videos
+- [Sitio de Mateo](https://edmateo.site) - No hay mucha ciencia, estás aquí...
+- [Instancia de 4get](https://4get.edmateo.site) - Motor de búsqueda que no apesta alojado en mi servidor y dominio.
+- [Mi canal de YouTube](https://www.youtube.com/channel/UCqpoeinlFGDwa_b60qnLDWw) - Por favor, vean mis videos.
 - [Mi perfil en codeberg](https://codeberg.org/Imnot_EdMateo) - Aquí guardo toda la basura que plasmo en codigo.
 
 ### Sitios de otras personas
@@ -20,7 +20,7 @@ En esta sección, podrás encontrar gran variedad de enlaces útiles recopilados
 - [Getgle](https://getgle.org/) - Una comunidad de personas libres. Parece una página de shitpost, pero en realidad hay personas detrás que velan por la libre expresión.
 - [La caverna de PjQNV](https://pjqnv.neocities.org/) - Opiniones rancias y proyectos caseros, todo compilado en un sitio muy bonito.
 - [LinuxChad](https://linuxchad.xyz/) - Código libre en la lengua cervantina. (y sitio del cuál tomé mucha inspiración)
-- [Virgolandia](https://virgolandia.neocities.org) - Las vivencias de un Marxista.
+- [Virgolandia](https://virgolandia.neocities.org) - Las vivencias de un Moísta.
 
 ### Herramienta útiles
 
