@@ -20,7 +20,7 @@ En esta sección, podrás encontrar gran variedad de enlaces útiles recopilados
 - [Getgle](https://getgle.org/) - Una comunidad de personas libres. Parece una página de shitpost, pero en realidad hay personas detrás que velan por la libre expresión.
 - [La caverna de PjQNV](https://pjqnv.neocities.org/) - Opiniones rancias y proyectos caseros, todo compilado en un sitio muy bonito.
 - [LinuxChad](https://linuxchad.xyz/) - Código libre en la lengua cervantina. (y sitio del cuál tomé mucha inspiración)
-- [Virgolandia](https://virgolandia.neocities.org) - Las vivencias de un Moísta.
+- [Virgolandia](https://virgolandia.neocities.org) - Las vivencias de un Maoísta.
 
 ### Herramienta útiles
 
