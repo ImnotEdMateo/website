@@ -34,6 +34,6 @@ Utilizo muy pocas redes sociales y las que uso están abandonadas o las utilizo 
 
 Todos los seres humanos tienen un soporte físico: Ya sea comida, ropa, un techo, etc. Si eres capaz y quieres apoyar lo que hago, puedes enviarme dinero mediante Monero a mi billetera: 
 
-[![44oHR1cLwmhSLF2SF8A34WTxCd29PMsqnWyRZDhFqAvxXj6JUaskaRhWkAsfTnNajTQ1e7gfNsD2EPDV1bTHtRc56cRzH2f](https://assets.edmateo.site/MONERO.jpg)](https://assets.edmateo.site/monero.txt)
+[![44oHR1cLwmhSLF2SF8A34WTxCd29PMsqnWyRZDhFqAvxXj6JUaskaRhWkAsfTnNajTQ1e7gfNsD2EPDV1bTHtRc56cRzH2f](/img/MONERO.jpg)](assets/monero.txt)
 
 Si no cuentas con este medio y vives en Colombia, puedes escribirme por alguno de mis medios de contacto para que te envie mi nequi.
