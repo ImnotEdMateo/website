@@ -5,8 +5,8 @@ description: 'Repertorio de enlaces.'
 author: 'Mateo'
 ---
 
-En esta sección, podrás encontrar gran variedad de enlaces útiles recopilados por la experiencia de [un bobo](/about) en internet. Ya sea información valiosa, sitios curiosos o herramientas útiles, tal vez algo te sirva.
-
+En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la experiencia de [un bobo](/about) en internet. Ya sea información valiosa, sitios curiosos o herramientas útiles, tal vez algo te sirva.
+yp
 ### Mis sitios
 
 - [Sitio de Mateo](https://edmateo.site) - No hay mucha ciencia, estás aquí...
@@ -30,4 +30,4 @@ En esta sección, podrás encontrar gran variedad de enlaces útiles recopilados
 ### Información interesante
 
 - [LandChad.net](https://landchad.net) - Iniciar un sitio web es algo que se puede hacer en una tarde tranquila con algo de dinero.
-- [Spyware Watchdog](https://spyware.neocities.org) - Sitio centrado en la clasificación de software espía.
+- [Spyware Watchdog](https://spyware.neocities.org) - Sitio centrado en exponer todos los casos de spyware (tomen la información con pinzas).
