@@ -5,7 +5,17 @@ body {
 
 img {
     max-width: 100%;
-    height: auto;
+    max-height: 400px;
+}
+
+code {
+    display: block;
+    line-height: 1.25;
+    background-color: #282828;
+    padding: 20px;
+    color: #d5c4a1;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
 }
 
 .wrapper {
@@ -17,18 +27,14 @@ img {
     position: fixed;
 }
 
-main {
-    padding: 5px 35px 0 180px;
-}
-
 nav ul {
     padding: 0;
     list-style-type: none;
 }
 
 main {
+    padding: 5px 35px 0 180px;
     overflow-y: auto;
-    text-align: left;
     color: #ebdbb2;
 }
 
@@ -39,6 +45,11 @@ main a:visited {
 
 main ul {
     padding-left: 15px;
+}
+
+main img {
+    margin: 0 auto;
+    display: block;
 }
 
 #pins {
