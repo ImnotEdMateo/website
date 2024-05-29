@@ -20,7 +20,7 @@ El correo era jodidamente largo, tenía el asunto de "SEGURIDAD DE (edmateo.site
 
 ¿Y cuál era su increible prueba de que mi sitio tenía estas vulnerabilidades? **UNA PUTA SCREENSHOT** que solo mostraba su entorno de mierda de Kali Linux, una terminal y la página abierta.
 
-<img width="50%" src="/img/EVIDENCIA_ULTRA_EVIDENTE.png" alt="Una screenshot">
+<img src="/img/EVIDENCIA_ULTRA_EVIDENTE.png" alt="Una screenshot">
 
 ## Explicación
 
@@ -41,11 +41,11 @@ Para solucionar que la estructura no se viera, fue muy facil, solo tocaba enseñ
 </VirtualHost>
 ~~~
 
-Y con esta configuración, ya se arregló todo esto.
+Y con esta configuración, ya se arregló todo esto. Apache ya mostraba el sitio compilado, y supuestamente resolví 3 vulnerabilidades de seguridad
 
 ## "Moraleja"
 
-Investiguen. No crean todo lo que les dicen las personas de su entorno.
+Investiguen. No crean todo lo que les dicen las personas de su entorno. De todos modos, recuerden que aquellos que están satisfechos son ignorantes.
 
 ## Para D3V1L
 
