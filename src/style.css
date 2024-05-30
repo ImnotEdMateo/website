@@ -43,6 +43,11 @@ main a:visited {
     color: #83a598;
 }
 
+main a:hover {
+    color: #458588;
+}
+
+
 main ul {
     padding-left: 15px;
 }
