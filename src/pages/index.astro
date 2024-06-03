@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const allPosts = await Astro.glob('../pages/post/*.md');
+import { getPosts } from '../getPosts.js';
+
+const allPosts = getPosts();
 const pageTitle = "Sitio de Mateo";
 ---
 
@@ -8,18 +10,18 @@ const pageTitle = "Sitio de Mateo";
     <p>Este sitio solo tiene una función, ser el "refugio" personal de <a href="/about">un tal Mateo</a>. A pesar de esto, su código fuente está abierto a todo el mundo en <a href="https://codeberg.org/Imnot_EdMateo/website">este repositorio de codeberg</a>.</p>
     <h3>Posts recientes</h3>
     <ul>
-        {allPosts.slice(0,4).map((post) => (
-        <li>
-            [{post.frontmatter && post.frontmatter.pubDate ? post.frontmatter.pubDate.toString().slice(0,10) : 'No hay fecha'}] - 
-            <a href={post.url}>{post.frontmatter ? post.frontmatter.title : 'Título no definido'}</a>
+        {allPosts.slice(0, 4).map(post => (
+        <li key={post.slug}>
+            [{post.pubDate ? post.pubDate.toISOString().slice(0, 10) : 'No hay fecha'}] - 
+            <a href={`/post/${post.slug}`}>{post.title}</a>
         </li>
-    ))}
+        ))}
     </ul>
 
     <h3>Actualizaciones</h3>
     <ul>
-        <li>[06-02-2024] - Oficialmente, Google ya indexó mi sitio a su motor de búsqueda.</li>
-        <li>[05-04-2024] - El sitio se ha adaptado a pantallas pequeñas.</li>
-        <li>[05-01-2024] - Se ha reescrito toda la página a AstroJS.</li>
+        <li>[2024-06-02] - Oficialmente, Google ya indexó mi sitio a su motor de búsqueda.</li>
+        <li>[2024-05-04] - El sitio se ha adaptado a pantallas pequeñas.</li>
+        <li>[2024-05-01] - Se ha reescrito toda la página a AstroJS.</li>
     </ul>
 </BaseLayout>
