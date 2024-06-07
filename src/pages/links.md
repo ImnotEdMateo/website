@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/LongPageLayout.astro
 title: 'Enlaces de Mateo'
-description: 'Repertorio de enlaces.'
+description: 'Repertorio de enlaces recopilados por su servidor, Mateo.'
 author: 'Mateo'
 ---
 
