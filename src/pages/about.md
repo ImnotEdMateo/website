@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/LongPageLayout.astro
 title: 'Acerca de Mateo'
-description: 'Página que habla un poco de Mateo.'
+description: 'Página que habla un poco acerca de de Mateo, sus gustos, etc.'
 author: 'Mateo'
 ---
 

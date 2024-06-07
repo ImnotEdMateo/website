@@ -3,7 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={frontmatter.title} pageDescription={frontmatter.description}>
     <h4>Escrito el {frontmatter.pubDate.toString().slice(0,10)}</h4>
     <slot />
 </BaseLayout>

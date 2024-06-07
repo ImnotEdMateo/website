@@ -4,9 +4,10 @@ import { getPosts } from '../getPosts.js';
 
 const allPosts = getPosts();
 const pageTitle = "Blog";
+const pageDescription = "Por si no te haz dado cuenta, Mateo tiene un blog";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
     <p>He aquí una compilación de todos mis post, están ordenados en orden cronológico y eso...</p>
     <p>Si quieres suscribirte, tienes el <a href="/rss.xml">RSS</a></p>
     <ul>

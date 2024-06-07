@@ -2,13 +2,13 @@
 import '../style.css';
 import Navigation from '../components/nav.astro';
 
-const {pageTitle} = Astro.props;
+const {pageTitle, pageDescription} = Astro.props;
 ---
 
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-        <meta name="description" content="Este sitio es el refugio personal de  un tal Mateo, donde comparte basura y sus vivencias.">
+        <meta name="description" content={pageDescription}>
         <meta name="generator" content={Astro.generator} />
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
