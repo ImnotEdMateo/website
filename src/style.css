@@ -51,21 +51,11 @@ main a:hover {
 main ul {
     padding-left: 15px;
 }
-
-main img {
-    margin: 0 auto;
-    display: block;
-}
-
 #pins {
     display: flex;
     flex-direction: column;
     padding-top: 10px;
     margin-left: 0px;
-}
-
-iframe {
-    display: inline-block;
 }
 
 .navigation ul {
@@ -109,5 +99,20 @@ nav ul a:hover {
 
     main {
         padding: 5px;        
+    }
+
+    main img {
+        margin: 0 auto;
+        display: block;
+    }
+
+
+    main iframe {
+        margin: 0 auto;
+        display: block;
+    }
+
+    h1, h2, h3, h4 {
+        text-align: center;
     }
 }
