@@ -106,13 +106,10 @@ nav ul a:hover {
         display: block;
     }
 
-
     main iframe {
+        max-height: 100%;
+        max-width: 100%;
         margin: 0 auto;
         display: block;
-    }
-
-    h1, h2, h3, h4 {
-        text-align: center;
     }
 }
