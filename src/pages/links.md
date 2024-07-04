@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/LongPageLayout.astro
 title: 'Repertorio de Enlaces de EdMateo'
-description: 'Repertorio de enlaces recopilados por su servidor, Mateo.'
+description: 'Repertorio de enlaces recopilados por su servidor, EdMateo.'
 author: 'Mateo'
 ---
 
@@ -9,7 +9,7 @@ En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la
 yp
 ### Mis sitios
 
-- [Sitio de Mateo](https://edmateo.site) - No hay mucha ciencia, estás aquí...
+- [edmateo.site](https://edmateo.site) - No hay mucha ciencia, estás aquí...
 - [Instancia de 4get](https://4get.edmateo.site) - Motor de búsqueda que no apesta alojado en mi servidor y dominio.
 - [Mi canal de YouTube](https://www.youtube.com/channel/UCqpoeinlFGDwa_b60qnLDWw) - Por favor, vean mis videos.
 - [Mi perfil en codeberg](https://codeberg.org/Imnot_EdMateo) - Aquí guardo toda la basura que plasmo en codigo.
