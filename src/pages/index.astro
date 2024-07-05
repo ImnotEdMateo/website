@@ -9,7 +9,7 @@ const pageDescription = "Este sitio es el refugio personal de un tal Mateo, dond
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
     <p>Este sitio solo tiene una función, ser el "refugio" personal de <a href="/about">un tal Mateo</a>. A pesar de esto, su código fuente está abierto a todo el mundo en <a href="https://codeberg.org/Imnot_EdMateo/website">este repositorio de codeberg</a>.</p>
-    <h3>Posts recientes</h3>
+    <h2>Posts recientes</h2>
     <ul>
         {allPosts.slice(0, 4).map(post => (
         <li key={post.slug}>
@@ -19,11 +19,11 @@ const pageDescription = "Este sitio es el refugio personal de un tal Mateo, dond
         ))}
     </ul>
 
-    <h3>Actualizaciones</h3>
+    <h2>Actualizaciones</h2>
     <ul>
-        <li>[2024-06-02] - Oficialmente, Google ya indexó mi sitio a su motor de búsqueda.</li>
-        <li>[2024-05-04] - El sitio se ha adaptado a pantallas pequeñas.</li>
-        <li>[2024-05-01] - Se ha reescrito toda la página a AstroJS.</li>
+        <li>[02/06/2024] - Oficialmente, Google ya indexó mi sitio a su motor de búsqueda.</li>
+        <li>[04/05/2024] - El sitio se ha adaptado a pantallas pequeñas.</li>
+        <li>[01/05/2024] - Se ha reescrito toda la página a AstroJS.</li>
     </ul>
     <h3>¿Cómo?</h3>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9Q3iB-K2kY?si=6qYFqooW00TS1h8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
