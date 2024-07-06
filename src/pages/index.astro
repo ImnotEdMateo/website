@@ -13,8 +13,8 @@ const pageDescription = "Este sitio es el refugio personal de un tal Mateo, dond
     <ul>
         {allPosts.slice(0, 4).map(post => (
         <li key={post.slug}>
-            <a href={`/post/${post.slug}`}>{post.title}</a> -
-            [{post.pubDate ? new Date(post.pubDate).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }) : 'No hay fecha'}]
+            [{post.pubDate ? new Date(post.pubDate).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }) : 'No hay fecha'}] - 
+            <a href={`/post/${post.slug}`}>{post.title}</a>
         </li>
         ))}
     </ul>
@@ -25,6 +25,6 @@ const pageDescription = "Este sitio es el refugio personal de un tal Mateo, dond
         <li>[04/05/2024] - El sitio se ha adaptado a pantallas pequeñas.</li>
         <li>[01/05/2024] - Se ha reescrito toda la página a AstroJS.</li>
     </ul>
-    <h3>¿Cómo?</h3>
+    <h2>¿Cómo?</h2>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9Q3iB-K2kY?si=6qYFqooW00TS1h8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </BaseLayout>
