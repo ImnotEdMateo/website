@@ -3,20 +3,6 @@ body {
     background-color: #1d2021;
 }
 
-img {
-    max-width: 100%;
-    max-height: 400px;
-}
-
-code {
-    display: block;
-    line-height: 1.25;
-    background-color: #282828;
-    padding: 20px;
-    color: #d5c4a1;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
-}
 
 .wrapper {
     display: flex;
@@ -24,42 +10,8 @@ code {
 }
 
 .navigation {
+    padding-top: 5px;
     position: fixed;
-}
-
-nav ul {
-    padding: 0;
-    list-style-type: none;
-}
-
-main {
-    padding: 5px 35px 0 180px;
-    overflow-y: auto;
-    color: #ebdbb2;
-}
-
-main a,
-main a:visited {
-    color: #83a598;
-    text-decoration-line: none;
-}
-
-main a:hover {
-    color: #458588;
-    text-decoration-line: underline;
-    font-style: italic;
-}
-
-
-main ul {
-    padding-left: 15px;
-}
-
-#pins {
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
-    margin-left: 0px;
 }
 
 .navigation ul {
@@ -86,19 +38,72 @@ nav ul a:hover {
     text-decoration: none;
 }
 
+nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+main {
+    padding: 5px 180px 0 180px;
+    overflow-y: auto;
+    color: #ebdbb2;
+}
+
+main a,
+main a:visited {
+    color: #83a598;
+    text-decoration-line: none;
+}
+
+main a:hover {
+    color: #458588;
+    text-decoration-line: underline;
+    font-style: italic;
+}
+
+
+main ul {
+    padding-left: 15px;
+}
+
+.pins {
+    width: auto;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 2.5rem;
+    position: fixed;
+}
+
+img {
+    max-width: 100%;
+    max-height: 400px;
+}
+
+code {
+    display: block;
+    line-height: 1.25;
+    background-color: #282828;
+    padding: 20px;
+    color: #d5c4a1;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+}
+
 @media screen and (max-width: 600px) {
     .wrapper {
         flex-direction: column;
     }
 
     .navigation {
+        display: flex;
+        justify-content: center;
         position: static;
-        width: 50%;
-        margin: 0 auto; 
     }
 
     .navigation ul {
         text-align: center;
+        padding-left: 0;
     }
 
     main {
@@ -115,5 +120,10 @@ nav ul a:hover {
         max-width: 100%;
         margin: 0 auto;
         display: block;
+    }
+    
+    .pins {
+        position: relative;
+        flex-direction: row;
     }
 }

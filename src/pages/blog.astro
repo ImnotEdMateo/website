@@ -13,8 +13,8 @@ const pageDescription = "Por si no te haz dado cuenta, Mateo tiene un blog";
     <ul>
         {allPosts.map(post => (
         <li key={post.slug}>
-            <a href={`/post/${post.slug}`}>{post.title}</a> -
-            [{post.pubDate ? new Date(post.pubDate).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }) : 'No hay fecha'}]
+            [{post.pubDate ? new Date(post.pubDate).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }) : 'No hay fecha'}] - 
+            <a href={`/post/${post.slug}`}>{post.title}</a>
         </li>
         ))}
     </ul>

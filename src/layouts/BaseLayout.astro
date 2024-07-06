@@ -1,6 +1,7 @@
 ---
 import '../style.css';
 import Navigation from '../components/nav.astro';
+import Pins from '../components/pins.astro';
 
 const {pageTitle, pageDescription} = Astro.props;
 ---
@@ -23,6 +24,7 @@ const {pageTitle, pageDescription} = Astro.props;
                 <h1>{pageTitle}</h1>
                 <slot />
             </main>
+            <Pins />    
         </div>
     </body>
 </html>
