@@ -4,10 +4,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
         <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>404</title>
         <style>
         body {
@@ -18,8 +17,33 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
             text-align: center;
             flex-direction: column;
+            padding: 20px;
+        }
+
+        img {
+            width: 80%;
+            max-width: 750px;
+            height: auto;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 768px) {
+            p {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            p {
+                font-size: 2em;
+            }
         }
 
         a,
@@ -46,3 +70,4 @@
         </div>
     </body>
 </html>
+
