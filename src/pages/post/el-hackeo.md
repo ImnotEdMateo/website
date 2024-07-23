@@ -2,7 +2,7 @@
 layout: ../../layouts/PostLayout.astro
 title: 'El "Hackeo"'
 pubDate: 05-28-2024
-description: 'Hablo acerca de un correo que me llegó de un "pentesting"'
+description: 'Hablo acerca de un correo que me llegó de un "pentesting" a mi sitio'
 author: 'Mateo'
 ---
 

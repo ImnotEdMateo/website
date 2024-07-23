@@ -1,9 +1,10 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { formatDate } from '../utils/formatDate';
 const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title} pageDescription={frontmatter.description}>
-    <h4>Escrito el {frontmatter.pubDate.toString().slice(0,10)}</h4>
+    <h4>Escrito el {formatDate(frontmatter.pubDate)}</h4>
     <slot />
 </BaseLayout>
