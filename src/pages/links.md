@@ -6,7 +6,7 @@ author: 'Mateo'
 ---
 
 En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la experiencia de [un bobo](/about) en internet. Ya sea información valiosa, sitios curiosos o herramientas útiles, tal vez algo te sirva.
-yp
+
 ### Mis sitios
 
 - [edmateo.site](https://edmateo.site) - No hay mucha ciencia, estás aquí...
@@ -20,6 +20,7 @@ yp
 - [Getgle](https://getgle.org/) - Una comunidad de personas libres. Parece una página de shitpost, pero en realidad hay personas detrás que velan por la libre expresión.
 - [La caverna de PjQNV](https://pjqnv.neocities.org/) - Opiniones rancias y proyectos caseros, todo compilado en un sitio muy bonito.
 - [LinuxChad](https://linuxchad.xyz/) - Código libre en la lengua cervantina. (y sitio del cuál tomé mucha inspiración)
+- [Luke Smith's Webpage](https://lukesmith.xyz/) - Este sitio lo dirige un puto boomer asqueroso de mierda que tiene varios proyectos bonitos. <3
 - [Virgolandia](https://virgolandia.neocities.org) - Las vivencias de un Maoísta.
 
 ### Herramienta útiles
@@ -29,5 +30,7 @@ yp
 
 ### Información interesante
 
+- [DigDeeper](https://digdeeper.neocities.org/) - Este sitio tiene un montón de artículos relacionados con la seguridad y privacidad digital.
 - [LandChad.net](https://landchad.net) - Iniciar un sitio web es algo que se puede hacer en una tarde tranquila con algo de dinero.
 - [Spyware Watchdog](https://spyware.neocities.org) - Sitio centrado en exponer todos los casos de spyware (tomen la información con pinzas).
+- [This is a motherfucking website](https://www.motherfuckingwebsite.com/) - Este sitio es simplemente perfecto.
