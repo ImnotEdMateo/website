@@ -3,6 +3,11 @@ body {
     background-color: #1d2021;
 }
 
+::selection {
+  color: #e6d6ae;
+  background-color: #655c54;
+}
+
 .wrapper {
     display: flex;
     flex-direction: row;
