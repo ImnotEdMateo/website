@@ -1,30 +1,40 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getPosts } from '../utils/getPosts.js';
+import { YouTube } from '@astro-community/astro-embed-youtube';
 
 const allPosts = getPosts();
 const pageTitle = "El espacio picho de EdMateo";
 const pageDescription = "Este sitio es el refugio personal de un tal Mateo, donde comparte basura y sus vivencias.";
 ---
-
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
-    <p>Este sitio solo tiene una función, ser el "refugio" personal de <a href="/about">un tal Mateo</a>. A pesar de esto, su código fuente está abierto a todo el mundo en <a href="https://github.com/ImnotEdMateo/website/">este repositorio en GitHub</a>.</p>
-    <h2>Posts recientes</h2>
-    <ul>
-        {allPosts.slice(0, 4).map(post => (
-        <li key={post.slug}>
-            [{post.pubDate ? new Date(post.pubDate).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }) : 'No hay fecha'}] - 
-            <a href={`/post/${post.slug}`}>{post.title}</a>
-        </li>
-        ))}
-    </ul>
+    <p>
+        Este sitio solo tiene una función: ser el "refugio" personal de <a href="/about">un tal Mateo</a>. A pesar de esto, su código fuente está abierto a todo el mundo en 
+        <a href="https://github.com/ImnotEdMateo/website/" target="_blank" rel="noopener noreferrer">este repositorio en GitHub</a>.
+    </p>
 
-    <h2>Actualizaciones</h2>
-    <ul>
-        <li>[02/06/2024] - Oficialmente, Google ya indexó mi sitio a su motor de búsqueda.</li>
-        <li>[04/05/2024] - El sitio se ha adaptado a pantallas pequeñas.</li>
-        <li>[01/05/2024] - Se ha reescrito toda la página a AstroJS.</li>
-    </ul>
-    <h2>¿Cómo?</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Z9Q3iB-K2kY?si=6qYFqooW00TS1h8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <section>
+        <h2>Posts recientes</h2>
+        <ul>
+            {allPosts.slice(0, 4).map(post => (
+                <li key={post.slug}>
+                    [{post.pubDate ? new Date(post.pubDate).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }) : 'No hay fecha'}] - 
+                    <a href={`/post/${post.slug}`}>{post.title}</a>
+                </li>
+            ))}
+        </ul>
+    </section>
+
+    <section>
+        <h2>Actualizaciones</h2>
+        <ul>
+            <li>[02/06/2024] - Oficialmente, Google ya indexó mi sitio en su motor de búsqueda.</li>
+            <li>[04/05/2024] - El sitio se ha adaptado a pantallas pequeñas.</li>
+            <li>[01/05/2024] - Se ha reescrito toda la página en AstroJS.</li>
+        </ul>
+    </section>
+
+      <h2>¿Cómo?</h2>
+      <YouTube id="https://youtu.be/f6DqndVDZYU" />
+    </section>
 </BaseLayout>
