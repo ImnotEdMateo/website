@@ -21,7 +21,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /var/www/website 
-          git pull origin main
-          npm install
-          npm run build
+          sudo git pull origin main
+          sudo npm install
+          sudo npm run build
           sudo systemctl restart apache2
