@@ -2,10 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getPosts } from '../utils/getPosts.js';
 import { YouTube } from '@astro-community/astro-embed-youtube';
+import { getRadioSong } from '../utils/getRadioSong'
 
 const allPosts = getPosts();
 const pageTitle = "El espacio picho de EdMateo";
 const pageDescription = "Este sitio es el refugio personal de un tal Mateo, donde comparte basura y sus vivencias.";
+const radioSong = await getRadioSong();
 ---
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
     <p>
@@ -36,6 +38,11 @@ const pageDescription = "Este sitio es el refugio personal de un tal Mateo, dond
 
     <section>
       <h2>Radio</h2>
+      {radioSong ? (
+      <p>Reproduciendo: {radioSong}</p>
+      ) : (
+      <p>Tal vez no se está reproduciendo nada.</p>
+      )}
       <audio controls="">
         <source src="https://radio.edmateo.site/stream" type="audio/mp3">
       </audio>
