@@ -1,0 +1,27 @@
+<section>
+      <h2>Radio</h2>
+      <p id="radioSong">Espera...</p>
+      <audio controls="">
+        <source src="https://radio.edmateo.site/stream" type="audio/mp3">
+      </audio>
+</section>
+
+<script>
+  const fetchRadioSong = async () => {
+    try {
+      const response = await fetch('https://radio.edmateo.site/status-json.xsl');
+      const data = await response.json();
+      const song = data.icestats.source.title;
+      document.getElementById('radioSong').textContent = `Sonando: ${song || 'Nada'}`;
+    } catch (error) {
+      console.error('Error fetching radio song:', error);
+      document.getElementById('radioSong').textContent = 'Error fetching song information';
+    }
+  };
+
+  // Llamar a la función inmediatamente al cargar la página
+  fetchRadioSong();
+
+  // Actualizar cada 10 segundos (10000 ms)
+  setInterval(fetchRadioSong, 10000);
+</script>
