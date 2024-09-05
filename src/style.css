@@ -1,11 +1,24 @@
+:root {
+    --font-primary: 'Hack', monospace;
+    --color-background: #1d2021;
+    --color-text: #ebdbb2;
+    --color-link: #83a598;
+    --color-link-hover: #458588;
+    --color-selection-bg: #655c54;
+    --color-selection-text: #e6d6ae;
+    --color-nav-hover: #d3969b;
+    --color-code-bg: #282828;
+    --color-code-text: #d5c4a1;
+}
+
 body {
-    font-family: 'Hack';
-    background-color: #1d2021;
+    font-family: var(--font-primary);
+    background-color: var(--color-background);
 }
 
 ::selection {
-  color: #e6d6ae;
-  background-color: #655c54;
+  color: var(--color-selection-text);
+  background-color: var(--color-selection-bg);
 }
 
 .wrapper {
@@ -27,6 +40,7 @@ body {
     width: 150px;
     font-size: 22px;
     line-height: 50px;
+    list-style: none; 
 }
 
 nav ul a,
@@ -50,17 +64,17 @@ nav ul {
 main {
     padding: 5px 180px 0 180px;
     overflow-y: auto;
-    color: #ebdbb2;
+    color: var(--color-text);
 }
 
 main a,
 main a:visited {
-    color: #83a598;
+    color: var(--color-link);
     text-decoration-line: none;
 }
 
 main a:hover {
-    color: #458588;
+    color: var(--color-link-hover);
     text-decoration-line: underline;
     font-style: italic;
 }
@@ -87,48 +101,67 @@ img {
 code {
     display: block;
     line-height: 1.25;
-    background-color: #282828;
+    background-color: var(--color-code-bg);
     padding: 20px;
-    color: #d5c4a1;
+    color: var(--color-code-text);
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
 }
 
-@media screen and (max-width: 1024px) {
-    .wrapper {
-        flex-direction: column;
-    }
-
+@media screen and (max-width: 600px) {
     .navigation {
         display: flex;
         justify-content: center;
+        margin-top: 20px;
+        width: 100%;
         position: static;
     }
 
     .navigation ul {
+        display: flex;
+        flex-direction: column;
         text-align: center;
         padding-left: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .navigation ul {
+        display: flex;
+        justify-content: space-around;
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .navigation {
+        width: 100%;
+        text-align: center;
+        position: static;
+    }
+
+    main {
+        padding: 10px;
     }
 
     main {
         padding: 5px;        
     }
 
-    main img {
+    main img, main iframe {
         margin: 0 auto;
         display: block;
+        max-width: 100%;
     }
 
-    main iframe {
-        max-height: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-        display: block;
-    }
-    
     .pins {
         position: relative;
         align-self: center;
         flex-direction: row;
+        gap: 5px;
     }
 }
