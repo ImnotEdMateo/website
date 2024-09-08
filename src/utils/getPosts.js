@@ -12,7 +12,7 @@ export function getPosts() {
     const { data } = matter(fileContents);
     return {
       ...data,
-      slug: file.replace('.md', ''),
+      slug: file.replace(/\.mdx?$/, ''),
       pubDate: new Date(data.pubDate),
     };
   });
