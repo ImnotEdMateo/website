@@ -18,6 +18,7 @@ En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la
 ### Sitios de otras personas
 
 - [[Locky.mx]](https://locky.mx) - Este sitio, creado por un mexicano, busca retratar la "esencia de la web", Una mas expresiva y diversa.
+- [Kazantroten](https://kazantroten.neocities.org/acertijos/kazantroten/bienvenido) - Una página/juego en donde tienes que resolver acertijos para navegar.
 - [La caverna de PjQNV](https://pjqnv.neocities.org/) - Opiniones rancias y proyectos caseros, todo compilado en un sitio muy bonito.
 - [Luke Smith's Webpage](https://lukesmith.xyz/) - Este sitio lo dirige un puto boomer asqueroso de mierda que tiene varios proyectos bonitos. <3
 
@@ -29,7 +30,6 @@ En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la
 ### Información interesante
 
 - [DigDeeper](https://digdeeper.neocities.org/) - Este sitio tiene un montón de artículos relacionados con la seguridad y privacidad digital.
-- [Kazantroten](https://kazantroten.neocities.org/acertijos/kazantroten/bienvenido) - Una página/juego en donde tienes que resolver acertijos para avanzar.
 - [LandChad.net](https://landchad.net) - Iniciar un sitio web es algo que se puede hacer en una tarde tranquila con algo de dinero.
 - [Spyware Watchdog](https://spyware.neocities.org) - Sitio centrado en exponer todos los casos de spyware (tomen la información con pinzas).
 - [This is a motherfucking website](https://www.motherfuckingwebsite.com/) - Este sitio es simplemente perfecto.
