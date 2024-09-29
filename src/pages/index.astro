@@ -19,7 +19,7 @@ const pageDescription = "Este sitio es el refugio personal de un tal Mateo, dond
         <h2>Posts recientes</h2>
         <ul>
             {allPosts.slice(0, 4).map(post => (
-                <li key={post.slug}>
+                <li>
                     [{post.pubDate ? new Date(post.pubDate).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }) : 'No hay fecha'}] - 
                     <a href={`/post/${post.slug}`}>{post.title}</a>
                 </li>
