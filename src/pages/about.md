@@ -7,7 +7,7 @@ author: 'Mateo'
 
 ### Soy un joven promedio que hace cosas que los jóvenes promedio hacen.
 
-Actualmente tengo 14 años y nací en Colombia. Tengo un gran interés por la programación y los ideales de la [FSF](https://www.fsf.org); el hecho de que velen por una "libertad digital" en un mundo que es dominado por grandes monopolios es algo de admirar de esta organización. Personalmente, considero que las redes sociales nos están limitando a la hora de expresar nuestros puntos de vista (ya sea por unas condiciones de uso ridículas, políticas de privacidad abusivas o incluso el límite de carácteres en las publicaciones). Si pudiera comparar ambas caras de la moneda, una web sería como un lienzo en blanco y una red social como un libro para colorear.
+Actualmente tengo 15 años y nací en Colombia. Tengo un gran interés por la programación y los ideales de la [FSF](https://www.fsf.org); el hecho de que velen por una "libertad digital" en un mundo que es dominado por grandes monopolios es algo de admirar de esta organización. Personalmente, considero que las redes sociales nos están limitando a la hora de expresar nuestros puntos de vista (ya sea por unas condiciones de uso ridículas, políticas de privacidad abusivas o incluso el límite de carácteres en las publicaciones). Si pudiera comparar ambas caras de la moneda, una web sería como un lienzo en blanco y una red social como un libro para colorear.
 
 ## ¿EdMateo?
 
@@ -36,4 +36,4 @@ Todos los seres humanos tienen un soporte para subsistir: Ya sea comida, ropa, u
 
 [![44oHR1cLwmhSLF2SF8A34WTxCd29PMsqnWyRZDhFqAvxXj6JUaskaRhWkAsfTnNajTQ1e7gfNsD2EPDV1bTHtRc56cRzH2f](https://edmateo.neocities.org/assets/MONERO.webp)](/assets/monero.txt)
 
-O también puedes enviarme dinero a mi cuenta de Paypal, contactándome por uno de mis medios de contacto.
+O también puedes enviarme dinero a mi cuenta de Paypal, pídemelo por uno de mis medios de contacto.
