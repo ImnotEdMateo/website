@@ -5,18 +5,8 @@ pubDate: 04-29-2024
 description: 'TEST'
 author: 'EdMateo'
 ---
-import Latex from '../../components/latex.astro';
-import { Code } from 'astro:components';
-
 Astro is a JavaScript web framework optimized for building fast, content-driven websites. It's not the type of technology that use a neocities user, but... **I LOVE ASTRO**
 
 ~~~lisp
-defun(monda)
+defun(no-se-aun-no-se-un-qlo-de-lisp)
 ~~~
-
-Here's some math btw
-
-<Latex formula='\LARGE{2+2=69}'/>
-
-
-<Latex formula='{\LaTeX}'/>
