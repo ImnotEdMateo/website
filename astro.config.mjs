@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [
     sitemap(),
     expressiveCode({
-      themes: ['github-light', 'catppuccin-mocha'],
+      themes: ['everforest-dark'],
       styleOverrides: {
         frames: {
           frameBoxShadowCssValue: 'none',
