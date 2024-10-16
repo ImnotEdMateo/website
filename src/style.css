@@ -1,19 +1,32 @@
 :root {
   --font-primary: 'Hack', monospace;
+  --color-background: #f9f5d7;
+  --color-text: #282828;
+  --color-link: #427b58;
+  --color-link-hover: #689d6a;
+  --color-selection-bg: #bdae93;
+  --color-selection-text: #282828;
+  --color-nav: #427b58;
+  --color-nav-hover: #83a598;
+  --transition-duration: 1s;
+}
+
+:root.dark {
+  --font-primary: 'Hack', monospace;
   --color-background: #1d2021;
   --color-text: #ebdbb2;
   --color-link: #83a598;
   --color-link-hover: #458588;
   --color-selection-bg: #655c54;
   --color-selection-text: #e6d6ae;
+  --color-nav: #458588;
   --color-nav-hover: #d3969b;
-  --color-code-bg: #282828;
-  --color-code-text: #d5c4a1;
 }
 
 body {
   font-family: var(--font-primary);
   background-color: var(--color-background);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ::selection {
@@ -46,12 +59,12 @@ body {
 nav ul a,
 nav ul a:visited {
   display: block;
-  color: #458588;
+  color: var(--color-nav);
   text-decoration: none;
 }
 
 nav ul a:hover {
-  color: #d3969b;
+  color: var(--color-nav-hover);
   font-style: italic;
   text-decoration: none;
 }
@@ -98,7 +111,7 @@ img {
   max-height: 400px;
 }
 
-code {
+/*code {
   display: block;
   line-height: 1.25;
   background-color: var(--color-code-bg);
@@ -106,7 +119,7 @@ code {
   color: var(--color-code-text);
   font-family: 'Courier New', Courier, monospace;
   font-size: 15px;
-}
+}*/
 
 @media screen and (max-width: 600px) {
   .navigation {
