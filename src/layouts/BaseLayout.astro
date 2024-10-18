@@ -2,6 +2,7 @@
 import '../style.css';
 import Navigation from '../components/nav.astro';
 import Pins from '../components/pins.astro';
+import { ViewTransitions } from "astro:transitions";
 
 const {pageTitle, pageDescription} = Astro.props;
 ---
@@ -14,6 +15,7 @@ const {pageTitle, pageDescription} = Astro.props;
     <link rel="canonical" href={`https://edmateo.site${Astro.url.pathname}`} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
+    <ViewTransitions />
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
     <title>{pageTitle} | edmateo.site</title>

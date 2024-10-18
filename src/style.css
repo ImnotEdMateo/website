@@ -1,4 +1,4 @@
-:root {
+/*:root (MODO CLARO [Algun día :')']) {
   --font-primary: 'Hack', monospace;
   --color-background: #f9f5d7;
   --color-text: #282828;
@@ -9,9 +9,9 @@
   --color-nav: #427b58;
   --color-nav-hover: #83a598;
   --transition-duration: 1s;
-}
+}*/
 
-:root.dark {
+:root {
   --font-primary: 'Hack', monospace;
   --color-background: #1d2021;
   --color-text: #ebdbb2;
@@ -26,7 +26,6 @@
 body {
   font-family: var(--font-primary);
   background-color: var(--color-background);
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ::selection {

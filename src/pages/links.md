@@ -10,10 +10,10 @@ En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la
 ### Mis sitios
 
 - [edmateo.site](https://edmateo.site) - No hay mucha ciencia, estás aquí...
-- [Instancia de 4get](https://4get.edmateo.site) - Motor de búsqueda que no apesta alojado en mi servidor y dominio.
+- [Instancia de 4get](https://4get.edmateo.site) - Metabuscador que no apesta, alojado en mi servidor y dominio.
 - [Mi canal de YouTube](https://www.youtube.com/channel/UCqpoeinlFGDwa_b60qnLDWw) - Por favor, vean mis videos.
 - [Mi perfil de GitHub](https://github.com/ImnotEdMateo) - Aquí guardo toda la basura que plasmo en codigo.
-- [Mi estación de Radio](https://radio.edmateo.site/stream) - Escuchen y sufran...
+- [EdMateo's Radio: Icecast2 Status](https://radio.edmateo.site/) - Para ver si se ha caido la radio o algo...
 
 ### Sitios de otras personas
 
