@@ -2,7 +2,7 @@
 layout: ../layouts/LongPageLayout.astro
 title: 'Enlaces'
 description: 'Repertorio de enlaces recopilados por su servidor, EdMateo.'
-author: 'Mateo'
+author: 'EdMateo'
 ---
 
 En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la experiencia de [un bobo](/about) en internet. Ya sea información valiosa, sitios curiosos o herramientas útiles, tal vez algo te sirva.

@@ -2,7 +2,7 @@
 layout: ../layouts/LongPageLayout.astro
 title: 'Acerca de Mateo'
 description: 'Página que habla un poco acerca de de Mateo, sus gustos, etc.'
-author: 'Mateo'
+author: 'EdMateo'
 ---
 
 ### Soy un joven promedio que hace cosas que los jóvenes promedio hacen.
