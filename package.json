@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.5.3",
-    "@astrojs/mdx": "^3.1.8",
+    "@astrojs/mdx": "^3.1.9",
     "@astrojs/rss": "^4.0.9",
     "@astrojs/sitemap": "^3.2.1",
-    "astro": "^4.16.7",
+    "astro": "^4.16.13",
     "astro-expressive-code": "^0.37.0",
     "gray-matter": "^4.0.3",
     "katex": "^0.16.11",
