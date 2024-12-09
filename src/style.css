@@ -21,6 +21,8 @@
   --color-selection-text: #e6d6ae;
   --color-nav: #458588;
   --color-nav-hover: #d3969b;
+  --color-code-bg: #32302f;
+  --color-code-text: #bdae93;
 }
 
 body {
@@ -91,6 +93,10 @@ main a:hover {
   font-style: italic;
 }
 
+main p {
+  line-height: 1.4; 
+  margin-bottom: 1rem;
+}
 
 main ul {
   padding-left: 15px;
@@ -110,15 +116,13 @@ img {
   max-height: 400px;
 }
 
-/*code {
-  display: block;
-  line-height: 1.25;
+code {
   background-color: var(--color-code-bg);
-  padding: 20px;
+  border-radius: 4px;
+  padding: 0 4px;
   color: var(--color-code-text);
   font-family: 'Courier New', Courier, monospace;
-  font-size: 15px;
-}*/
+}
 
 @media screen and (max-width: 600px) {
   .navigation {
