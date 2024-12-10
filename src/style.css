@@ -85,6 +85,8 @@ main a,
 main a:visited {
   color: var(--color-link);
   text-decoration-line: none;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 main a:hover {
