@@ -20,9 +20,9 @@ En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la
 - [[Locky.mx]](https://locky.mx) - Este sitio, creado por un mexicano, busca retratar la "esencia de la web", Una mas expresiva y diversa.
 - [Kazantroten](https://kazantroten.neocities.org/acertijos/kazantroten/bienvenido) - Uno de los acertijos online que mas me han gustado.
 - [La caverna de PjQNV](https://pjqnv.neocities.org/) - Opiniones rancias y proyectos caseros, todo compilado en un sitio muy bonito.
-- [Luke Smith's Webpage](https://lukesmith.xyz/) - Este sitio lo dirige un puto Boomer asqueroso de mierda que tiene varios proyectos bonitos. <3
+- [Luke Smith's Webpage](https://lukesmith.xyz/) - Sitio personal del creador de LandChad y Based Cooking, un genio o no sé, me cae bien el boomer este.
 
-### Herramienta útiles
+### Herramientas útiles
 
 - [BIRME](https://www.birme.net) - Una herramienta para recortar varias imágenes a la vez.
 - [petpet generator :)](https://benisland.neocities.org/petpet) - Genera de forma rápida un GIF de una mano acariciando cualquier imagen.
@@ -31,6 +31,6 @@ En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la
 
 - [DigDeeper](https://digdeeper.neocities.org/) - Este sitio tiene un montón de artículos relacionados con la seguridad y privacidad digital.
 - [LandChad.net](https://landchad.net) - Iniciar un sitio web es algo que se puede hacer en una tarde tranquila con algo de dinero.
-- [Spyware Watchdog](https://spyware.neocities.org) - Sitio centrado en exponer todos los casos de Spyware (Puede que la información actual esté desactualizada, y no esperen mucho, el repo original está archivado).
+- [Spyware Watchdog](https://spyware.neocities.org) - Sitio centrado en exponer todos los casos de Spyware (Puede que la información actual esté desactualizada, y no esperen mucho, el repo de el sitio está archivado).
 - [This is a motherfucking website](https://www.motherfuckingwebsite.com/) - Este sitio es simplemente perfecto.
 - [Wired Sounds For Wired People](https://fauux.neocities.org/) - ¿Te gusta Lain? Pues visita esta obra de arte y deleítate con sus melodías.
