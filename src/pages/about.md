@@ -28,7 +28,7 @@ Sin duda, los gustos hacen parte de la formación de la identidad de un humano, 
 Utilizo muy pocas redes sociales y las que uso están abandonadas o las utilizo solo para personas cercanas. De todos modos si estás interesado en enviarme sugerencias, amenazas o spam; puedes intentar escribirme por aquí:
 
 - [Correo Electrónico - mineestasedmateo@proton.me](mailto:mineestasedmateo@proton.me)
-- [XMPP - imnot_edmateo@dismail.de](xmpp:imnot_edmateo@dismail.de)
+- [XMPP - imnot_edmateo@dismail.de](xmpp:edmateo@edmateo.site)
 
 ## Limosna
 
