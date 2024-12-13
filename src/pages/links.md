@@ -13,7 +13,7 @@ En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la
 - [Instancia de 4get](https://4get.edmateo.site) - Metabuscador que no apesta, alojado en mi servidor y dominio.
 - [Mi canal de YouTube](https://www.youtube.com/channel/UCqpoeinlFGDwa_b60qnLDWw) - Por favor, vean mis vídeos.
 - [Mi perfil de GitHub](https://github.com/ImnotEdMateo) - Aquí guardo toda la basura que plasmo en código.
-- [EdMateo's Radio: Icecast2 Status](https://radio.edmateo.site/) - Para ver si se ha caído la radio o algo...
+- [edmateo.site status](https://4get.edmateo.site) - Estado de toda la mierda que hosteo.
 
 ### Sitios de otras personas
 
