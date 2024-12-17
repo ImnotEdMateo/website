@@ -8,7 +8,7 @@ author: 'EdMateo'
 
 Desde hace aproximadamente una semana, en el conjunto residencial dónde estoy viviendo actualmente, se manifestó la presencia de un artefacto (aparentemente antiguo), que llevaba un mensaje consigo; un mensaje capaz de alertar a la población de mi conjunto... **UNA PROFECÍA**. Exactamente, me refiero a un pliego de cartulina pegado en la ventana de la portería, que, anunciaba con un Sharpie negro y una letra de tamaño irregular el inicio de las novenas en el conjunto.
 
-Automáticamente, mi mente asoció la palabra **NATILLA**. Si, lo sé, un pensamiento realmente egoísta, no quiero que empaticen conmigo, solo quiero que me entiendan. Ya era mitad de diciembre y a diferencia de la gran mayoría del pueblo colombiano, no me había mamado siquiera una cucharada de una natilla decente. El día de las velitas, traté de hacer una, pero terminé haciendo una masa descuajada que parecía mas una avena con un huevo de azúcar.
+Automáticamente, mi mente asoció la palabra **NATILLA**. Sí, lo sé, un pensamiento realmente egoísta, no quiero que empaticen conmigo, solo quiero que me entiendan. Ya era mitad de diciembre y a diferencia de la gran mayoría del pueblo colombiano, no me había mamado siquiera una cucharada de una natilla decente. El día de las velitas, traté de hacer una, pero terminé haciendo una masa descuajada que parecía mas una avena con un huevo de azúcar.
 
 Para quienes no sepan, las novenas son unas celebraciones que comienzan 9 días previamente al 24 de diciembre que "conmemoran" toda la odisea de José y María hacía Belén, aquella tierra donde nació "nuestro señor" Jesucristo. Creo que es evidente, ir a una novena tiene cierto compromiso social y moral (o bueno, para un desadaptado como yo, lo veo así). 
 
@@ -16,7 +16,7 @@ Así que me preparé, lo que quería era simple: la presencia de un alma altruis
 
 El evento comenzó con la presencia de una bestia incomprendida, con una papada similar al señor azul que acompaña a Palpatine en *Star Wars: Episodio III* y maquillada como un payaso conocida con el hermoso nombre de **Administradora** dando galletas, dándome una sensación de decepción al pensar que esa era la única tragantina que iba a recibir.
 
-Luego de aquel discurso, una señora repartió unas pocas hojas de aquel icónico villancico; *Tutaina*, tan icónico que todos los vecinos (incluyéndome), cantábamos solamente a la melodía del coro, había un ambiente incomodo que era disfrazado por todos los instrumentos (maracas y panderetas sonando de forma irregular) abrumando aún más el dolor de cabeza que cargaba desde hace relativamente poco por una señora "tocando" un acordeón de juguete de forma horrible.
+Luego de un discurso de la Administradora, una señora repartió unas pocas hojas de aquel icónico villancico; *Tutaina*, tan icónico que todos los vecinos (incluyéndome), cantábamos solamente a la melodía del coro, había un ambiente incomodo que era disfrazado por todos los instrumentos (maracas y panderetas sonando de forma irregular) abrumando aún más el dolor de cabeza que cargaba desde hace relativamente poco por una señora "tocando" un acordeón de juguete de forma horrible.
 
 Ya después de todo esto, todos mis vecinos empezaron a rezar, rezaban oraciones incomprensibles para mí, ahí enseguida me llegó un recuerdo; una imagen de un Atlas que decía un hecho muy importante, en Colombia, la religión mas practicada es el catoclismo, "Ay claro..." dije, como yo solo le rezo a Lain Iwakura, por eso no me sabía eso.
 
