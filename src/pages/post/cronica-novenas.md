@@ -2,7 +2,7 @@
 layout: ../../layouts/PostLayout.astro
 title: 'Crónica de una novena: Un hpta hambreado y una natilla'
 pubDate: 12-16-2024
-description: '"Una crónica humorística sobre mi experiencia en la novena del conjunto residencial, buscando una natilla. Un relato horrible que no debería leer nadie."'
+description: 'Una crónic sobre mi experiencia en una novena de mi conjunto residencial buscando una natilla. Un relato horrible que no debería leer nadie.'
 author: 'EdMateo'
 ---
 
