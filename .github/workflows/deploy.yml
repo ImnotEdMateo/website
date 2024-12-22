@@ -3,7 +3,7 @@ name: Deploy AstroJS Site
 on:
   push:
     branches:
-      - main  # O la rama que desees
+      - main
 
 jobs:
   deploy:
@@ -20,8 +20,9 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd /var/www/website 
+          cd /var/www/website
           sudo git pull origin main
           sudo npm install
           sudo npm run build
-          sudo systemctl restart apache2
+          sudo pm2 restart edmateo-site
+          sudo sudo systemctl restart apache2
