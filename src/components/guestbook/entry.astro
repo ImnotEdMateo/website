@@ -23,22 +23,24 @@ function normalizeUrl(url) {
     return `http://${url}`;
   }
   return url;
-}
+  }
+
+export const prerender = false
 ---
 
 <div>
   {entries.map((entry) => {
     const { formattedDate, formattedTime } = formatDate(entry.CreatedAt);
     return (
-      <div class="entry-box" id={`entry-${entry.ID}`}>
+      <div class="entry-box" id={`entry-${entry.ID}`} key={entry.ID}>
         <div class="entry-header">
           <span>
             <strong>
               <span class="importantshit">{entry.Name}</span>
             </strong>
-              {entry.Website ? (
-              <>{"desde "}<a href={normalizeUrl(entry.Website)} target="_blank" rel="noopener noreferrer">{entry.Website}</a></>
-              ) : null}
+            {entry.Website ? (
+              <>{" desde "}<a href={normalizeUrl(entry.Website)} target="_blank" rel="noopener noreferrer">{entry.Website}</a></>
+            ) : null}
           </span>
           <span>&nbsp;</span>
           <div class="datekajid">
