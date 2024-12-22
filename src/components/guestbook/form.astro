@@ -18,7 +18,7 @@ import './guestbook.css';
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    const response = await fetch("http://localhost:3000/", {
+    const response = await fetch("https://guestbook-api.edmateo.site/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
