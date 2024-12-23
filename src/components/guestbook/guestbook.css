@@ -93,6 +93,11 @@
   font-size: 13px;
 }
 
+.namekajweb {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
 @media screen and (max-width: 992px) {
   .entry-box {
     width: auto;
