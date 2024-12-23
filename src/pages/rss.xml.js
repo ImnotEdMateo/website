@@ -12,8 +12,8 @@ export async function GET(context) {
   }));
 
   return rss({
-    title: 'Blog de Mateo',
-    description: 'Si no te has dado cuenta, Mateo tiene un blog',
+    title: 'edmateo.site',
+    description: 'Si no te has dado cuenta, EdMateo tiene un blog',
     site: context.site,
     items,
     customData: `<language>es-co</language>`,
