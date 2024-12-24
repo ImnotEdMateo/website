@@ -29,8 +29,9 @@ En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la
 
 ### Información interesante
 
-- [DigDeeper](https://digdeeper.neocities.org/) - Este sitio tiene un montón de artículos relacionados con la seguridad y privacidad digital.
+- [DigDeeper](https://digdeeper.club/) - Este sitio tiene un montón de artículos relacionados con la seguridad y privacidad digital.
 - [LandChad.net](https://landchad.net) - Iniciar un sitio web es algo que se puede hacer en una tarde tranquila con algo de dinero.
+- [Sci-Hub](https://sci-hub.st/) - Es un "centro de ciencias" que provee acceso gratis y sin restricción a muchísimos documentos científicos. ¿Es piratería? Quizá...  
 - [Spyware Watchdog](https://spyware.neocities.org) - Sitio centrado en exponer todos los casos de Spyware (Puede que la información actual esté desactualizada, y no esperen mucho, el repo de el sitio está archivado).
 - [This is a motherfucking website](https://www.motherfuckingwebsite.com/) - Este sitio es simplemente perfecto.
 - [Wired Sounds For Wired People](https://fauux.neocities.org/) - ¿Te gusta Lain? Pues visita esta obra de arte y deleítate con sus melodías.
