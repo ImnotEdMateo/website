@@ -8,37 +8,45 @@ const pageDescription = "Este sitio es el refugio personal de un tal Mateo, dond
 ---
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
-    <p>
+  <p>
     Este sitio lo maneja una sola persona, <a href="/about">un tal Mateo</a>, lo usa como un "refugio personal" para compartir sus vivencias y otras cosas, puede que esto se acabe dentro de unos meses por no pagar el dominio... A pesar de esto, su código fuente está abierto a todo el mundo en 
     <a href="https://github.com/ImnotEdMateo/website/" target="_blank" rel="noopener noreferrer">este repositorio en GitHub</a>.
-    </p>
-    <p>
-    <b>GRACIAS POR TODO</b>
-    </p>
+  </p>
+  <marquee behavior="" direction="" style="margin: 20px 0;" scrollamount="15">
+    <b>
+      <a href="xmpp:chat@chat.edmateo.site?join">ÚNETE AL MUC DE XMPP</a>
+    </b>
+  </marquee>
 
-    <section>
-        <h2>Posts recientes</h2>
-        <ul>
-            {allPosts.slice(0, 4).map(post => (
-                <li>
-                    [{post.pubDate ? new Date(post.pubDate).toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' }) : 'No hay fecha'}] - 
-                    <a href={`/post/${post.slug}`}>{post.title}</a>
-                </li>
-            ))}
-        </ul>
-    </section>
+  <section>
+    <h2>Posts recientes</h2>
+    <ul>
+      {allPosts.slice(0, 4).map(post => (
+        <li>
+          [{
+            post.pubDate 
+              ? new Date(post.pubDate).toLocaleDateString('es-ES', {
+                  day: '2-digit', month: '2-digit', year: 'numeric'
+                }) 
+              : 'No hay fecha'
+          }] - 
+          <a href={`/post/${post.slug}`}>{post.title}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
 
-    <section>
-      <h2>Actualizaciones</h2>
-        <ul>
-            <li>[11/12/2024] - He montado un servidor de XMPP!!! Registros abiertos por este dominio.</li>
-            <li>[02/06/2024] - Oficialmente, Google ya indexó mi sitio en su motor de búsqueda.</li>
-            <li>[04/05/2024] - El sitio se ha adaptado a pantallas pequeñas.</li>
-            <li>[01/05/2024] - Se ha reescrito todo el sitio a AstroJS.</li>
-        </ul>
-    </section>
+  <section>
+    <h2>Actualizaciones</h2>
+    <ul>
+      <li>[11/12/2024] - He montado un servidor de XMPP!!! Registros abiertos por este dominio.</li>
+      <li>[02/06/2024] - Oficialmente, Google ya indexó mi sitio en su motor de búsqueda.</li>
+      <li>[04/05/2024] - El sitio se ha adaptado a pantallas pequeñas.</li>
+      <li>[01/05/2024] - Se ha reescrito todo el sitio a AstroJS.</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>¿Cómo?</h2>
-    </section>
+  <section>
+    <h2>¿Cómo?</h2>
+  </section>
 </BaseLayout>
