@@ -113,6 +113,11 @@ main ul {
   position: fixed;
 }
 
+.pins img {
+  width: 88px;
+  height: 31px;
+}
+
 img {
   max-width: 100%;
   max-height: 400px;
