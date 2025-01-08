@@ -177,14 +177,6 @@ blockquote::after {
     flex-wrap: nowrap;
     flex-direction: column;
     text-align: center;
-    padding: 0;
-    gap: 5px;
-    column-gap: 0;
-  }
-
-  .navigation li {
-    margin: 0;
-    padding: 0;
   }
 }
 
@@ -197,7 +189,7 @@ blockquote::after {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 15px 50px;
+    gap: 0px 100px;
     padding-left: 0;
     width: 100%;
   }
