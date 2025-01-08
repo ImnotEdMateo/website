@@ -114,8 +114,9 @@ main ul {
 }
 
 .pins img {
+  max-width: 100%;
   width: 88px;
-  height: 31px;
+  height: auto; 
 }
 
 img {
@@ -167,17 +168,23 @@ blockquote::after {
   .navigation {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
     width: 100%;
     position: static;
   }
 
   .navigation ul {
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     text-align: center;
-    padding-left: 0;
+    padding: 0;
+    gap: 5px;
+    column-gap: 0;
+  }
+
+  .navigation li {
     margin: 0;
+    padding: 0;
   }
 }
 
@@ -188,7 +195,9 @@ blockquote::after {
 
   .navigation ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    gap: 15px 50px;
     padding-left: 0;
     width: 100%;
   }
@@ -200,7 +209,7 @@ blockquote::after {
   }
 
   main {
-    padding: 10px;
+    padding: 10px 0 10px 5px;
   }
 
   main img,
