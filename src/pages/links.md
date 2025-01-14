@@ -21,6 +21,8 @@ En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la
 - [Kazantroten](https://kazantroten.neocities.org/acertijos/kazantroten/bienvenido) - Uno de los acertijos online que mas me han gustado.
 - [La caverna de PjQNV](https://pjqnv.neocities.org/) - Opiniones rancias y proyectos caseros, todo compilado en un sitio muy bonito.
 - [Luke Smith's Webpage](https://lukesmith.xyz/) - Sitio personal del creador de LandChad y Based Cooking, un genio o no sé, me cae bien el boomer este.
+- [LYRICAL TOKAREVの政](http://lyricaltokarev.com/home) - Sitio personal de un shitposter más autista que yo.
+- [The Cidoku Network](http://cidoku.net) - Un sitio "moderno", pero a la vez retrocompatible, tiene muchos post interesantes.
 
 ### Herramientas útiles
 
