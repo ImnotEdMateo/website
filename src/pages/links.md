@@ -14,7 +14,7 @@ En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la
 - [Mi canal de YouTube](https://www.youtube.com/channel/UCqpoeinlFGDwa_b60qnLDWw) - Por favor, vean mis vídeos.
 - [Mi perfil de GitHub](https://github.com/ImnotEdMateo) - Aquí guardo toda la basura que plasmo en código.
 - [edmateo.site status](https://status.edmateo.site) - Estado de toda la mierda que hosteo.
-- [UBS](http://ubs.edmateo.site) - Un subidor de archivos creado por mi, no usa JavaScript y eso...
+- [USB](http://usb.edmateo.site) - Un subidor de archivos creado por mi, no usa JavaScript y eso...
 
 ### Sitios de otras personas
 
