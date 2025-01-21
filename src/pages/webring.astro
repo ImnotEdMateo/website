@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPosts } from '../utils/getPosts.js';
+import Links from '../components/link.astro';
+
+const allPosts = getPosts();
+const pageTitle = "Webring";
+const pageDescription = "Este sitio es el refugio personal de un tal Mateo, donde comparte basura y sus vivencias.";
+---
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
+  <h2>Mis sitios</h2>
+  <Links data="owns" />
+  <h2>Sitios de Amigos</h2>
+  <Links data="friends" />
+  <h2>Información útil</h2>
+  <Links data="usefulInfo" />
+</BaseLayout>

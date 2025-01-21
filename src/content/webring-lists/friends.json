@@ -1,0 +1,24 @@
+[
+  {
+    "id": "2",
+    "url": "http://lyricaltokarev.com",
+    "imageSrc": "/buttons/lyricaltokarevbutton.gif",
+    "imageAlt": "GOR's 88x31",
+    "linkText": "LYRICAL TOKAREVの政",
+    "additionalText": "IP Logger, muy peligroso, no entrar!!!"
+  },
+  {
+    "id": "3",
+    "url": "http://cidoku.net",
+    "imageSrc": "/buttons/cidokunet.gif",
+    "imageAlt": "Cidoku.net 88x31",
+    "linkText": "The Cidoku Network",
+    "additionalText": "Sitio de mierda hecho por un chileno de 30 años."
+  },
+  {
+    "id": "4",
+    "url": "https://pjqnv.neocities.org",
+    "linkText": "La caverna de PjQNV",
+    "additionalText": "Opiniones rancias y proyectos caseros, todo compilado en un sitio muy bonito."
+  }
+]

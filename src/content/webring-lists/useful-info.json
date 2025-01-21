@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "url": "https://digdeeper.neocities.org/",
+    "imageSrc": "/buttons/digdeeperbutton.png",
+    "imageAlt": "DigDeeper 88x31",
+    "linkText": "DigDeeper",
+    "additionalText": "Este sitio tiene un montón de artículos relacionados con la seguridad y privacidad digital."
+  },
+  {
+    "id": "2",
+    "url": "https://landchad.net",
+    "imageSrc": "/buttons/landchad.gif",
+    "imageAlt": "LandChad.net 88x31",
+    "linkText": "LandChad.net",
+    "additionalText": "Iniciar un sitio web es algo que se puede hacer en una tarde tranquila con algo de dinero."
+  },
+  {
+    "id": "3",
+    "url": "https://spyware.neocities.org",
+    "imageSrc": "/buttons/spywarewatchdogs.png",
+    "imageAlt": "SWD 88x31",
+    "linkText": "Spyware Watchdog",
+    "additionalText": "Sitio centrado en exponer la mayor cantidad de casos de Spyware."
+  },
+  {
+    "id": "4",
+    "url": "http://cidoku.net",
+    "linkText": "Sci-Hub",
+    "additionalText": "Es un \"centro de ciencias\" que provee acceso gratis y sin restricción a millones de documentos científicos. ¿Es piratería? Quiza..."
+  }
+]
