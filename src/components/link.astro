@@ -8,22 +8,22 @@ const items = await getCollection(data);
 
 <style>
   ul {
-    list-style-type: none;  
-    padding-left: 2px;
+    padding-left: 0;
   }
 
   li {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    gap: 5px 10px;
     align-items: center;
-    margin: 10px 0;
-    gap: 5px;
+    padding: 8px 0;
   }
 
   span {
+    grid-column: 1 / -1;
   }
 
   img {
-    flex-shrink: 0;
     width: 88px;
     height: 31px;
   }
@@ -32,31 +32,15 @@ const items = await getCollection(data);
     word-break: keep-all;
   }
 
-  @media (max-width: 992px) {
-    li {
-      display: grid;
-      grid-template-columns: auto 1fr; /* Imagen y URL en la misma línea */
-      gap: 5px 5px;
-      align-items: center;
-    }
-
-    span {
-      grid-column: 1 / -1; /* El span ocupa toda la fila */
-    }
-
-    .separator {
-      display: none;
-    }
 </style>
 
 <ul>
   {items.length > 0 && items.map((item) => (
     <li key={item.data.url}>
       <a href={item.data.url}>
-        <img src={item.data.imageSrc} alt={item.data.imageAlt} />
+        {item.data.imageSrc && <img src={item.data.imageSrc} alt={item.data.imageAlt} />}
       </a>
       <a href={item.data.url}>{item.data.linkText}</a>
-      <span class="separator"> - </span>
       <span>{item.data.additionalText}</span>
     </li>
   ))}
