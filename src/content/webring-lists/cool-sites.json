@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "url": "https://getgle.org",
+    "imageSrc": "/buttons/getgle.gif",
+    "imageAlt": "getgle's 88x31",
+    "linkText": "Getgle",
+    "additionalText": "Una cloaca de degenerados adictos al Futanari y fanáticos de Jeffrey Epstein (Solo quiero ser uno de ellos, quiero sentarme con ellos...)"
+  },
+  {
+    "id": "2",
+    "url": "https://lukesmith.xyz/",
+    "imageSrc": "/buttons/lukesmith.gif",
+    "imageAlt": "Luke Smith",
+    "linkText": "Luke Smith's Webpage",
+    "additionalText": "Si no sabes quien es Luke Smith, no eres bienvenido aquí."
+  },
+  {
+    "id": "3",
+    "url": "https://www.tailsgetstrolled.org/",
+    "imageSrc": "/buttons/tgt.gif",
+    "imageAlt": "tails, wake up",
+    "linkText": "Tails Gets Trolled",
+    "additionalText": "Una obra magna, cuyo valor es apreciado por unos pocos. desde que leí Tails Gets Trolled, soy más feliz de mí propia persona."
+  },
+  {
+    "id": "4",
+    "url": "https://sergio-m.neocities.org/",
+    "linkText": "sergio-m.neocities.org",
+    "additionalText": "Hincha de Millos promedio."
+  }
+]

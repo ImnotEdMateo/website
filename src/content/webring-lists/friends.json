@@ -1,5 +1,13 @@
 [
   {
+    "id": "1",
+    "url": "https://locky.mx",
+    "imageSrc": "/buttons/lockymx.png",
+    "imageAlt": "locky's 88x31",
+    "linkText": "[Locky.mx]",
+    "additionalText": "Este sitio, creado por un mexicano, busca retratar la \"escencia de la web\"; una más colorida y diversa."
+  },
+  {
     "id": "2",
     "url": "http://lyricaltokarev.com",
     "imageSrc": "/buttons/lyricaltokarevbutton.gif",
@@ -20,5 +28,11 @@
     "url": "https://pjqnv.neocities.org",
     "linkText": "La caverna de PjQNV",
     "additionalText": "Opiniones rancias y proyectos caseros, todo compilado en un sitio muy bonito."
-  }
+  },
+  {
+    "id": "5",
+    "url": "http://8388607.xyz/",
+    "linkText": "Paja",
+    "additionalText": "En unos meses se viene un proyecto enorme, dice Cartas siempre y nunca hace nada."
+  }  
 ]
