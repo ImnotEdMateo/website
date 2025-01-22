@@ -1,14 +1,22 @@
 [
   {
     "id": "1",
+    "url": "https://texto-plano.xyz/~pomelo/",
+    "imageSrc": "/buttons/desdeunsotano.gif",
+    "imageAlt": "desde un sotano...",
+    "linkText": "Desde un Sótano en un Cerro",
+    "additionalText": "Sitio de un random que le escuché una canción y me gustó."
+  },
+  {
+    "id": "2",
     "url": "https://getgle.org",
     "imageSrc": "/buttons/getgle.gif",
     "imageAlt": "getgle's 88x31",
     "linkText": "Getgle",
-    "additionalText": "Una cloaca de degenerados adictos al Futanari y fanáticos de Jeffrey Epstein (Solo quiero ser uno de ellos, quiero sentarme con ellos...)"
+    "additionalText": "Una cloaca de degenerados adictos al Futanari y fanáticos de Jeffrey Epstein. (Solo quiero ser uno de ellos, quiero sentarme con ellos...)"
   },
   {
-    "id": "2",
+    "id": "3",
     "url": "https://lukesmith.xyz/",
     "imageSrc": "/buttons/lukesmith.gif",
     "imageAlt": "Luke Smith",
@@ -16,7 +24,7 @@
     "additionalText": "Si no sabes quien es Luke Smith, no eres bienvenido aquí."
   },
   {
-    "id": "3",
+    "id": "4",
     "url": "https://www.tailsgetstrolled.org/",
     "imageSrc": "/buttons/tgt.gif",
     "imageAlt": "tails, wake up",
@@ -25,6 +33,12 @@
   },
   {
     "id": "4",
+    "url": "http://www.corporabida.8m.net/index.htm",
+    "linkText": "Corporación Instituto la Rábida",
+    "additionalText": "Sitio web antiguo de un colegio que fue abandonado en Bogotá, Colombia y actualmente está la estructura en ruinas. Por algún motivo, este sitio lleva activo sin mantenerse desde 2009"
+  },
+  {
+    "id": "5",
     "url": "https://sergio-m.neocities.org/",
     "linkText": "sergio-m.neocities.org",
     "additionalText": "Hincha de Millos promedio."
