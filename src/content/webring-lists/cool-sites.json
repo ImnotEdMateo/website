@@ -25,6 +25,14 @@
   },
   {
     "id": "4",
+    "url": "https://suragu.net/",
+    "imageSrc": "/buttons/sugaru.png",
+    "imageAlt": "SUGARU",
+    "linkText": "SUGARU",
+    "additionalText": "Un random que postea cosas sobre su decadencia."
+  },
+  {
+    "id": "5",
     "url": "https://www.tailsgetstrolled.org/",
     "imageSrc": "/buttons/tgt.gif",
     "imageAlt": "tails, wake up",
@@ -32,13 +40,13 @@
     "additionalText": "Una obra magna, cuyo valor es apreciado por unos pocos. desde que leí Tails Gets Trolled, soy más feliz conmigo mismo."
   },
   {
-    "id": "4",
+    "id": "6",
     "url": "http://www.corporabida.8m.net/index.htm",
     "linkText": "Corporación Instituto la Rábida",
     "additionalText": "Sitio web antiguo de un colegio que fue abandonado en Bogotá, Colombia y actualmente está la estructura en ruinas. Por algún motivo, este sitio lleva activo sin mantenerse desde 2009"
   },
   {
-    "id": "5",
+    "id": "7",
     "url": "https://sergio-m.neocities.org/",
     "linkText": "sergio-m.neocities.org",
     "additionalText": "Hincha de Millos promedio."
