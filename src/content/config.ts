@@ -1,21 +1,13 @@
 import { defineCollection } from "astro:content";
 import { file } from "astro/loaders";
 
-const owns = defineCollection({
-  loader: file("src/content/webring-lists/owns.json"),
+const createCollection = (path: string) => defineCollection({
+  loader: file(`src/content/webring-lists/${path}.json`),
 });
 
-const friends = defineCollection({
-  loader: file("src/content/webring-lists/friends.json"),
-});
-
-const coolSites = defineCollection({
-  loader: file("src/content/webring-lists/cool-sites.json"),
-});
-
-const usefulInfo = defineCollection({
-  loader: file("src/content/webring-lists/useful-info.json"),
-});
-
+const owns = createCollection("owns");
+const friends = createCollection("friends");
+const coolSites = createCollection("cool-sites");
+const usefulInfo = createCollection("useful-info");
 
 export const collections = { owns, friends, coolSites, usefulInfo };
