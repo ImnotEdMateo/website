@@ -9,6 +9,14 @@
   },
   {
     "id": "2",
+    "url": "https://digdeeper.neocities.org/",
+    "imageSrc": "/buttons/digdeeperbutton.png",
+    "imageAlt": "DigDeeper 88x31",
+    "linkText": "DigDeeper",
+    "additionalText": "Este sitio tiene un montón de artículos relacionados con la seguridad y privacidad digital."
+  },
+  {
+    "id": "3",
     "url": "https://getgle.org",
     "imageSrc": "/buttons/getgle.gif",
     "imageAlt": "getgle's 88x31",
@@ -16,7 +24,7 @@
     "additionalText": "Una cloaca de degenerados adictos al Futanari y fanáticos de Jeffrey Epstein. (Solo quiero ser uno de ellos, quiero sentarme con ellos...)"
   },
   {
-    "id": "3",
+    "id": "4",
     "url": "https://lukesmith.xyz/",
     "imageSrc": "/buttons/lukesmith.gif",
     "imageAlt": "Luke Smith",
@@ -24,7 +32,15 @@
     "additionalText": "Si no sabes quien es Luke Smith, no eres bienvenido aquí."
   },
   {
-    "id": "4",
+    "id": "5",
+    "url": "https://nadeko.net/",
+    "imageSrc": "/buttons/nadekodotnet.png",
+    "imageAlt": "nadeko.net 88x31",
+    "linkText": "nadeko.net",
+    "additionalText": "Fijxu (webmaster de nadeko.net) se dedica al self-hosting de varios servicios enfocados a la privacidad abiertos a todo el mundo."
+  },
+  {
+    "id": "6",
     "url": "https://suragu.net/",
     "imageSrc": "/buttons/sugaru.png",
     "imageAlt": "SURAGU",
@@ -32,7 +48,7 @@
     "additionalText": "Un random que postea cosas sobre su decadencia."
   },
   {
-    "id": "5",
+    "id": "7",
     "url": "https://www.tailsgetstrolled.org/",
     "imageSrc": "/buttons/tgt.gif",
     "imageAlt": "tails, wake up",
@@ -40,13 +56,27 @@
     "additionalText": "Una obra magna, cuyo valor es apreciado por unos pocos. desde que leí Tails Gets Trolled, soy más feliz conmigo mismo."
   },
   {
-    "id": "6",
+    "id": "8",
+    "url": "https://fauux.neocities.org/",
+    "imageSrc": "/buttons/fauux-btn.gif",
+    "imageAlt": "WSfWP 88x31",
+    "linkText": "Wired Sounds for Wired People",
+    "additionalText": "¿Te gusta Lain? Pues disfruta de las melodías que tiene este sitio para ofrecer."
+  },
+  {
+    "id": "9",
     "url": "http://www.corporabida.8m.net/index.htm",
     "linkText": "Corporación Instituto la Rábida",
     "additionalText": "Antiguo sitio web de un colegio en Bogotá, Colombia, que fue abandonado y cuya estructura hoy está en ruinas. Sorprendentemente, este sitio sigue activo, aunque no ha sido actualizado desde 2009."
   },
   {
-    "id": "7",
+    "id": "10",
+    "url": "https://her.st",
+    "linkText": "her.st",
+    "additionalText": "Blog muy interesante acerca de minimalismo digital, selfhosting y eso..."
+  },
+  {
+    "id": "11",
     "url": "https://sergio-m.neocities.org/",
     "linkText": "sergio-m.neocities.org",
     "additionalText": "Hincha de Millos promedio."
