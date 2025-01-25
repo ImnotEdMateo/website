@@ -174,8 +174,8 @@ Para poder tener *server side rendering*, *server islands* y toda la mierda que 
       SSLCertificateKeyFile /etc/letsencrypt/live/tudominio.org/privkey.pem
       SSLCertificateChainFile /etc/letsencrypt/live/tudominio.org/chain.pem
 
-      ErrorLog ${APACHE_LOG_DIR}/astro-ssr-site-error.log
-      CustomLog ${APACHE_LOG_DIR}/astro-ssr-site-access.log combined
+      ErrorLog /dev/null
+      CustomLog /dev/null
     </VirtualHost>
     ~~~
 
