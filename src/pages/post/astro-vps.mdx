@@ -158,8 +158,8 @@ Para poder tener *server side rendering*, *server islands* y toda la mierda que 
       ProxyPass / http://127.0.0.1:4321/
       ProxyPassReverse / http://127.0.0.1:4321/
 
-      ErrorLog ${APACHE_LOG_DIR}/astro-ssr-site-error.log
-      CustomLog ${APACHE_LOG_DIR}/astro-ssr-site-access.log combined
+      ErrorLog /dev/null
+      CustomLog /dev/null
     </VirtualHost>
 
     <VirtualHost *:443>
