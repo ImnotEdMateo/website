@@ -9,5 +9,6 @@ const owns = createCollection("owns");
 const friends = createCollection("friends");
 const coolSites = createCollection("cool-sites");
 const usefulInfo = createCollection("useful-info");
+const darknetSites = createCollection("darknet-sites");
 
-export const collections = { owns, friends, coolSites, usefulInfo };
+export const collections = { owns, friends, coolSites, usefulInfo, darknetSites };
