@@ -1,0 +1,87 @@
+html,
+body {
+  height: 100vh;
+  margin: 0;
+  overflow-y: hidden;
+}
+
+body {
+  background: #322f2e url('/static/wallpaper.png') no-repeat center;
+  background-size: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  margin: 10px;
+  height: 98%;
+}
+
+main {
+  overflow: auto;
+  color: #ebdbb2;
+  padding: 10px 20px;
+  margin: 10px 0;
+  background: #1d2021;
+  flex: 1 1 auto;
+  opacity: 0.95;
+}
+
+main a,
+main a:visited {
+  color: #83a598;
+  text-decoration: none;
+}
+
+main a:hover {
+  color: #458588;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+footer {
+  margin-bottom: 10px;
+}
+
+footer img {
+  width: 88px;
+  height: 31px;
+}
+
+footer,
+header {
+  background-color: #1d2021;
+  padding: 10px 0;
+  flex: 0 1 auto;
+  opacity: 0.95;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+  font-size: 15px;
+  padding: 10px 15px;
+}
+
+nav ul li a,
+nav ul li span {
+  text-decoration: none;
+  color: #928374;
+}
+
+nav ul li a:visited {
+  text-decoration: none;
+  color: #ebdbb2;
+}
+
+
+nav ul li a:hover {
+  color: #fabd2f;
+}
