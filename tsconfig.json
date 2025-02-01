@@ -1,8 +1,5 @@
 {
-  // Included with "astro/tsconfigs/strict" or "astro/tsconfigs/strictest"
-  "extends": "astro/tsconfigs/base",
-  "compilerOptions": {
-    "strictNullChecks": true,
-    "allowJs": true
-  }
+  "extends": "astro/tsconfigs/strict",
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"]
 }

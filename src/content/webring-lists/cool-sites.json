@@ -2,7 +2,7 @@
   {
     "id": "1",
     "url": "https://texto-plano.xyz/~pomelo/",
-    "imageSrc": "/buttons/desdeunsotano.gif",
+    "imageSrc": "/static/buttons/desdeunsotano.gif",
     "imageAlt": "desde un sotano...",
     "linkText": "Desde un Sótano en un Cerro",
     "additionalText": "Sitio de un random que le escuché una canción y me gustó."
@@ -10,7 +10,7 @@
   {
     "id": "2",
     "url": "https://digdeeper.neocities.org/",
-    "imageSrc": "/buttons/digdeeperbutton.png",
+    "imageSrc": "/static/buttons/digdeeperbutton.png",
     "imageAlt": "DigDeeper 88x31",
     "linkText": "DigDeeper",
     "additionalText": "Este sitio tiene un montón de artículos relacionados con la seguridad y privacidad digital."
@@ -18,7 +18,7 @@
   {
     "id": "3",
     "url": "https://getgle.org",
-    "imageSrc": "/buttons/getgle.gif",
+    "imageSrc": "/static/buttons/getgle.gif",
     "imageAlt": "getgle's 88x31",
     "linkText": "Getgle",
     "additionalText": "Una cloaca de degenerados adictos al Futanari y fanáticos de Jeffrey Epstein. (Solo quiero ser uno de ellos, quiero sentarme con ellos...)"
@@ -26,7 +26,7 @@
   {
     "id": "4",
     "url": "https://lukesmith.xyz/",
-    "imageSrc": "/buttons/lukesmith.gif",
+    "imageSrc": "/static/buttons/lukesmith.gif",
     "imageAlt": "Luke Smith",
     "linkText": "Luke Smith's Webpage",
     "additionalText": "Si no sabes quien es Luke Smith, no eres bienvenido aquí."
@@ -34,7 +34,7 @@
   {
     "id": "5",
     "url": "https://nadeko.net/",
-    "imageSrc": "/buttons/nadekodotnet.png",
+    "imageSrc": "/static/buttons/nadekodotnet.png",
     "imageAlt": "nadeko.net 88x31",
     "linkText": "nadeko.net",
     "additionalText": "Fijxu (webmaster de nadeko.net) se dedica al self-hosting de varios servicios enfocados a la privacidad abiertos a todo el mundo."
@@ -42,7 +42,7 @@
   {
     "id": "6",
     "url": "https://suragu.net/",
-    "imageSrc": "/buttons/sugaru.png",
+    "imageSrc": "/static/buttons/sugaru.png",
     "imageAlt": "SURAGU",
     "linkText": "SURAGU",
     "additionalText": "Un random que postea cosas sobre su decadencia."
@@ -50,7 +50,7 @@
   {
     "id": "7",
     "url": "https://www.tailsgetstrolled.org/",
-    "imageSrc": "/buttons/tgt.gif",
+    "imageSrc": "/static/buttons/tgt.gif",
     "imageAlt": "tails, wake up",
     "linkText": "Tails Gets Trolled",
     "additionalText": "Una obra magna, cuyo valor es apreciado por unos pocos. desde que leí Tails Gets Trolled, soy más feliz conmigo mismo."
@@ -58,7 +58,7 @@
   {
     "id": "8",
     "url": "https://fauux.neocities.org/",
-    "imageSrc": "/buttons/fauux-btn.gif",
+    "imageSrc": "/static/buttons/fauux-btn.gif",
     "imageAlt": "WSfWP 88x31",
     "linkText": "Wired Sounds for Wired People",
     "additionalText": "¿Te gusta Lain? Pues disfruta de las melodías que tiene este sitio para ofrecer."

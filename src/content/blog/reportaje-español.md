@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/PostLayout.astro
 title: 'La "Dark Web": ¿Es realmente peligroso entrar?'
-pubDate: 09-09-2024
-description: 'Para la clas de humanidades, se me encomendó hacer un reportaje sobre cualquier basura...'
 author: 'Mateo'
+description: 'Para la clas de humanidades, se me encomendó hacer un reportaje sobre cualquier basura...'
+pubDate: 2024-09-09
 ---
 # Introduccion
 

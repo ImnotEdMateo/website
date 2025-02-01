@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/PostLayout.astro
 title: Solucionar el problema del cierre de tapa en Linux con SystemD
-pubDate: 12-09-2024
-description: Aprende a evitar que tu sistema Linux con SystemD se congele al cerrar la tapa del portátil modificando logind.conf de manera sencilla.
 author: 'EdMateo'
+description: Aprende a evitar que tu sistema Linux con SystemD se congele al cerrar la tapa del portátil modificando logind.conf de manera sencilla.
+pubDate: 2024-12-09
 ---
 
 ## ¿Por qué SystemD es tan controversial?

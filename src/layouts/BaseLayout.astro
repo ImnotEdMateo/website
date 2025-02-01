@@ -1,7 +1,7 @@
 ---
 import '../style.css';
-import Navigation from '../components/nav.astro';
-import Pins from '../components/pins.astro';
+import Navbar from '../components/navbar.astro';
+import Footer from '../components/footer.astro';
 import { ViewTransitions } from "astro:transitions";
 
 const {pageTitle, pageDescription} = Astro.props;
@@ -21,13 +21,13 @@ const {pageTitle, pageDescription} = Astro.props;
     <title>{pageTitle} | edmateo.site</title>
 	</head>
 	<body>
-        <div class="wrapper">
-            <Navigation />    
-            <main>
-                <h1>{pageTitle}</h1>
-                <slot />
-            </main>
-            <Pins />    
-        </div>
-    </body>
+    <div class="wrapper">
+      <Navbar /> 
+      <main>
+        <h1>{pageTitle}</h1>
+        <slot />
+      </main>
+      <Footer />
+    </div>
+	</body>
 </html>

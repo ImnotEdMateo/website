@@ -3,7 +3,7 @@
   {
     "id": "2",
     "url": "https://landchad.net",
-    "imageSrc": "/buttons/landchad.gif",
+    "imageSrc": "/static/buttons/landchad.gif",
     "imageAlt": "LandChad.net 88x31",
     "linkText": "LandChad.net",
     "additionalText": "Iniciar un sitio web es algo que se puede hacer en una tarde tranquila con algo de dinero."
@@ -12,7 +12,7 @@
   {
     "id": "4",
     "url": "https://spyware.neocities.org",
-    "imageSrc": "/buttons/spywarewatchdogs.png",
+    "imageSrc": "/static/buttons/spywarewatchdogs.png",
     "imageAlt": "SWD 88x31",
     "linkText": "Spyware Watchdog",
     "additionalText": "Sitio centrado en exponer la mayor cantidad de casos de Spyware."
@@ -20,7 +20,7 @@
   {
     "id": "5",
     "url": "http://wiby.me/",
-    "imageSrc": "/buttons/wiby.gif",
+    "imageSrc": "/static/buttons/wiby.gif",
     "imageAlt": "Wiby 88x31",
     "linkText": "Wiby",
     "additionalText": "Un motor de búsqueda diseñado para revivir la esencia de la web antigua."

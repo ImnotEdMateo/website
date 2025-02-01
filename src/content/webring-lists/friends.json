@@ -2,7 +2,7 @@
   {
     "id": "1",
     "url": "https://locky.mx",
-    "imageSrc": "/buttons/lockymx.png",
+    "imageSrc": "/static/buttons/lockymx.png",
     "imageAlt": "locky's 88x31",
     "linkText": "[Locky.mx]",
     "additionalText": "Este sitio, creado por un mexicano, busca retratar la \"escencia de la web\"; una más colorida y diversa."
@@ -10,7 +10,7 @@
   {
     "id": "2",
     "url": "http://lyricaltokarev.com",
-    "imageSrc": "/buttons/lyricaltokarevbutton.gif",
+    "imageSrc": "/static/buttons/lyricaltokarevbutton.gif",
     "imageAlt": "GOR's 88x31",
     "linkText": "LYRICAL TOKAREVの政",
     "additionalText": "IP Logger, muy peligroso, no entrar!!!"
@@ -18,7 +18,7 @@
   {
     "id": "3",
     "url": "http://cidoku.net",
-    "imageSrc": "/buttons/cidokunet.gif",
+    "imageSrc": "/static/buttons/cidokunet.gif",
     "imageAlt": "Cidoku.net 88x31",
     "linkText": "The Cidoku Network",
     "additionalText": "Sitio de mierda hecho por un chileno de 30 años."

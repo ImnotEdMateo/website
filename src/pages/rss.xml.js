@@ -1,21 +1,19 @@
-import rss, { pagesGlobToRssItems } from '@astrojs/rss';
-import { getPosts } from '../utils/getPosts.js'; 
+import rss from '@astrojs/rss';
+import { getCollection } from 'astro:content';
 
 export async function GET(context) {
-  const posts = getPosts();
-
-  const items = posts.map(post => ({
-    link: `/post/${post.slug}`,
-    title: post.title,
-    pubDate: post.pubDate,
-    description: post.description,
-  }));
+  const blog = await getCollection('blog');
+  const sortedBlog = blog.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate));
 
   return rss({
     title: 'edmateo.site',
-    description: 'Si no te has dado cuenta, EdMateo tiene un blog',
+    description: 'Por si no te has dado cuenta, EdMateo tiene un Blog',
     site: context.site,
-    items,
-    customData: `<language>es-co</language>`,
+    items: sortedBlog.map((post) => ({
+      title: post.data.title,
+      pubDate: post.data.pubDate,
+      description: post.data.description,
+      link: `/post/${post.slug}/`,
+    })),
   });
 }
