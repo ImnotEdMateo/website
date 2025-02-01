@@ -36,8 +36,13 @@ main {
 
 main img {
   max-width: 100%;
-  width: 350px;
-  height: 100%px;
+  height: auto;
+}
+
+iframe {
+  aspect-ratio: 4 / 3;
+  max-width: 100%;
+  height: auto;
 }
 
 main a,
@@ -155,21 +160,9 @@ nav ul li a:hover {
     padding: 10px 15px;
   }
 
-  nav ul li span {
-    text-decoration: none;
-    color: #928374;
+  header,
+  footer {
+    flex: 1 1 auto;
   }
-
-  nav ul li a,
-  nav ul li a:visited {
-    text-decoration: none;
-    color: #ebdbb2;
-  }
-
-
-  nav ul li a:hover {
-    color: #fabd2f;
-  }
-
 }
 
