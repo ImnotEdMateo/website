@@ -18,13 +18,20 @@ body {
 }
 
 main {
+  font-family: Hack;
   overflow: auto;
   color: #ebdbb2;
-  padding: 10px 20px;
+  padding: 10px 5% 0 35px;
   margin: 10px 0;
   background: #1d2021;
   flex: 1 1 auto;
   opacity: 0.95;
+}
+
+main img {
+  max-width: 100%;
+  width: 350px;
+  height: 100%;
 }
 
 main a,
@@ -84,4 +91,10 @@ nav ul li a:visited {
 
 nav ul li a:hover {
   color: #fabd2f;
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    padding: 5px 20px 50px 8px;
+  } 
 }

@@ -1,0 +1,43 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const { slug } = Astro.params;
+const postSlug = Array.isArray(slug) ? slug.join('/') : slug;
+
+if (!slug) {
+  Astro.response.status = 200;
+  return Astro.redirect('/blog');
+}
+
+const post = await getEntry('blog', postSlug);
+
+if (!post) {
+  Astro.response.status = 404;
+  return Astro.rewrite('/404');
+}
+
+const formattedDate = post.data.pubDate.toLocaleDateString('es-ES', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric'
+});
+
+const { Content } = await render(post);
+
+const pageTitle = post.data.title;
+const pageDescription = post.data.description;
+---
+
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
+  <article>
+    <h4>
+      <time datetime={post.data.pubDate.toISOString()}>
+        Escrito el {formattedDate}
+      </time>
+    </h4>
+    <Content />
+    <h1>Comentarios</h1>
+    <p>¿Quieres comentar algo? Una pena, soy muy vago para programar algo así, lo que puedes hacer es escribir algo en <a href="/guestbook">Mi GuestBook</a></p>
+  </article>
+</BaseLayout>
