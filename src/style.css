@@ -131,10 +131,6 @@ nav ul li a:hover {
     overflow: auto;
   }
 
-  header {
-    font-size: 100px;
-  }
-
   nav li {
     font-size: 22px;
   }
@@ -160,9 +156,8 @@ nav ul li a:hover {
     padding: 10px 15px;
   }
 
-  header,
   footer {
-    flex: 1 1 auto;
+    padding-bottom: 25px;
   }
 }
 
