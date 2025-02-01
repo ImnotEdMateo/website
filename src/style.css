@@ -56,6 +56,10 @@ main a:hover {
   text-decoration: underline;
 }
 
+main ul { 
+  padding-left: 20px;
+}
+
 footer {
   margin-bottom: 10px;
 }
@@ -112,13 +116,14 @@ nav ul li a:hover {
 
 @media screen and (max-width: 720px) {
   body {
-    overflow: auto;
+    height: 100%;
     background-size: 200%;
   }
 
   .wrapper {
     margin: 0;
     height: 100%;
+    overflow: auto;
   }
 
   header {

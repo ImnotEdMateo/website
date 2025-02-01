@@ -1,5 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 const pageTitle = "EdMateo's Shitty Site";
 const pageDescription = "Este sitio es el refugio personal de un tal Mateo, donde comparte basura y sus vivencias.";
@@ -7,4 +11,45 @@ const pageDescription = "Este sitio es el refugio personal de un tal Mateo, dond
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
   <p>El futuro es incierto, pero siempre hay que imaginarse el peor escenario. Lo mas probable es que no pueda seguir manteniendo este sitio web. En 4 meses, tengo que pagar el dominio y efectivamente no tengo nada. Además, mi cuenta bancaria fue bloqueada. Si lees esto, tienes mi permiso de selfhostear este sitio web, el código fuente está en <a href="https://github.com/ImnotEdMateo/website">GitHub</a>.</p>
+
+  <marquee behavior="" direction="" style="margin: 20px 0;" scrollamount="10"> 
+    <b>
+      <a href="xmpp:chat@chat.edmateo.site?join">ÚNETE AL MUC DE XMPP</a>
+      <span>|</span>
+      <a href="http://usb.edmateo.site">SUBE TU MIERDA A MI USB</a>
+    </b>
+  </marquee>
+
+  <section>
+    <h2>Posts recientes</h2>
+    <ul>
+      {posts.slice(0, 4).map(post => (
+      <li>
+        <span>[{post.data.pubDate.toLocaleDateString('es-ES', {
+            day: 'numeric',
+            month: 'short',
+            year: 'numeric'
+          })}] - </span>
+          <a href={`/post/${post.slug}`}>
+            {post.data.title}
+          </a>
+      </li>
+      ))}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Actualizaciones</h2>
+    <ul>
+      <li>[11/12/2024] - He montado un servidor de XMPP!!! Registros abiertos por este dominio.</li>
+      <li>[02/06/2024] - Oficialmente, Google ya indexó mi sitio en su motor de búsqueda.</li>
+      <li>[04/05/2024] - El sitio se ha adaptado a pantallas pequeñas.</li>
+      <li>[01/05/2024] - Se ha reescrito todo el sitio a AstroJS.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Un Vídeo</h2>
+    <iframe allowfullscreen src="https://www.vidlii.com/embed?v=kAfv9Ww6w94&a=0" frameborder="0" width="640" height="360"></iframe>
+  </section>
 </BaseLayout>
