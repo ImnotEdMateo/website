@@ -1,0 +1,40 @@
+[
+  {
+    "id": "1",
+    "url": "http://edmateo.site",
+    "imageSrc": "/static/buttons/edmateo-site.webp",
+    "imageAlt": "edmateo.site 88x31",
+    "linkText": "edmateo.site",
+    "additionalText": "No hay mucha ciencia, estás aquí..."
+  },
+  {
+    "id": "2",
+    "url": "https://4get.edmateo.site",
+    "linkText": "Mi instancia de 4get",
+    "additionalText": "Metabuscador que no apesta, alojado en mi servidor y dominio"
+  },
+  {
+    "id": "3",
+    "url": "https://www.youtube.com/channel/UCqpoeinlFGDwa_b60qnLDWw",
+    "linkText": "Mi canal de Youtube",
+    "additionalText": "Por favor, vean mis vídeos."
+  },
+  {
+    "id": "4",
+    "url": "https://github.com/ImnotEdMateo",
+    "linkText": "Mi perfil de GitHub",
+    "additionalText": "Aquí guardo toda la basura que plasmo en código."
+  },
+  {
+    "id": "5",
+    "url": "https://status.edmateo.site",
+    "linkText": "edmateo.site status",
+    "additionalText": "Estado en vivo de toda la mierda que hosteo."
+  },
+  {
+    "id": "6",
+    "url": "http://usb.edmateo.site",
+    "linkText": "USB",
+    "additionalText": "Subidor de archivos creado por mí, no usa JavaScript y eso..."
+  }
+]
