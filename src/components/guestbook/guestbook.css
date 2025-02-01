@@ -71,13 +71,13 @@
   padding: 10px 15px;
   border: 1px solid #504945;
   background-color: #282828; 
-  color: var(--color-text);
+  color: #ebdbb2;
   font-size: 14px;
   line-height: 1.5;
 }
 
 .importantshit {
-  color: var(--color-text);
+  color: #ebdbb2;
 }
 
 .entry-header {

@@ -2,7 +2,7 @@
   {
     "id": "1",
     "url": "http://edmateo.site",
-    "imageSrc": "/buttons/edmateo-site.webp",
+    "imageSrc": "/static/buttons/edmateo-site.webp",
     "imageAlt": "edmateo.site 88x31",
     "linkText": "edmateo.site",
     "additionalText": "No hay mucha ciencia, estás aquí..."

@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/PostLayout.astro
 title: 'Desplegando un Sitio hecho con Astro usando Apache (como cavernícolas)'
-pubDate: 01-24-2025
-description: 'Guía paso a paso para desplegar un sitio web hecho con Astro en tu propio VPS usando Apache, con y sin SSR. Sin usar vercel, docker u otro shitware'
 author: 'EdMateo'
+description: 'Guía paso a paso para desplegar un sitio web hecho con Astro en tu propio VPS usando Apache, con y sin SSR. Sin usar vercel, docker u otro shitware'
+pubDate: 2025-01-24
 ---
 
 [Astro](https://astro.build) es un framework excelente para desarrollar sitios estáticos (Blogs de mierda), ya sea por su soporte a archivos de *markdown*, *server islands*, *server side rendering*, que todo se compile a *HTML* puro, etc.

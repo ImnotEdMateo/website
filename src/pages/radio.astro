@@ -1,0 +1,300 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pageTitle = "EdMateo's Radio";
+const pageDescription = "The most autistic music at EdMateo's Radio";
+---
+<style>
+  .radio-container {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding-bottom: 10px
+  }
+
+  .radio-player {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  pre {
+    margin: 0;
+  }
+
+  @media screen and (max-width: 720px) {
+    .radio-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    pre {
+      padding: 0;
+    }
+  }
+</style>
+
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
+<div class="radio-container">
+<pre>
+░░█▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+██▀▀▀██▀▀▀▀▀▀██▀▀▀██
+█▒▒▒▒▒█▒▀▀▀▀▒█▒▒▒▒▒█
+█▒▒▒▒▒█▒████▒█▒▒▒▒▒█
+██▄▄▄██▄▄▄▄▄▄██▄▄▄██
+</pre>
+<div class="radio-player">
+  <b><p id="radioSong">Espera...</p></b>
+  <audio controls>
+    <source src="https://radio.edmateo.site/stream" type="audio/mp3" />
+  </audio>
+</div>
+</div>
+<p><strong>EdMateo's Radio</strong> es un proyecto bien autista que he creado para compartir mis gustos musicales paupérrimos al Internet. Si te gusta la mierda, esto es lo que deberías escuchar en lugar del <a href="https://stallman.org/spotify.html"><strong>MALDITO</strong> Spotify.</a> La radio está abierta a todo el mundo, no debes pagar ni nada, la mantengo como a un hijo (ambos igual de inútiles).</p>
+<p>Si no quieres escuchar desde este sitio web, también puedes reproducir la música directamente desde cualquier reproductor multimedia que soporte transmisiones en linea. Solo pon la URL <a href="http://radio.edmateo.site/stream">radio.edmateo.site/stream</a> en tu reproductor, o en su defecto, abre el enlace directamente en tu navegador.</p>
+<h2 id="programación-estimada">Programación Estimada</h2>
+<p>La programación de la radio está dividida en <em>5 bloques</em> principales, organizados según la hora del día. Cada bloque cuenta con una playlist en aleatorio que refleja el ambiente adecuado para el momento específico de que habla el bloque. La zona horaria de la radio es <strong>UTC-5</strong>.</p>
+<details>
+<summary><b>Mañana (6:00 - 11:30)</b></summary>
+
+<ul>
+<li>6 30 - Métricas Frías</li>
+<li>Aurolito Corbalán - Cuarteto de Nos</li>
+<li>Autos Nuevos - Riki Musso</li>
+<li>Beef Rapp - MF DOOM</li>
+<li>Believe In Myself ver.1 - Sonic The Hedgehog: Passion &amp; Pride</li>
+<li>Lovely Day - Bill Withers</li>
+<li>All The Small Things - blink-182</li>
+<li>Three Little Birds - Bob Marley</li>
+<li>Chico Correcto - Cuarteto de Nos</li>
+<li>Daleko si rodjeni brate - Roki Vulović</li>
+<li>Deep Fried Frenz - MF DOOM</li>
+<li>9 To 5 - Dolly Parton</li>
+<li>El Fin del Mundo - Cuarteto de Nos</li>
+<li>El Pelo Jamón - Cuarteto de Nos</li>
+<li>Jingle Jange Jingle - Fallout New Vegas: Mojave Music Radio</li>
+<li>Fig Leaf Bi-Carbonate - MF DOOM</li>
+<li>Fillet-O-Rapper - MF DOOM</li>
+<li>Y Volar Y Volar - Frutos del País</li>
+<li>Good Morning - Kanye West</li>
+<li>Gumbo - MF DOOM</li>
+<li>Here Comes The Sun - The Beatles</li>
+<li>Hoe Cakes - MF DOOM</li>
+<li>Hoy Estoy Raro - Cuarteto de Nos</li>
+<li>(I Got Spurs That) Jingle, Jangle, Jingle - Kay Kyser</li>
+<li>Juan Bojorge Ocorbojon - Cuarteto de Nos</li>
+<li>Walking On Sunshine - Katrina &amp; The Waves</li>
+<li>Kon Queso - MF DOOM</li>
+<li>La Bufarracha - Riki Musso</li>
+<li>La Paranoica - Cuarteto de Nos</li>
+<li>LEASE - Takeshi Abo</li>
+<li>Let&#39;s Go Sunning - Jack Shaindlin</li>
+<li>Lovely Gate 3... for Egg Quarters - Sonic Adventure 2: Original Soundtrack</li>
+<li>Manhattan - Gerhard Trede</li>
+<li>Mister Sandman - The Chordettes</li>
+<li>Mr. Blue Sky - Electric Light Orchesta</li>
+<li>My Sweet Passion - Sonic The Hedgehog: Passion &amp; Pride</li>
+<li>Nadie Me Quiere - Cuarteto de Nos</li>
+<li>On the Sunny Side of the Street (Live) - Louis Armstrong</li>
+<li>Poo-Putt Platter - MF DOOM</li>
+<li>Resort Island (Can You Feel The Sunshine?) - Sonic R OST</li>
+<li>Nuestro Aporte - Riki Musso</li>
+<li>This Is How It Sounds - Skee-Lo</li>
+<li>All Star - Smash Mouth</li>
+<li>Wake Up Boo! - The Boo Radleys</li>
+<li>Peaches - The Presidents of the United States of America</li>
+<li>Buggin&#39; - Topaz Jones</li>
+<li>Rich - Topaz Jones</li>
+<li>Vampira - Cuarteto de Nos</li>
+<li>Island In The Sun - Weezer</li>
+<li>You Make My Dreams (Come True) - Daryl Hall &amp; John Oates</li>
+</ul>
+</details>
+
+<details>
+<summary><b>Tarde (11:30 - 17:30)</b></summary>
+
+<ul>
+<li>FATALITY - Moebiuz</li>
+<li>MIENTRAS TODO - Moebiuz</li>
+<li>6 Días de Asueto - Riki Musso</li>
+<li>AIN&#39;T NOTHIN&#39; LIKE A FUNKY BEAT - Hideki Naganuma</li>
+<li>PODCAST - Akapellah</li>
+<li>Mundo de lo Ajeno - Akapellah ft. Pirlo</li>
+<li>Sancocho en Leña - Alcolirykoz</li>
+<li>Believe In Myself ver.2 - Sonic The Hedgehog: Passion &amp; Pride</li>
+<li>Dando Saltos - Métricas Frías</li>
+<li>Garbage Truck - Sex Bob-Omb</li>
+<li>Guinnessez - MF DOOM</li>
+<li>His World - Crush 40</li>
+<li>Intro - Métricas Frias</li>
+<li>Flight Of Icarus - Iron Maiden</li>
+<li>It Doesn&#39;t Matter ver.2 - Sonic The Hedgehog: Passion &amp; Pride</li>
+<li>Don&#39;t Front - Joey Bada$$</li>
+<li>Hilary $Wank - Joey Bada$$</li>
+<li>My Jeep - Joey Bada$$</li>
+<li>Zipcodes - Joey Bada$$</li>
+<li>Kookies - MF DOOM</li>
+<li>La Casa del Sudaca - Riki Musso</li>
+<li>Hourglass - Lamb of God</li>
+<li>Omerta - Lamb of God</li>
+<li>N.Y. State of Mind - Nas</li>
+<li>Nobody - Skindred</li>
+<li>Phantom of the Opera (2015 Remaster) - Iron Maiden</li>
+<li>Potholderz - MF DOOM</li>
+<li>Rapp Snitch Knishes - MF DOOM</li>
+<li>Reactive Factory (Work It Out) - Sonic R OST</li>
+<li>Scott Pilgrim - Plumtree</li>
+<li>05 Free Zone - Serial Experiments: Lain Soundtrack</li>
+<li>Shoulder Of Your God (Bonus Track) - Lamb Of God</li>
+<li>The Burger Song - Skee-Lo</li>
+<li>Disasterpiece - Slipknot</li>
+<li>Eyeless - Slipknot</li>
+<li>I Am Hated - Slipknot</li>
+<li>People = Shit - Slipknot</li>
+<li>Surfacing - Slipknot</li>
+<li>The Heretic Athem - Slipknot</li>
+<li>Sneakman - Hideki Naganuma</li>
+<li>Sólo estoy sobreviviendo - Cuarteto de Nos</li>
+<li>Chop Suey! - System Of A Down</li>
+<li>Violent Pornography - System Of A Down</li>
+<li>The Genesis - Nas</li>
+<li>Threshold - Sex Bob-Omb</li>
+<li>Baba 70s - Topaz Jones</li>
+<li>Unknown from M.E. ver.1 - Sonic The Hedgehog: Passion &amp; Pride</li>
+<li>Unknown from M.E. ver.2 - Sonic The Hedgehog: Passion &amp; Pride</li>
+<li>We Are Sex Bob-Omb - Sex Bob-Omb</li>
+<li>Yendo a la Casa de Damián - Cuarteto de Nos</details></li>
+</ul>
+<details>
+<summary><b>Noche (17:30 - 00:00)</b></summary>
+
+<ul>
+<li>Ain&#39;t That A Kick In The Head (1997 Remastered) - Dean Martin</li>
+<li>All Blues - Miles Davis</li>
+<li>Gimme chocolate!! - BABYMETAL</li>
+<li>Black Sheep (Brie Larson Vocal Version) - Metric ft. Brie Larson</li>
+<li>Blue Moon (1999 Remastered) - Frank Sinatra</li>
+<li>Duvet - Bôa</li>
+<li>Cabra Negra - CABRA NEGRA</li>
+<li>Caravan - John Wasson</li>
+<li>Caravan - The Kilimanjaro Darkjazz Ensemble</li>
+<li>Copacabana (At the Copa) - Barry Manilow</li>
+<li>Cx4 Ac - Riki Musso</li>
+<li>El Karaoke de Mi Noviecita - Cuarteto de Nos</li>
+<li>Esta Cobardía - Chiquetete</li>
+<li>Why Don&#39;t You Do Right - Fallout New Vegas: Mysterious broadcast</li>
+<li>Hotel California (2013 Remaster) - Eagles</li>
+<li>Is It You - Crush 40</li>
+<li>Jazz Blues - Gerhard Trede</li>
+<li>Bachata en Fukuota (Live) - Juan Luis Guerra</li>
+<li>La Conga de 15 - Riki Musso</li>
+<li>La Prima - Cuarteto de Nos</li>
+<li>Una Nube Cuela Sobre Mí - Los Bunkers</li>
+<li>Malherido - Cuarteto De Nos</li>
+<li>Black Sheep - Metric</li>
+<li>My Way (2008 Remastered) - Frank Sinatra</li>
+<li>Bailando triste - Nicolás y Los Fumadores</li>
+<li>Number One - Sonic R OST</li>
+<li>Bajan - Pescado Rabioso</li>
+<li>Cementerio Club - Pescado Rabioso</li>
+<li>Las Habladurías del Mundo - Pescado Rabioso</li>
+<li>Princesa Azul - Cuarteto de Nos</li>
+<li>Radiant Emerald (Diamond In The Sky) - Sonic R OST</li>
+<li>Radical City (Living In The City) - Sonic R OST</li>
+<li>Ramona (Bonus Track) - Osymyso</li>
+<li>Aún estás en mis sueños - Rata Blanca</li>
+<li>La Leyenda del Hada y el Mago - Rata Blanca</li>
+<li>Mujer Amante - Rata Blanca</li>
+<li>Regal Ruin (Back In Time) - Sonic R OST</li>
+<li>Ricardo de todos los santos - Riki Musso</li>
+<li>01 Lain&#39;s Theme - Serial Experiments: Lain Soundtrack</li>
+<li>06 Working Man&#39;s Theme - Serial Experiments: Lain Soundtrack</li>
+<li>07 Like a Lizard - Serial Experiments: Lain Soundtrack</li>
+<li>09 Hilly Road Theme - Serial Experiments: Lain Soundtrack</li>
+<li>Diluted - Slipknot</li>
+<li>Duality - Slipknot</li>
+<li>The Devil In I - Slipknot</li>
+<li>El Rito - Soda Stereo</li>
+<li>Somos muchos más que vos - Cuarteto de Nos</li>
+<li>Srpska garda - Roki Vulović</li>
+<li>Tooi Sakebi - Reichi Nakaido</li>
+<li>Ve con él - Cuarteto de Nos</li>
+<li>Ven Aquí - Los Bunkers</li>
+<li>Venta de Garage - Riki Musso</li>
+<li>Vida de Perros - Los Bunkers</li>
+<li>Zitarrosa en el cielo - Cuarteto de Nos</li>
+<li>Stay With Me - Miki Matsubara</details></li>
+</ul>
+<details>
+<summary><b>Madrugada (00:00 - 6:00)</b></summary>
+<ul>
+<li>An Ending - Toby Fox</li>
+<li>Bergentrückung - Toby Fox</li>
+<li>Mice On Venus [Alpha 1.0.14] - C418</li>
+<li>Confession - Toby Fox</li>
+<li>Dont&#39;t Forget - Laura Shigihara</li>
+<li>Etude - Joep Beving</li>
+<li>Good Night - Toby Fox</li>
+<li>His Theme - Toby Fox</li>
+<li>Home - Toby Fox</li>
+<li>Home (Music Box) - Toby Fox</li>
+<li>La fee verte - Joep Beving</li>
+<li>Memory - Toby Fox</li>
+<li>Midwayer - Joep Beving</li>
+<li>「◆N20 江戸の子守唄 小鳩くるみ」 - Edo Lullaby</li>
+<li>Children of the Ruins - OneShot OST</li>
+<li>Distant - OneShot OST</li>
+<li>Distant water - OneShot OST</li>
+<li>Geothermal - OneShot OST</li>
+<li>Library Nap - OneShot OST</li>
+<li>Library Nap - OneShot OST</li>
+<li>My Burden Is Light - OneShot OST</li>
+<li>Niko and the World Machine - OneShot OST</li>
+<li>Sonder - OneShot OST</li>
+<li>Thanks for Everything - OneShot OST</li>
+<li>To Dream - OneShot OST</li>
+<li>To Sleep - OneShot OST</li>
+<li>Ghost in the Machine - OneShot</li>
+<li>Happily Ever After - OneShot</li>
+<li>Prelude - OneShot</li>
+<li>Solstice - OneShot</li>
+<li>Vestige - OneShot</li>
+<li>Paris s&#39;enflamme - Joep Beving</li>
+<li>PotatOS Lament - Portal 2 OST</li>
+<li>Space Phase - Portal 2 OST</li>
+<li>Quiet Water - Toby Fox</li>
+<li>Reflection #2 - Joep Beving</li>
+<li>Main Music Theme - Serial Experiments</li>
+<li>Serial Experiments - amaranth_todd</li>
+<li>08 Ballad of Albatross - Serial Experiments: Lain Soundtrack</li>
+<li>14 Family Portait - Serial Experiments: Lain Soundtrack</li>
+<li>She&#39;s Playing Piano - Toby Fox</li>
+<li>Snowy - Toby Fox</details></li>
+</ul>
+<p><strong>C U R S E D (3:00 - 4:00)</strong></p>
+<p>Aquí es un poco diferente... <strong>Ustedes</strong> tendrán que descubrir por su propia cuenta qué canción está sonando. Si saben de que canción se trata, <a href="/about/#contacto">Ya saben donde decírmelo</a>. Las canciones encontradas se pondrán acá, mucha suerte. :)</p>
+<blockquote>
+<p><strong>Dato curioso:</strong> Cada hora sonará el jingle de &quot;EdMateo&#39;s Radio&quot; (incluso si suena una canción). No sé, me gustó dejarlo para orientarme y saber que hora es xd</p>
+</blockquote>
+<script>
+  const fetchRadioSong = async () => {
+    try {
+      const response = await fetch('https://radio.edmateo.site/status-json.xsl');
+      const { icestats: { source } } = await response.json();
+      const sources = Array.isArray(source) ? source : [source];
+      const { title = '' } = sources.find(({ listenurl }) => listenurl.includes('/stream')) || {};
+      const [artist, song] = title.split(' - ');
+      const formattedSong = song && artist ? `${song} - ${artist}` : title || 'Nada';
+
+      document.getElementById('radioSong').textContent = `Sonando: ${formattedSong}`;
+    } catch (error) {
+      console.error('Error fetching radio song:', error);
+      document.getElementById('radioSong').textContent = 'Error fetching song information';
+    }
+  };
+
+  fetchRadioSong();
+  setInterval(fetchRadioSong, 10000);
+</script>
+</BaseLayout>
