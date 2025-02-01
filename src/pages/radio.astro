@@ -19,7 +19,11 @@ const pageDescription = "The most autistic music at EdMateo's Radio";
   }
 
   pre {
+    line-height: 1;
+    font-family: monospace; 
+    white-space: pre;
     margin: 0;
+    padding: 0;
   }
 
   @media screen and (max-width: 720px) {
@@ -27,9 +31,12 @@ const pageDescription = "The most autistic music at EdMateo's Radio";
       flex-direction: column;
       align-items: center;
     }
+    
+    #radioSong {
+      text-align: center;
+    }
 
     pre {
-      padding: 0;
     }
   }
 </style>
@@ -44,10 +51,10 @@ const pageDescription = "The most autistic music at EdMateo's Radio";
 ██▄▄▄██▄▄▄▄▄▄██▄▄▄██
 </pre>
 <div class="radio-player">
-  <b><p id="radioSong">Espera...</p></b>
-  <audio controls>
-    <source src="https://radio.edmateo.site/stream" type="audio/mp3" />
-  </audio>
+<b><p id="radioSong">Espera...</p></b>
+<audio controls>
+<source src="https://radio.edmateo.site/stream" type="audio/mp3" />
+</audio>
 </div>
 </div>
 <p><strong>EdMateo's Radio</strong> es un proyecto bien autista que he creado para compartir mis gustos musicales paupérrimos al Internet. Si te gusta la mierda, esto es lo que deberías escuchar en lugar del <a href="https://stallman.org/spotify.html"><strong>MALDITO</strong> Spotify.</a> La radio está abierta a todo el mundo, no debes pagar ni nada, la mantengo como a un hijo (ambos igual de inútiles).</p>

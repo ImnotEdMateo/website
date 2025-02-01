@@ -17,6 +17,11 @@ body {
   height: 98%;
 }
 
+::selection {
+  background-color: #655c54;
+  color: #e6d6ae;
+}
+
 main {
   font-family: Hack;
   overflow: auto;
@@ -101,6 +106,65 @@ nav ul li a:hover {
 
 @media screen and (max-width: 992px) {
   main {
-    padding: 5px 20px 50px 8px;
+    padding: 5px 20px 50px 10px;
   } 
 }
+
+@media screen and (max-width: 720px) {
+  body {
+    overflow: auto;
+    background-size: 200%;
+  }
+
+  .wrapper {
+    margin: 0;
+    height: 100%;
+  }
+
+  header {
+    font-size: 100px;
+  }
+
+  nav li {
+    font-size: 22px;
+  }
+
+  main {
+    overflow: visible;
+    margin: 0;
+    padding: 10px 8px;
+    font-size: 11pt;
+  }
+
+  nav ul {
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Hack;
+  }
+
+  nav ul li {
+    margin: 0 10px;
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+
+  nav ul li span {
+    text-decoration: none;
+    color: #928374;
+  }
+
+  nav ul li a,
+  nav ul li a:visited {
+    text-decoration: none;
+    color: #ebdbb2;
+  }
+
+
+  nav ul li a:hover {
+    color: #fabd2f;
+  }
+
+}
+
