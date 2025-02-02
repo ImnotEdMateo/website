@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import List from "../components/musicList.astro"
 
 const pageTitle = "EdMateo's Radio";
 const pageDescription = "The most autistic music at EdMateo's Radio";
@@ -23,7 +24,7 @@ const pageDescription = "The most autistic music at EdMateo's Radio";
     margin: 0;
     padding: 0;
     line-height: 1;
-    font-size: 20px; /* Ajusta según necesites */
+    font-size: 15pt; /* Ajusta según necesites */
     white-space: pre; 
   }
 
@@ -62,6 +63,10 @@ const pageDescription = "The most autistic music at EdMateo's Radio";
 <p>Si no quieres escuchar desde este sitio web, también puedes reproducir la música directamente desde cualquier reproductor multimedia que soporte transmisiones en linea. Solo pon la URL <a href="http://radio.edmateo.site/stream">radio.edmateo.site/stream</a> en tu reproductor, o en su defecto, abre el enlace directamente en tu navegador.</p>
 <h2 id="programación-estimada">Programación Estimada</h2>
 <p>La programación de la radio está dividida en <em>5 bloques</em> principales, organizados según la hora del día. Cada bloque cuenta con una playlist en aleatorio que refleja el ambiente adecuado para el momento específico de que habla el bloque. La zona horaria de la radio es <strong>UTC-5</strong>.</p>
+<details><summary><b>Manana</b></summary>
+  <List data="morning" />
+</details>
+
 <details>
 <summary><b>Mañana (6:00 - 11:30)</b></summary>
 
