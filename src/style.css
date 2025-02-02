@@ -46,6 +46,7 @@ iframe {
 main a,
 main a:visited {
   color: #83a598;
+  word-wrap: break-word;
   text-decoration: none;
 }
 
@@ -137,6 +138,7 @@ nav ul li a:hover {
 
   main {
     overflow: visible;
+    height: auto;
     margin: 0;
     padding: 10px 8px;
     font-size: 11pt;
@@ -157,7 +159,7 @@ nav ul li a:hover {
   }
 
   footer {
-    padding-bottom: 50px;
+    padding: 50px 0;
   }
 }
 
