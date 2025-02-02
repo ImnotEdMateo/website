@@ -1,11 +1,7 @@
-html,
 body {
-  height: 100vh;
-  margin: 0;
-  overflow-y: hidden;
-}
-
-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #322f2e url('/static/wallpaper.png') no-repeat center;
   background-size: 100%;
 }
@@ -13,8 +9,11 @@ body {
 .wrapper {
   display: flex;
   flex-flow: column;
-  margin: 10px;
-  height: 98%;
+  gap: 10px;
+  margin: 0 10px;
+  height: 97vh;
+  width: 100%;
+  overflow-y: hidden;
 }
 
 ::selection {
@@ -26,8 +25,7 @@ main {
   font-family: Hack;
   overflow: auto;
   color: #ebdbb2;
-  padding: 10px 5% 0 35px;
-  margin: 10px 0;
+  padding: 10px 5% 10px 35px;
   background: #1d2021;
   flex: 1 1 auto;
   opacity: 0.95;
@@ -66,7 +64,7 @@ main ul {
 }
 
 footer {
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 footer img {
@@ -122,10 +120,12 @@ nav ul li a:hover {
 @media screen and (max-width: 720px) {
   body {
     height: 100%;
+    margin: 0;
     background-size: 200%;
   }
 
   .wrapper {
+    gap: 0;
     margin: 0;
     height: 100%;
     overflow: auto;
