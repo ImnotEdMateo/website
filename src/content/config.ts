@@ -20,8 +20,17 @@ const coolSites = defineWebringCollections("cool-sites");
 const usefulInfo = defineWebringCollections("useful-info");
 const darknetSites = defineWebringCollections("darknet-sites");
 
+const defineMusicCollections = (path: string) => defineCollection({
+  loader: file(`src/content/radio-lists/${path}.json`),
+});
+
+const morning = defineMusicCollections("morning");
+const afternoon = defineMusicCollections("afternoon");
+const night = defineMusicCollections("night");
+const lateNight = defineMusicCollections("lateNight");
 
 export const collections = {
   blog: blogCollection,
-  owns, friends, coolSites, usefulInfo, darknetSites
+  owns, friends, coolSites, usefulInfo, darknetSites,
+  morning, afternoon, night, lateNight
 };
