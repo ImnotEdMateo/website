@@ -2,7 +2,7 @@
 title: 'Desplegando un Sitio hecho con Astro usando Apache (como cavernícolas)'
 author: 'EdMateo'
 description: 'Guía paso a paso para desplegar un sitio web hecho con Astro en tu propio VPS usando Apache, con y sin SSR. Sin usar vercel, docker u otro shitware'
-pubDate: 2025-01-24
+pubDate: 2025-01-24T19:00:00-05:00
 ---
 
 [Astro](https://astro.build) es un framework excelente para desarrollar sitios estáticos (Blogs de mierda), ya sea por su soporte a archivos de *markdown*, *server islands*, *server side rendering*, que todo se compile a *HTML* puro, etc.
