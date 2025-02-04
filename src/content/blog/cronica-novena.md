@@ -2,7 +2,7 @@
 title: 'Crónica de una novena: Un hpta hambreado y una natilla'
 author: 'EdMateo'
 description: 'Una crónica sobre mi experiencia en una novena de mi conjunto residencial buscando una natilla. Un relato horrible que no debería leer nadie.'
-pubDate: 2024-12-16
+pubDate: 2024-12-16T19:00:00-05:00
 ---
 
 Desde hace aproximadamente una semana, en el conjunto residencial dónde estoy viviendo actualmente, se manifestó la presencia de un artefacto (aparentemente antiguo), que llevaba un mensaje consigo; un mensaje capaz de alertar a la población de mi conjunto... **UNA PROFECÍA**. Exactamente, me refiero a un pliego de cartulina pegado en la ventana de la portería, que, anunciaba con un Sharpie negro y una letra de tamaño irregular el inicio de las novenas en el conjunto.
