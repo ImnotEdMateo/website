@@ -3,7 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   background: #322f2e url('/static/wallpaper.png') no-repeat center;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .wrapper {
@@ -122,7 +122,6 @@ nav ul li a:hover {
   body {
     height: 100%;
     margin: 0;
-    background-size: 200%;
   }
 
   .wrapper {
