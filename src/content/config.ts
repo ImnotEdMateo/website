@@ -24,6 +24,7 @@ const defineMusicCollections = (path: string) => defineCollection({
   loader: file(`src/content/radio-lists/${path}.json`),
 });
 
+const sunrise = defineMusicCollections("sunrise");
 const morning = defineMusicCollections("morning");
 const afternoon = defineMusicCollections("afternoon");
 const night = defineMusicCollections("night");
@@ -32,5 +33,5 @@ const lateNight = defineMusicCollections("lateNight");
 export const collections = {
   blog: blogCollection,
   owns, friends, coolSites, usefulInfo, darknetSites,
-  morning, afternoon, night, lateNight
+  sunrise, morning, afternoon, night, lateNight
 };
