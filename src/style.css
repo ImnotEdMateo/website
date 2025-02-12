@@ -143,6 +143,10 @@ nav ul li a:hover {
     font-size: 11pt;
   }
 
+  main img {
+    max-width: 100%;
+  }
+
   nav ul {
     padding-top: 25px;
     display: flex;
