@@ -22,18 +22,18 @@ body {
 }
 
 main {
-  font-family: Fira Code VF;
+  font-family: IBM Plex Mono;
   overflow: auto;
   color: #ebdbb2;
   padding: 10px 5% 10px 35px;
   background: #1d2021;
   flex: 1 1 auto;
   opacity: 0.95;
-  font-size: 12pt;
+  font-size: 11pt;
 }
 
 main img {
-  max-width: 100%;
+  max-width: 450px;
   height: auto;
 }
 
@@ -50,7 +50,7 @@ main a:visited {
   text-decoration: none;
 }
 
-main li {
+main li, main summary {
   margin-bottom: 10px;
 }
 

@@ -31,5 +31,11 @@
     "url": "https://www.sci-hub.st/",
     "linkText": "Sci-Hub",
     "additionalText": "Es un \"centro de ciencias\" que provee acceso gratis y sin restricción a millones de documentos científicos. ¿Es piratería? Quiza..."
+  },
+  {
+    "id": "8",
+    "url": "http://www.corporabida.8m.net/index.htm",
+    "linkText": "Corporación Instituto la Rábida",
+    "additionalText": "Antiguo sitio web de un colegio en Bogotá, Colombia, que fue abandonado y cuya estructura hoy está en ruinas. Sorprendentemente, este sitio sigue activo, aunque no ha sido actualizado desde 2009."
   }
 ]
