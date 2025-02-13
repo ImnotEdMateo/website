@@ -25,6 +25,14 @@
   },
   {
     "id": "4",
+    "url": "https://eldeadkennedy.neocities.org/",
+    "imageSrc": "/static/buttons/deadkennedy.gif",
+    "imageAlt": "DeadKennedy",
+    "linkText": "La Virgocueva de DeadKennedy",
+    "additionalText": "El YouTuber chistoso con un trapo sucio en la cabeza."
+  },
+  {
+    "id": "5",
     "url": "https://lukesmith.xyz/",
     "imageSrc": "/static/buttons/lukesmith.gif",
     "imageAlt": "Luke Smith",
@@ -32,7 +40,7 @@
     "additionalText": "Si no sabes quien es Luke Smith, no eres bienvenido aquí."
   },
   {
-    "id": "5",
+    "id": "6",
     "url": "https://nadeko.net/",
     "imageSrc": "/static/buttons/nadekodotnet.png",
     "imageAlt": "nadeko.net 88x31",
@@ -40,7 +48,7 @@
     "additionalText": "Fijxu (webmaster de nadeko.net) se dedica al self-hosting de varios servicios enfocados a la privacidad abiertos a todo el mundo."
   },
   {
-    "id": "6",
+    "id": "7",
     "url": "https://suragu.net/",
     "imageSrc": "/static/buttons/sugaru.png",
     "imageAlt": "SURAGU",
@@ -48,7 +56,7 @@
     "additionalText": "Un random que postea cosas sobre su decadencia."
   },
   {
-    "id": "7",
+    "id": "8",
     "url": "https://www.tailsgetstrolled.org/",
     "imageSrc": "/static/buttons/tgt.gif",
     "imageAlt": "tails, wake up",
@@ -56,7 +64,7 @@
     "additionalText": "Una obra magna, cuyo valor es apreciado por unos pocos. desde que leí Tails Gets Trolled, soy más feliz conmigo mismo."
   },
   {
-    "id": "8",
+    "id": "9",
     "url": "https://fauux.neocities.org/",
     "imageSrc": "/static/buttons/fauux-btn.gif",
     "imageAlt": "WSfWP 88x31",
@@ -64,13 +72,13 @@
     "additionalText": "¿Te gusta Lain? Pues disfruta de las melodías que tiene este sitio para ofrecer."
   },
   {
-    "id": "9",
+    "id": "10",
     "url": "https://her.st",
     "linkText": "her.st",
     "additionalText": "Blog muy interesante acerca de minimalismo digital, selfhosting y eso..."
   },
   {
-    "id": "10",
+    "id": "11",
     "url": "https://sergio-m.neocities.org/",
     "linkText": "sergio-m.neocities.org",
     "additionalText": "Hincha de Millos promedio."
