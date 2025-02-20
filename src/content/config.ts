@@ -21,7 +21,7 @@ const usefulInfo = defineWebringCollections("useful-info");
 const darknetSites = defineWebringCollections("darknet-sites");
 
 const defineMusicCollections = (path: string) => defineCollection({
-  loader: file(`src/content/radio-lists/${path}.json`),
+  loader: file(`src/content/radio-lists/${path}.csv`),
 });
 
 const sunrise = defineMusicCollections("sunrise");
