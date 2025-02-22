@@ -36,10 +36,10 @@ const items = await getCollection(data);
   {items.length > 0 && items.map((item) => (
     <li key={item.data.url}>
       <a href={item.data.url}>
-        {item.data.imageSrc && <img src={item.data.imageSrc} alt={item.data.imageAlt} />}
+        {item.data.img && <img src={item.data.img} alt={`88x31 de ${item.data.name}`} />}
       </a>
-      <a href={item.data.url}>{item.data.linkText}</a>
-      <span>{item.data.additionalText}</span>
+      <a href={item.data.url}>{item.data.name}</a>
+      <span>{item.data.desc}</span>
     </li>
   ))}
 </ul>

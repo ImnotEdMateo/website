@@ -2,85 +2,83 @@
   {
     "id": "1",
     "url": "https://texto-plano.xyz/~pomelo/",
-    "imageSrc": "/static/buttons/desdeunsotano.gif",
-    "imageAlt": "desde un sotano...",
-    "linkText": "Desde un Sótano en un Cerro",
-    "additionalText": "Sitio de un random que le escuché una canción y me gustó."
+    "img": "/static/buttons/desdeunsotano.gif",
+    "name": "Desde un Sótano en un Cerro",
+    "desc": "Sitio de un random que le escuché una canción y me gustó."
   },
   {
     "id": "2",
     "url": "https://digdeeper.neocities.org/",
-    "imageSrc": "/static/buttons/digdeeperbutton.png",
-    "imageAlt": "DigDeeper 88x31",
-    "linkText": "DigDeeper",
-    "additionalText": "Este sitio tiene un montón de artículos relacionados con la seguridad y privacidad digital."
+    "img": "/static/buttons/digdeeperbutton.png",
+    "name": "DigDeeper",
+    "desc": "Este sitio tiene un montón de artículos relacionados con la seguridad y privacidad digital."
   },
   {
     "id": "3",
     "url": "https://getgle.org",
-    "imageSrc": "/static/buttons/getgle.gif",
-    "imageAlt": "getgle's 88x31",
-    "linkText": "Getgle",
-    "additionalText": "Una cloaca de degenerados adictos al Futanari y fanáticos de Jeffrey Epstein. (Solo quiero ser uno de ellos, quiero sentarme con ellos...)"
+    "img": "/static/buttons/getgle.gif",
+    "name": "Getgle",
+    "desc": "Una cloaca de degenerados adictos al Futanari y fanáticos de Jeffrey Epstein. (Solo quiero ser uno de ellos, quiero sentarme con ellos...)"
   },
   {
     "id": "4",
     "url": "https://eldeadkennedy.neocities.org/",
-    "imageSrc": "/static/buttons/deadkennedy.gif",
-    "imageAlt": "DeadKennedy",
-    "linkText": "La Virgocueva de DeadKennedy",
-    "additionalText": "El YouTuber chistoso con un trapo sucio en la cabeza."
+    "img": "/static/buttons/deadkennedy.gif",
+    "name": "La Virgocueva de DeadKennedy",
+    "desc": "El YouTuber chistoso con un trapo sucio en la cabeza."
   },
   {
     "id": "5",
     "url": "https://lukesmith.xyz/",
-    "imageSrc": "/static/buttons/lukesmith.gif",
-    "imageAlt": "Luke Smith",
-    "linkText": "Luke Smith's Webpage",
-    "additionalText": "Si no sabes quien es Luke Smith, no eres bienvenido aquí."
+    "img": "/static/buttons/lukesmith.gif",
+    "name": "Luke Smith's Webpage",
+    "desc": "Si no sabes quien es Luke Smith, no eres bienvenido aquí."
   },
   {
     "id": "6",
     "url": "https://nadeko.net/",
-    "imageSrc": "/static/buttons/nadekodotnet.png",
-    "imageAlt": "nadeko.net 88x31",
-    "linkText": "nadeko.net",
-    "additionalText": "Fijxu (webmaster de nadeko.net) se dedica al self-hosting de varios servicios enfocados a la privacidad abiertos a todo el mundo."
+    "img": "/static/buttons/nadekodotnet.png",
+    "name": "nadeko.net",
+    "desc": "Fijxu (webmaster de nadeko.net) se dedica al self-hosting de varios servicios enfocados a la privacidad abiertos a todo el mundo."
   },
   {
     "id": "7",
-    "url": "https://suragu.net/",
-    "imageSrc": "/static/buttons/sugaru.png",
-    "imageAlt": "SURAGU",
-    "linkText": "SURAGU",
-    "additionalText": "Un random que postea cosas sobre su decadencia."
+    "url": "https://pinchimundo.neocities.org",
+    "img": "/static/buttons/pinchimundo.png",
+    "name": "PINCHIMUNDO",
+    "desc": "Artista español obsesionado con Agatha Knife."
   },
   {
     "id": "8",
-    "url": "https://www.tailsgetstrolled.org/",
-    "imageSrc": "/static/buttons/tgt.gif",
-    "imageAlt": "tails, wake up",
-    "linkText": "Tails Gets Trolled",
-    "additionalText": "Una obra magna, cuyo valor es apreciado por unos pocos. desde que leí Tails Gets Trolled, soy más feliz conmigo mismo."
+    "url": "https://suragu.net/",
+    "img": "/static/buttons/sugaru.png",
+    "name": "SURAGU",
+    "desc": "Un random que postea cosas sobre su decadencia."
   },
   {
     "id": "9",
-    "url": "https://fauux.neocities.org/",
-    "imageSrc": "/static/buttons/fauux-btn.gif",
-    "imageAlt": "WSfWP 88x31",
-    "linkText": "Wired Sounds for Wired People",
-    "additionalText": "¿Te gusta Lain? Pues disfruta de las melodías que tiene este sitio para ofrecer."
+    "url": "https://www.tailsgetstrolled.org/",
+    "img": "/static/buttons/tgt.gif",
+    "name": "Tails Gets Trolled",
+    "desc": "Una obra magna, cuyo valor es apreciado por unos pocos. desde que leí Tails Gets Trolled, soy más feliz conmigo mismo."
   },
   {
     "id": "10",
-    "url": "https://her.st",
-    "linkText": "her.st",
-    "additionalText": "Blog muy interesante acerca de minimalismo digital, selfhosting y eso..."
+    "url": "https://fauux.neocities.org/",
+    "img": "/static/buttons/fauux-btn.gif",
+    "name": "Wired Sounds for Wired People",
+    "desc": "¿Te gusta Lain? Pues disfruta de las melodías que tiene este sitio para ofrecer."
   },
   {
     "id": "11",
+    "url": "https://her.st",
+    "name": "her.st",
+    "desc": "Blog muy interesante acerca de minimalismo digital, selfhosting y eso..."
+  },
+  {
+    "id": "12",
     "url": "https://sergio-m.neocities.org/",
-    "linkText": "sergio-m.neocities.org",
-    "additionalText": "Hincha de Millos promedio."
+    "name": "sergio-m.neocities.org",
+    "desc": "Hincha de Millos promedio."
   }
 ]

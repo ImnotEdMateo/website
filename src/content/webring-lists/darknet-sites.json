@@ -2,13 +2,13 @@
   {
     "id": "1",
     "url": "http://sidripyo57kem4tcpslb7pxglsesmyzkczj7bfmnxv7kg4z5wuemxfqd.onion/",
-    "linkText": "SIDRIP Alliance",
-    "additionalText": "Una banda bien chistosa de metal que encontré en un repertorio de enlaces."
+    "name": "SIDRIP Alliance",
+    "desc": "Una banda bien chistosa de metal que encontré en un repertorio de enlaces."
   },
   {
     "id": "2",
     "url": "http://2lslksxlkcaqlgghidttuxd65sbzd7vx5qjpniutsp2yqqqmo2nvoqyd.onion/",
-    "linkText": "Stella's Site",
-    "additionalText": "Posiblemente esté inactivo cuando lo visites, no es raro, la actividad en linea de esta persona está ligada con su sitio, si su PC se apaga, el sitio se cae... simplemente poético."
+    "name": "Stella's Site",
+    "desc": "Posiblemente esté inactivo cuando lo visites, no es raro, la actividad en linea de esta persona está ligada con su sitio, si su PC se apaga, el sitio se cae... simplemente poético."
   }
 ]
