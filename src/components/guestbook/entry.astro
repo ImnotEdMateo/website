@@ -45,7 +45,7 @@ export const prerender = false
             <a href={`/guestbook/#entry-${entry.ID}`} class="post-number">No.{entry.ID}</a>
           </div>
         </div>
-        <div class="entry-content">{entry.Message}</div>
+        <div class="entry-content"><span style={{ whiteSpace: "pre-line" }}>{entry.Message}</span></div>
       </div>
     );
   })}
