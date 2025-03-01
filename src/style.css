@@ -21,15 +21,37 @@ body {
   color: #e6d6ae;
 }
 
-main {
-  font-family: IBM Plex Mono;
+.content-wrapper {
+  display: flex;
   overflow: auto;
-  color: #ebdbb2;
-  padding: 10px 5% 10px 35px;
   background: #1d2021;
   flex: 1 1 auto;
   opacity: 0.95;
+}
+
+main {
+  flex: 0 0 65%;
+  padding: 10px 20px;
+  font-family: IBM Plex Mono;
+  color: #ebdbb2;
   font-size: 11pt;
+}
+
+.monachina {
+  flex: 0 0 1;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  pointer-events: none !important;
+}
+
+.monachina img {
+  opacity: 0.08;
+  display: block;
+  width: 80%;
+  height: auto;
 }
 
 main img {
@@ -112,9 +134,29 @@ nav ul li a:hover {
 }
 
 @media screen and (max-width: 992px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .monachina {
+    width: auto;
+  }
+  
+  .monachina img {
+    width: 20%;
+  }
+
   main {
-    padding: 5px 20px 50px 10px;
-  } 
+    width: auto;
+    flex: 1;
+    align-content: center;
+    margin: 20px;
+    margin-top: 0;
+  }
+
+  main h1 {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 720px) {
@@ -134,16 +176,28 @@ nav ul li a:hover {
     font-size: 22px;
   }
 
-  main {
+  .content-wrapper {
     overflow: visible;
     height: auto;
     margin: 0;
-    padding: 10px 8px;
     font-size: 11pt;
+  }
+
+  main {
+    margin: 0;
+    padding: 10px 8px;
+  }
+
+  main h1 {
+    text-align: left;
   }
 
   main img {
     max-width: 100%;
+  }
+  
+  .monachina img {
+    width: 50%;
   }
 
   nav ul {
@@ -151,7 +205,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-family: Hack;
+    font-family: IBM Plex Mono;
   }
 
   nav ul li {

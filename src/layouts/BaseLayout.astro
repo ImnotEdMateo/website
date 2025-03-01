@@ -24,10 +24,15 @@ const {pageTitle, pageDescription} = Astro.props;
 	<body>
     <div class="wrapper">
       <Navbar /> 
-      <main>
-        <h1>{pageTitle}</h1>
-        <slot />
-      </main>
+      <div class="content-wrapper">
+        <main>
+          <h1>{pageTitle}</h1>
+          <slot />
+        </main>
+        <aside class="monachina">
+          <img src="/static/niko.jpg" aria-hidden="true">
+        </aside>
+      </div>
       <Footer />
     </div>
 	</body>
