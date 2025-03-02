@@ -17,13 +17,19 @@ function formatDate(isoDate) {
 }
 
 function normalizeUrl(url) {
-  if (!url.startsWith("http://") && !url.startsWith("https://")) {
+  if (!/^https?:\/\//i.test(url)) {
     return `http://${url}`;
   }
   return url;
-  }
+}
 
-export const prerender = false
+function parseMessage(message) {
+  return message.replace(/>>(\d+)/g, (match, id) => {
+    return `<a href="/guestbook/#entry-${id}">${match}</a>`;
+  });
+}
+
+export const prerender = false;
 ---
 
 <div>
@@ -37,16 +43,49 @@ export const prerender = false
               <span class="importantshit">{entry.Name}</span>
             </strong>
             {entry.Website ? (
-              <>{" desde "}<a href={normalizeUrl(entry.Website)} target="_blank" rel="noopener noreferrer">{entry.Website}</a></>
+              <>
+                {" desde "}
+                <a
+                  href={normalizeUrl(entry.Website)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {entry.Website}
+                </a>
+              </>
             ) : null}
           </div>
           <div class="datekajid">
-            <span class="date">escrito el <strong><span class="importantshit">{formattedDate}</span></strong> a las <strong><span class="importantshit">{formattedTime}</span></strong></span>
-            <a href={`/guestbook/#entry-${entry.ID}`} class="post-number">No.{entry.ID}</a>
+            <span class="date">
+              escrito el{" "}
+              <strong>
+                <span class="importantshit">{formattedDate}</span>
+              </strong>{" "}
+              a las{" "}
+              <strong>
+                <span class="importantshit">{formattedTime}</span>
+              </strong>
+            </span>
+            {/* Aquí se cambia el enlace para que inserte el texto en el formulario */}
+            <a href={`javascript:quote(${entry.ID})`} class="post-number reply-link">
+              No.{entry.ID}
+            </a>
           </div>
         </div>
-        <div class="entry-content"><span style={{ whiteSpace: "pre-line" }}>{entry.Message}</span></div>
+        <div class="entry-content">
+          <span style="white-space: pre-line" set:html={parseMessage(entry.Message)}></span>
+        </div>
       </div>
     );
   })}
 </div>
+
+<script>
+  window.quote = function(id) {
+    const messageField = document.querySelector('#guestbook-form textarea[name="message"]');
+    if (messageField) {
+      messageField.value += `>>${id}\n`;
+      messageField.focus();
+    }
+  }
+</script>
