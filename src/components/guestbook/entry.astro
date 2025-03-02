@@ -11,7 +11,7 @@ const formatDate = iso => {
 };
 
 const normalizeUrl = url => /^https?:\/\//i.test(url) ? url : `http://${url}`;
-const parseMessage = msg => msg.replace(/>>(\d+)/g, (m, id) => `<a href="/guestbook/#entry-${id}">${m}</a>`);
+const parseMessage = msg => msg.replace(/>>(\d+)/g, (m, id) => `<a href="/guestbook#entry-${id}">${m}</a>`);
 
 export const prerender = false;
 ---
