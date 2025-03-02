@@ -4,6 +4,7 @@ body {
   align-items: center;
   background: #322f2e url('/static/wallpaper.png') no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .wrapper {
