@@ -78,7 +78,7 @@ Verán, el día de hoy, tenía ganas de llenar la sección de [Archivos Público
 
 Le mandé un mail (un poquito confianzudo, lo admito) a la par que le mandé solicitud en discord... No sé si el hpta tenía un caldo de lentejas en el qlo, pero me respondió con 2 piedras en la mano.
 
-[![Screenshot del mail y la respuesta](https://files.edmateo.site/gem/Pozzard.png)](https://files.edmateo.site/gem/Pozzard.png)
+[![Screenshot del mail y la respuesta](https://files.edmateo.site/Gem/Pozzard.png)](https://files.edmateo.site/Gem/Pozzard.png)
 
 En fin... Obviamente no me trago ese cuento, mi ISP es una mierda y me tiene bloqueados todos los puertos, además, cualquier cacorro puede ver con django que IP interactúa con la API, en fin... **UN PELMAZO** ese hpta kajkjakajk.
 
