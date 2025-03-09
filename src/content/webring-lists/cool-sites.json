@@ -8,74 +8,81 @@
   },
   {
     "id": "2",
+    "url": "https://www.cozynet.org/",
+    "img": "/static/buttons/cozynet.gif",
+    "name": "CozyNet",
+    "desc": "El blog personal de algún ser humano que usa la imágen de Pepe the Frog."
+  },
+  {
+    "id": "3",
     "url": "https://digdeeper.neocities.org/",
     "img": "/static/buttons/digdeeperbutton.png",
     "name": "DigDeeper",
     "desc": "Este sitio tiene un montón de artículos relacionados con la seguridad y privacidad digital."
   },
   {
-    "id": "3",
+    "id": "4",
     "url": "https://getgle.org",
     "img": "/static/buttons/getgle.gif",
     "name": "Getgle",
     "desc": "Una cloaca de degenerados adictos al Futanari y fanáticos de Jeffrey Epstein. (Solo quiero ser uno de ellos, quiero sentarme con ellos...)"
   },
   {
-    "id": "4",
+    "id": "5",
     "url": "https://eldeadkennedy.neocities.org/",
     "img": "/static/buttons/deadkennedy.gif",
     "name": "La Virgocueva de DeadKennedy",
     "desc": "El YouTuber chistoso con un trapo sucio en la cabeza."
   },
   {
-    "id": "5",
+    "id": "6",
     "url": "https://lukesmith.xyz/",
     "img": "/static/buttons/lukesmith.gif",
     "name": "Luke Smith's Webpage",
     "desc": "Si no sabes quien es Luke Smith, no eres bienvenido aquí."
   },
   {
-    "id": "6",
+    "id": "7",
     "url": "https://nadeko.net/",
     "img": "/static/buttons/nadekodotnet.png",
     "name": "nadeko.net",
     "desc": "Fijxu (webmaster de nadeko.net) se dedica al self-hosting de varios servicios enfocados a la privacidad abiertos a todo el mundo."
   },
   {
-    "id": "7",
+    "id": "8",
     "url": "https://pinchimundo.neocities.org",
     "img": "/static/buttons/pinchimundo.png",
     "name": "PINCHIMUNDO",
     "desc": "Artista español obsesionado con Agatha Knife."
   },
   {
-    "id": "8",
+    "id": "9",
     "url": "https://www.tailsgetstrolled.org/",
     "img": "/static/buttons/tgt.gif",
     "name": "Tails Gets Trolled",
     "desc": "Una obra magna, cuyo valor es apreciado por unos pocos. desde que leí Tails Gets Trolled, soy más feliz conmigo mismo."
   },
   {
-    "id": "9",
+    "id": "10",
     "url": "https://fauux.neocities.org/",
     "img": "/static/buttons/fauux-btn.gif",
     "name": "Wired Sounds for Wired People",
     "desc": "¿Te gusta Lain? Pues disfruta de las melodías que tiene este sitio para ofrecer."
   },
   {
-    "id": "10",
+    "id": "11",
     "url": "https://her.st",
     "name": "her.st",
     "desc": "Blog muy interesante acerca de minimalismo digital, selfhosting y eso..."
   },
   {
-    "id": "11",
+    "id": "12",
     "url": "https://lolcat.ca/",
     "name": "lolcat's website",
     "desc": "El mrk que creo 4get..."
   },
   {
-    "id": "12",
+    "id": "13",
     "url": "https://sergio-m.neocities.org/",
     "name": "sergio-m.neocities.org",
     "desc": "Hincha de Millos promedio."
