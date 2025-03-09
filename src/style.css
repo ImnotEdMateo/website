@@ -101,7 +101,7 @@ header {
   background-color: #1d2021;
   padding: 10px 0;
   flex: 0 1 auto;
-  opacity: 1;
+  opacity: 0.98;
 }
 
 nav ul {
