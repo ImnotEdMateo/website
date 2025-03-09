@@ -42,7 +42,9 @@ export const prerender = false;
           </div>
         </div>
         <div class="entry-content">
-          <span style="white-space: pre-line" set:html={parseMessage(Message)}></span>
+          {Message.split("\n").map((line, index) => (
+            <div key={index} class={line.startsWith("> ") ? "greentext" : ""} set:html={parseMessage(line)}></div>
+          ))}
         </div>
       </div>
     );
