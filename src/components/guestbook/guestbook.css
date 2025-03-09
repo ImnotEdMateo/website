@@ -16,6 +16,10 @@
   font-size: 14px;
 }
 
+.greentext {
+  color: #b8bb26;
+}
+
 #guestbook-form input {
   width: 200px;
 }
