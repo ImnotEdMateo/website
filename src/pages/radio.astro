@@ -24,7 +24,7 @@ const pageDescription = "The most autistic music at EdMateo's Radio";
     margin: 0;
     padding: 0;
     line-height: 1;
-    font-size: 15pt; /* Ajusta según necesites */
+    font-size: 15pt;
     white-space: pre; 
   }
 
@@ -55,23 +55,24 @@ const pageDescription = "The most autistic music at EdMateo's Radio";
 <div class="radio-player">
 <b><p id="radioSong">Espera...</p></b>
 <audio controls>
-<source src="https://radio.edmateo.site/stream" type="audio/mp3" />
+<source src="https://radio.edmateo.site/live" type="audio/mp3" />
 </audio>
 </div>
 </div>
 <p><strong>EdMateo's Radio</strong> es un proyecto bien autista que he creado para compartir mis gustos musicales paupérrimos al Internet. Si te gusta la mierda, esto es lo que deberías escuchar en lugar del <a href="https://stallman.org/spotify.html"><strong>MALDITO</strong> Spotify.</a> La radio está abierta a todo el mundo, no debes pagar ni nada, la mantengo como a un hijo (ambos igual de inútiles).</p>
 <p>Si no quieres escuchar desde este sitio web, también puedes reproducir la música directamente desde cualquier reproductor multimedia que soporte transmisiones en linea. Solo pon la URL <a href="http://radio.edmateo.site/stream">radio.edmateo.site/stream</a> en tu reproductor, o en su defecto, abre el enlace directamente en tu navegador.</p>
 <h2 id="programación-estimada">Programación Estimada</h2>
-<p>La programación de la radio está dividida en <em>5 bloques</em> principales, organizados según la hora del día. Cada bloque cuenta con una playlist en aleatorio que refleja el ambiente adecuado para el momento específico de que habla el bloque. La zona horaria de la radio es <strong>UTC-5</strong>.</p>
+<p>La programación de la radio está dividida en <em>6 bloques</em> principales, organizados según la hora del día. Cada bloque cuenta con una playlist en aleatorio que refleja el ambiente adecuado para el momento específico de que habla el bloque. La zona horaria de la radio es <strong>UTC-5</strong>.</p>
+
 <details><summary><b>Amanecer (4:00 - 6:00)</b></summary>
   <List data="sunrise" />
 </details>
+
 <details><summary><b>Mañana (6:00 - 11:30)</b></summary>
   <List data="morning" />
 </details>
-<details>
-<summary><b>Tarde (11:30 - 17:30)</b></summary>
 
+<details><summary><b>Tarde (11:30 - 17:30)</b></summary>
 <ul>
 <li>FATALITY - Moebiuz</li>
 <li>MIENTRAS TODO - Moebiuz</li>
@@ -245,11 +246,26 @@ const pageDescription = "The most autistic music at EdMateo's Radio";
       const response = await fetch('https://radio.edmateo.site/status-json.xsl');
       const { icestats: { source } } = await response.json();
       const sources = Array.isArray(source) ? source : [source];
-      const { title = '' } = sources.find(({ listenurl }) => listenurl.includes('/stream')) || {};
-      const [artist, song] = title.split(' - ');
-      const formattedSong = song && artist ? `${song} - ${artist}` : title || 'Nada';
 
-      document.getElementById('radioSong').textContent = `Sonando: ${formattedSong}`;
+      // Primero, buscamos si existe el mountpoint /live con título definido
+      const liveSource = sources.find(({ listenurl }) => listenurl.includes('/live'));
+      let finalTitle = '';
+
+      if (liveSource && liveSource.title && liveSource.title.trim() !== '') {
+        finalTitle = liveSource.title;
+      } else {
+        // Si no hay título en /live, usamos el mountpoint /stream
+        const streamSource = sources.find(({ listenurl }) => listenurl.includes('/stream'));
+        if (streamSource && streamSource.title) {
+          // Se asume que el título viene con el formato "Artista - Canción"
+          const [artist, song] = streamSource.title.split(' - ');
+          finalTitle = (artist && song) ? `${song.trim()} - ${artist.trim()}` : streamSource.title;
+        } else {
+          finalTitle = "Nada";
+        }
+      }
+
+      document.getElementById('radioSong').textContent = `Sonando: ${finalTitle}`;
     } catch (error) {
       console.error('Error fetching radio song:', error);
       document.getElementById('radioSong').textContent = 'Error fetching song information';
@@ -259,4 +275,3 @@ const pageDescription = "The most autistic music at EdMateo's Radio";
   fetchRadioSong();
   setInterval(fetchRadioSong, 10000);
 </script>
-</BaseLayout>
