@@ -10,25 +10,23 @@ const blogCollection = defineCollection({
   }),
 });
 
-const defineWebringCollections = (path: string) => defineCollection({
-  loader: file(`src/content/webring-lists/${path}.json`),
+const defineCollections = (listType: string, path: string) => defineCollection({
+  loader: file(`src/content/${listType}-lists/${path}.json`),
 });
 
-const owns = defineWebringCollections("owns");
-const friends = defineWebringCollections("friends");
-const coolSites = defineWebringCollections("cool-sites");
-const usefulInfo = defineWebringCollections("useful-info");
-const darknetSites = defineWebringCollections("darknet-sites");
+// WEBRING COLLECTIONS
+const owns = defineCollections("webring", "owns");
+const friends = defineCollections("webring", "friends");
+const coolSites = defineCollections("webring", "cool-sites");
+const usefulInfo = defineCollections("webring", "useful-info");
+const darknetSites = defineCollections("webring", "darknet-sites");
 
-const defineMusicCollections = (path: string) => defineCollection({
-  loader: file(`src/content/radio-lists/${path}.json`),
-});
-
-const sunrise = defineMusicCollections("sunrise");
-const morning = defineMusicCollections("morning");
-const afternoon = defineMusicCollections("afternoon");
-const night = defineMusicCollections("night");
-const lateNight = defineMusicCollections("lateNight");
+// RADIO COLLECTIONS
+const sunrise = defineCollections("radio", "sunrise");
+const morning = defineCollections("radio", "morning");
+const afternoon = defineCollections("radio", "afternoon");
+const night = defineCollections("radio", "night");
+const lateNight = defineCollections("radio", "lateNight");
 
 export const collections = {
   blog: blogCollection,
