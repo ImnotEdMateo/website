@@ -14,12 +14,12 @@ const defineCollections = (listType: string, path: string) => defineCollection({
   loader: file(`src/content/${listType}-lists/${path}.json`),
 });
 
-// WEBRING COLLECTIONS
-const owns = defineCollections("webring", "owns");
-const friends = defineCollections("webring", "friends");
-const coolSites = defineCollections("webring", "cool-sites");
-const usefulInfo = defineCollections("webring", "useful-info");
-const darknetSites = defineCollections("webring", "darknet-sites");
+// LINKS COLLECTIONS
+const owns = defineCollections("links", "owns");
+const hommies = defineCollections("links", "hommies");
+const coolSites = defineCollections("links", "cool-sites");
+const usefulInfo = defineCollections("links", "useful-info");
+const darknetSites = defineCollections("links", "darknet-sites");
 
 // RADIO COLLECTIONS
 const sunrise = defineCollections("radio", "sunrise");
@@ -30,6 +30,6 @@ const lateNight = defineCollections("radio", "lateNight");
 
 export const collections = {
   blog: blogCollection,
-  owns, friends, coolSites, usefulInfo, darknetSites,
+  owns, hommies, coolSites, usefulInfo, darknetSites,
   sunrise, morning, afternoon, night, lateNight
 };
