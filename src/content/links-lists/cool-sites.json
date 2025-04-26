@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "url": "https://texto-plano.xyz/~pomelo/",
-    "img": "/static/buttons/desdeunsotano.gif",
-    "name": "Desde un Sótano en un Cerro",
-    "desc": "Sitio de un random que le escuché una canción y me gustó."
-  },
-  {
-    "id": 2,
     "url": "https://www.cozynet.org/",
     "img": "/static/buttons/cozynet.gif",
     "name": "CozyNet",
     "desc": "El blog personal de algún ser humano que usa la imágen de Pepe the Frog."
+  },
+  {
+    "id": 2,
+    "url": "https://texto-plano.xyz/~pomelo/",
+    "img": "/static/buttons/desdeunsotano.gif",
+    "name": "Desde un Sótano en un Cerro",
+    "desc": "Sitio de un random que le escuché una canción y me gustó."
   },
   {
     "id": 3,
@@ -68,6 +68,12 @@
     "img": "/static/buttons/fauux-btn.gif",
     "name": "Wired Sounds for Wired People",
     "desc": "¿Te gusta Lain? Pues disfruta de las melodías que tiene este sitio para ofrecer."
+  },
+  {
+    "id": 11,
+    "url": "http://corriendocontijeras.ct.ws",
+    "name": "CCT (Corriendo Con Tijeras)",
+    "desc": "El ingeniero menos dañado."
   },
   {
     "id": 11,
