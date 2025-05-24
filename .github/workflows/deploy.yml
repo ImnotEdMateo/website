@@ -20,7 +20,7 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd /var/www/website
+          cd /srv/www/website
           sudo git pull origin main
           sudo npm install
           sudo npm run build
