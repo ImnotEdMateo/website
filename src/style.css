@@ -1,0 +1,81 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #1d2021;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Shitty CRT effect */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background:
+    linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%),
+    linear-gradient(90deg, rgba(255,0,0,0.06), rgba(0,255,0,0.02), rgba(0,0,255,0.06));
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+header {
+  margin: 0;
+  padding-top: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  cursor: default;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+}
+
+nav ul a,
+nav ul a:visited {
+  color: #fabd2f;
+  font-size: 15pt;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  color: #d79921;
+  text-decoration: underline;
+}
+
+main {
+  color: #ebdbb2;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+main h1 {
+  text-align: center;
+}
+
+main a,
+main a:visited {
+  color: #83a598;
+  text-decoration: none;
+}
+
+main a:hover {
+  color: #458588;
+  font-style: italic;
+  text-decoration: underline;
+}
