@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/base.astro"
 import Lunaticos from "@/components/lunaticos.astro"
+import PostsList from "@/components/postsList.astro"
 
 const pageDescription = "Este sitio es el refugio personal de EdMateo, donde comparte basura y sus vivencias.";
 ---
@@ -10,5 +11,15 @@ const pageDescription = "Este sitio es el refugio personal de EdMateo, donde com
 
   <Lunaticos />
 
-  <marquee behavior="" direction="">aaaaaaaaaaaaaaaaaa</marquee>
+  <h2>Posts Recientes</h2>
+  <PostsList limit={5} />
+
+  <h2>Chimbadas que Hosteo</h2>
+  <ul>
+    <li><b><a href="https://4get.edmateo.site">Instancia de 4get</a></b>: Metabuscador que no apesta. <b>No guardo logs</b>: no me importa si quieres buscar cómo hacer una bomba.</li>
+    <li><b><a href="https://usb.edmateo.site">USB (Upload Server for Bullshit)</a></b>: Subidor de archivos completamente gratis. Podrás subir archivos y se borrarán en una hora. <a href="https://github.com/imnotEdMateo/usb">LO DESARROLLÉ YO</a>.</li>
+    <li><b><a href="https://files.edmateo.site">Repertorio de Archivos</a></b>: Index de mierda que uso para para preservar, disfrutar, acceder rápido... Cualquier cosa en general.</li>
+    <li><b><a href="https://compliance.conversations.im/server/edmateo.site">Servidor de XMPP</a></b>: Para mensajes y llamadas privadas. <b>También tenemos un <a href="xmpp:chat@chat.edmateo.site?join">MUC</a></b> con mucho cancer textual.</li>
+    <li><b><a href="http://edmatka4yo6zt5mgc5pcm2cdhhooewjjh22caoadlydz2c4d2lfw24qd.onion">Sitio en TOR</a></b>: Está desactualizado, pero es lo suficientemente ligero para correr sin problemas en las conexiones lentas de TOR.</li>
+  </ul>
 </BaseLayout>

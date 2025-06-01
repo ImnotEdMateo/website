@@ -1,7 +1,6 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #1d2021;
-  color: #fff;
   margin: 0;
   padding: 0;
 }
@@ -20,6 +19,15 @@ body::after {
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
   z-index: 999;
+}
+
+::selection {
+  background-color: #655c54;
+  color: #e6d6ae;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 header {
@@ -51,7 +59,6 @@ nav ul a:visited {
 
 nav ul a:hover {
   color: #d79921;
-  text-decoration: underline;
 }
 
 main {
@@ -68,6 +75,14 @@ main h1 {
   text-align: center;
 }
 
+main ul { 
+  padding-left: 20px;
+}
+
+main li, main summary {
+  margin-bottom: 10px;
+}
+
 main a,
 main a:visited {
   color: #83a598;
@@ -76,6 +91,4 @@ main a:visited {
 
 main a:hover {
   color: #458588;
-  font-style: italic;
-  text-decoration: underline;
 }
