@@ -92,3 +92,8 @@ main a:visited {
 main a:hover {
   color: #458588;
 }
+
+article img {
+  max-width: 100%;
+  height: auto;
+}

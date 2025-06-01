@@ -1,0 +1,76 @@
+---
+import BaseLayout from "@/layouts/base.astro"
+
+const pageTitle = "EdMateo's Radio"
+const pageDescription = "The most autistic music at EdMateo's Radio"
+---
+
+<style>
+  .radio-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .radio-player img {
+    width: 180px;
+    height: auto;
+  }
+</style>
+
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
+  <div class="radio-player" style="text-align: center;">
+    <img src="/static/radio.gif" />
+    <div style="text-align: center; margin-top: 20px;">
+      <div style="display: inline-block; width: 300px;">
+        <b><p id="radioSong" style="margin: 5px 0;">Espera...</p></b>
+        <audio id="radio-audio" controls style="width: 100%;">
+          <source src="https://radio.edmateo.site/live" type="audio/mpeg" />
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+        <marquee style="color: #bdae93; font-size: 14px; margin-top: 10px; display: block; width: 100%;">
+          {pageDescription}
+        </marquee>
+      </div>
+    </div>
+  </div>
+  <p><b>EdMateo's Radio</b> es un proyecto bien autista que he creado para compartir mis gustos musicales paupérrimos al internet. Si te gusta la mierda, esto es lo que deberías escuchar en lugar de seguir pagando la suscripcion del <a href="https://stallman.org/spotify.html"><b>MALDITO</b> Spotify</a>. La radio está abierta a todo el mundo, no debes pagar ni nada; como si yo manteniera a un hijo (ambos igual de inútiles).</p>
+  <p>Si no quieres escuchar desde este sitio web, también puedes reproducir la radio directamente desde cualquier reproductor multimedia que soporte transmisiones en linea (vlc, mpv, etc.). Solo pon la url <b><a href="https://radio.edmateo.site/live">https://radio.edmateo.site/live</a></b> en tu reproductor, o en su defecto, abre el enlace directamente en tu navegador.</p>
+</BaseLayout>
+
+<script>
+  const fetchRadioSong = async () => {
+    try {
+      const response = await fetch('https://radio.edmateo.site/status-json.xsl');
+      const { icestats: { source } } = await response.json();
+      const sources = Array.isArray(source) ? source : [source];
+
+      // Primero, buscamos si existe el mountpoint /live con título definido
+      const liveSource = sources.find(({ listenurl }) => listenurl.includes('/live'));
+      let finalTitle = '';
+
+      if (liveSource && liveSource.title && liveSource.title.trim() !== '') {
+        finalTitle = liveSource.title;
+      } else {
+        // Si no hay título en /live, usamos el mountpoint /stream
+        const streamSource = sources.find(({ listenurl }) => listenurl.includes('/stream'));
+        if (streamSource && streamSource.title) {
+          // Se asume que el título viene con el formato "Artista - Canción"
+          const [artist, song] = streamSource.title.split(' - ');
+          finalTitle = (artist && song) ? `${song.trim()} - ${artist.trim()}` : streamSource.title;
+        } else {
+          finalTitle = "Nada";
+        }
+      }
+
+      document.getElementById('radioSong').textContent = `Sonando: ${finalTitle}`;
+    } catch (error) {
+      console.error('Error fetching radio song:', error);
+      document.getElementById('radioSong').textContent = 'Error fetching song information';
+    }
+  };
+
+  fetchRadioSong();
+  setInterval(fetchRadioSong, 10000);
+</script>
