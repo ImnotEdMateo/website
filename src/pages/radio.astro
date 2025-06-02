@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/base.astro"
+import List from "@/components/radioList.astro"
 
 const pageTitle = "EdMateo's Radio"
 const pageDescription = "The most autistic music at EdMateo's Radio"
@@ -37,6 +38,33 @@ const pageDescription = "The most autistic music at EdMateo's Radio"
   </div>
   <p><b>EdMateo's Radio</b> es un proyecto bien autista que he creado para compartir mis gustos musicales paupérrimos al internet. Si te gusta la mierda, esto es lo que deberías escuchar en lugar de seguir pagando la suscripcion del <a href="https://stallman.org/spotify.html"><b>MALDITO</b> Spotify</a>. La radio está abierta a todo el mundo, no debes pagar ni nada; como si yo manteniera a un hijo (ambos igual de inútiles).</p>
   <p>Si no quieres escuchar desde este sitio web, también puedes reproducir la radio directamente desde cualquier reproductor multimedia que soporte transmisiones en linea (vlc, mpv, etc.). Solo pon la url <b><a href="https://radio.edmateo.site/live">https://radio.edmateo.site/live</a></b> en tu reproductor, o en su defecto, abre el enlace directamente en tu navegador.</p>
+  <h2>Programación Estimada</h2>
+  <p>La programación de la radio está divida en <i>6 bloques</i> principales, cada uno asociado a un momento del día. Cada bloque cuenta con una playlist en aleatorio que se emite por todo el bloque... Nada eso.</p>
+
+  <details><summary><b>Amanecer (4:00 - 6:00)</b></summary>
+    <List data="sunrise" />
+  </details>
+
+  <details><summary><b>Mañana (6:00 - 11:30)</b></summary>
+    <List data="morning" />
+  </details>
+
+  <details><summary><b>Tarde (11:30 - 17:30)</b></summary>
+    <List data="afternoon" />
+  </details>
+
+  <details><summary><b>Noche (17:30 - 00:00)</b></summary>
+    <List data="night" />
+  </details>
+
+  <details><summary><b>Madrugada (00:00 - 3:00)</b></summary>
+    <List data="lateNight" />
+  </details>
+
+  <details><summary><b>C U R S E D (03:00 - 4:00)</b></summary>
+    <span>Aquí es un poco diferente... <strong>Ustedes</strong> tendrán que descubrir por su propia cuenta qué canción está sonando. Si saben de que canción se trata, <a href="/about/#contacto">Ya saben donde decírmelo</a>. Las canciones encontradas se pondrán acá, mucha suerte. :)</span>
+  </details>
+
 </BaseLayout>
 
 <script>

@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "title": "Por la Mañana",
+        "artist": "El Kalvo & Da Funkylooper"
+    },
+    {
+        "id": 2,
+        "title": "Intro (de Manzanas a la Vuelta)",
+        "artist": "Doble Porción"
+    },
+    {
+        "id": 3,
+        "title": "Piñata en el 301",
+        "artist": "Alcolirykoz"
+    },
+    {
+        "id": 4,
+        "title": "Todo lo Bueno Tarda",
+        "artist": "Alcolirykoz"
+    },
+    {
+        "id": 5,
+        "title": "Dando Saltos",
+        "artist": "Métricas Frías"
+    },
+    {
+        "id": 6,
+        "title": "Ordinaria Elegancia",
+        "artist": "El Kalvo & Hi-Kymon"
+    },
+    {
+        "id": 7,
+        "title": "Gumbo",
+        "artist": "MF DOOM"
+    },
+    {
+        "id": 8,
+        "title": "Hoe Cakes",
+        "artist": "MF DOOM"
+    },
+    {
+        "id": 9,
+        "title": "Sabanas",
+        "artist": "Guerreros del Bajo"
+    }
+]

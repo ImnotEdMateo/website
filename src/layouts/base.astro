@@ -1,5 +1,6 @@
 ---
 import "@/style.css";
+import Footer from "@/components/footer.astro";
 import Header from "@/components/header.astro";
 import { ViewTransitions } from "astro:transitions";
 
@@ -29,5 +30,6 @@ const fullTitle = pageTitle
       <h1>{pageTitle || fullTitle}</h1>
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
