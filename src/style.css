@@ -1,6 +1,7 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #1d2021;
+  color: #fbf1c7;
   margin: 0;
   padding: 0;
 }
@@ -31,13 +32,21 @@ a:hover {
 }
 
 main, footer {
-  color: #ebdbb2;
   max-width: 800px;
   margin: 0 auto;
   padding: 1rem;
   word-break: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
+}
+
+code {
+  background-color: #32302f;
+  color: #ebdbb2;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.95em;
 }
 
 main h1 {
