@@ -3,6 +3,7 @@ import node from '@astrojs/node';
 import path from 'path';
 
 export default defineConfig({
+  site: 'https://edmateo.site',
   output: 'server',
   adapter: node({
     mode: 'standalone',
