@@ -1,28 +1,13 @@
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from "../layouts/BaseLayout.astro";
+import BaseLayout from '@/layouts/base.astro';
+import PostsList from '@/components/postsList.astro'
 
-const posts = await getCollection('blog');
-posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
-
-const pageTitle = "Blog";
-const pageDescription = "Por si no te has dado cuenta, EdMateo tiene un Blog.";
+const pageTitle = "Blog"
+const pageDescription = "Por si no te has dado cuenta. EdMateo tiene un blog."
 ---
-<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
-  <p>He aquí una compilación de todos mis posts. Si quieres suscribirte, aquí tienes mi <a href="/rss.xml">Feed RSS</a></p>
-  <ul>
-    {posts.map((post) => (
-      <li>
-        <span>[{post.data.pubDate.toLocaleDateString('es-ES', {
-          day: 'numeric',
-          month: 'short',
-          year: 'numeric'
-        })}] - </span>
-        <a href={`/post/${post.slug}`}>
-          {post.data.title}
-        </a>
-      </li>
-    ))}
-  </ul>
-</BaseLayout>
 
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
+  <p>He aquí una compilación de toda la basura que he posteado. En el caso de querer suscribirte, <a href="/rss.xml">tienes mi Feed RSS</a>.</p>
+
+  <PostsList />
+</BaseLayout>

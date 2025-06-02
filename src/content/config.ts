@@ -1,5 +1,5 @@
 import { z, defineCollection } from 'astro:content';
-import { file } from "astro/loaders";
+import { file } from 'astro/loaders';
 
 const blogCollection = defineCollection({
   schema: z.object({
@@ -15,11 +15,10 @@ const defineCollections = (listType: string, path: string) => defineCollection({
 });
 
 // LINKS COLLECTIONS
-const owns = defineCollections("links", "owns");
 const hommies = defineCollections("links", "hommies");
-const coolSites = defineCollections("links", "cool-sites");
-const usefulInfo = defineCollections("links", "useful-info");
-const darknetSites = defineCollections("links", "darknet-sites");
+const coolSites = defineCollections("links", "coolSites");
+const usefulInfo = defineCollections("links", "usefulInfo");
+const darknetSites = defineCollections("links", "darknetSites");
 
 // RADIO COLLECTIONS
 const sunrise = defineCollections("radio", "sunrise");
@@ -30,6 +29,6 @@ const lateNight = defineCollections("radio", "lateNight");
 
 export const collections = {
   blog: blogCollection,
-  owns, hommies, coolSites, usefulInfo, darknetSites,
+  hommies, coolSites, usefulInfo, darknetSites,
   sunrise, morning, afternoon, night, lateNight
 };

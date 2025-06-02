@@ -1,20 +1,24 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #322f2e url('/static/wallpaper.png') no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
+  font-family: 'Segoe UI', sans-serif;
+  background: #1d2021;
+  margin: 0;
+  padding: 0;
 }
 
-.wrapper {
-  display: flex;
-  flex-flow: column;
-  gap: 10px;
-  margin: 0 10px;
-  height: 97vh;
-  width: 100%;
-  overflow-y: hidden;
+/* Shitty CRT effect */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background:
+    linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%),
+    linear-gradient(90deg, rgba(255,0,0,0.06), rgba(0,255,0,0.02), rgba(0,0,255,0.06));
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+  z-index: 999;
 }
 
 ::selection {
@@ -22,201 +26,52 @@ body {
   color: #e6d6ae;
 }
 
-.content-wrapper {
-  display: flex;
-  overflow: auto;
-  background: #1d2021;
-  flex: 1 1 auto;
-  opacity: 0.98;
+a:hover {
+  text-decoration: underline !important;
 }
 
-main {
-  flex: 0 0 65%;
-  padding: 10px 20px;
-  font-family: IBM Plex Mono;
+main, footer {
   color: #ebdbb2;
-  font-size: 11pt;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
-.monachina {
-  flex: 0 0 1;
-  position: sticky;
-  top: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  pointer-events: none !important;
-}
-
-.monachina img {
-  opacity: 0.08;
-  display: block;
-  width: 80%;
-  height: auto;
-}
-
-main img {
-  max-width: 450px;
-  height: auto;
-}
-
-iframe {
-  max-width: 100%;
-  height: auto;
-}
-
-main a,
-main a:visited {
-  color: #83a598;
-  word-wrap: break-word;
-  text-decoration: none;
-}
-
-main li, main summary {
-  margin-bottom: 10px;
-}
-
-main a:hover {
-  color: #458588;
-  font-style: italic;
-  text-decoration: underline;
+main h1 {
+  text-align: center;
 }
 
 main ul { 
   padding-left: 20px;
 }
 
-footer {
-  margin-bottom: 0;
+main li, main summary {
+  margin-bottom: 10px;
 }
 
-footer img {
-  width: 88px;
-  height: 31px;
-  padding: 0 10px;
-}
-
-footer,
-header {
-  background-color: #1d2021;
-  padding: 10px 0;
-  flex: 0 1 auto;
-  opacity: 0.98;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 10px;
-  font-size: 15px;
-  padding: 10px 15px;
-}
-
-nav ul li span {
+main a,
+footer a,
+main a:visited,
+footer a:visited {
+  color: #83a598;
   text-decoration: none;
-  color: #928374;
 }
 
-nav ul li a,
-nav ul li a:visited {
-  text-decoration: none;
-  color: #ebdbb2;
+main a:hover,
+footer a:hover {
+  color: #458588;
 }
 
-
-nav ul li a:hover {
-  color: #fabd2f;
+article img {
+  max-width: 100%;
+  height: auto;
 }
 
-@media screen and (max-width: 992px) {
-  .content-wrapper {
-    flex-direction: column;
-  }
+/* Color classes */
 
-  .monachina {
-    width: auto;
-  }
-  
-  .monachina img {
-    width: 20%;
-  }
-
-  main {
-    width: auto;
-    flex: 1;
-    align-content: center;
-    margin: 20px;
-    margin-top: 0;
-  }
-
-  main h1 {
-    text-align: center;
-  }
+.red {
+  color: #fb4934;
 }
-
-@media screen and (max-width: 720px) {
-  body {
-    height: 100%;
-    margin: 0;
-  }
-
-  .wrapper {
-    gap: 0;
-    margin: 0;
-    height: 100%;
-    overflow: auto;
-  }
-
-  nav li {
-    font-size: 22px;
-  }
-
-  .content-wrapper {
-    overflow: visible;
-    height: auto;
-    margin: 0;
-    font-size: 11pt;
-  }
-
-  main {
-    margin: 0;
-    padding: 10px 8px;
-  }
-
-  main h1 {
-    text-align: left;
-  }
-
-  main img {
-    max-width: 100%;
-  }
-  
-  .monachina img {
-    width: 50%;
-  }
-
-  nav ul {
-    padding-top: 25px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-family: IBM Plex Mono;
-  }
-
-  nav ul li {
-    margin: 0 10px;
-    font-size: 20px;
-    padding: 10px 15px;
-  }
-
-  footer {
-    padding: 50px 0;
-  }
-}
-
