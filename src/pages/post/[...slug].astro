@@ -27,6 +27,10 @@ const { Content } = await render(post);
 
 const pageTitle = post.data.title;
 const pageDescription = post.data.description;
+
+// Extraemos el autor
+const author = post.data.author || '';
+const shouldShowAuthor = author !== 'Mateo' && author !== 'EdMateo';
 ---
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
@@ -35,9 +39,16 @@ const pageDescription = post.data.description;
       <time datetime={post.data.pubDate.toISOString()}>
         Escrito el {formattedDate}
       </time>
+      {shouldShowAuthor && (
+        <> por <span style="color: #b8bb26;">{author}</span></>
+      )}
     </h4>
+
     <Content />
+
     <h1>Comentarios</h1>
-    <p>¿Quieres comentar algo? Una pena, soy muy vago para programar algo así, lo que puedes hacer es escribir algo en <a href="/guestbook">Mi GuestBook</a></p>
+    <p>
+      ¿Quieres comentar algo? Una pena, soy muy vago para programar algo así, lo que puedes hacer es escribir algo en <a href="/guestbook">Mi GuestBook</a>
+    </p>
   </article>
 </BaseLayout>

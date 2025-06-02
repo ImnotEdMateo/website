@@ -43,7 +43,7 @@ export const prerender = false;
         </div>
         <div class="entry-content">
           {Message.split("\n").map((line, index) => (
-            <div key={index} class={line.startsWith(">") ? "greentext" : ""} set:html={parseMessage(line)}></div>
+            <div key={index} class={line.startsWith(">") ? "green" : ""} set:html={parseMessage(line)}></div>
           ))}
         </div>
       </div>
