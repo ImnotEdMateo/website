@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Links from '../components/link.astro';
+import BaseLayout from '@/layouts/base.astro';
+import Links from '@/components/link.astro';
 
 const pageTitle = "Enlaces";
 const pageDescription = "Repertorio de enlaces recopilados por su servidor, EdMateo.";
@@ -9,8 +9,6 @@ const pageDescription = "Repertorio de enlaces recopilados por su servidor, EdMa
   <p>
   En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la experiencia de <a href="/about">un bobo</a> en Internet. Ya sea información valiosa, sitios curiosos o herramientas útiles, tal vez algo te sirva.
   </p>
-  <h2 id="owns">Mis sitios</h2>
-  <Links data="owns" />
   <h2 id="hommies">Hommies</h2>
   <Links data="hommies" />
   <h2 id="usefulInfo">Información Interesante</h2>

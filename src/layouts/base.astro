@@ -1,0 +1,35 @@
+---
+import "@/style.css";
+import Footer from "@/components/footer.astro";
+import Header from "@/components/header.astro";
+import { ViewTransitions } from "astro:transitions";
+
+const siteName = "EdMateo's Shitty Site";
+const { pageTitle = "", pageDescription = "" } = Astro.props;
+
+const fullTitle = pageTitle
+  ? `${pageTitle} | ${siteName}`
+  : siteName;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href={`https://edmateo.site${Astro.url.pathname}`} />
+    <ViewTransitions />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={pageDescription}>
+    <title>{fullTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>{pageTitle || fullTitle}</h1>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

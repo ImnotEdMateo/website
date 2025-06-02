@@ -1,0 +1,72 @@
+<style>
+.lunaticos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.lunaticos a {
+  display: inline-block;
+  position: relative;
+  margin: 0 0.5rem;
+}
+
+.lunaticos img {
+  display: block;
+  width: 33px; 
+  height: auto;
+}
+
+.lunaticos .hover {
+  display: none;
+}
+
+.lunaticos a {
+  position: relative;
+  display: inline-block;
+}
+.lunaticos .normal,
+.lunaticos .hover {
+  display: block;
+  position: relative;
+}
+.lunaticos .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.lunaticos a:hover .normal {
+  opacity: 0;
+}
+.lunaticos a:hover .hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.btn-right {
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+</style>
+
+<p class="lunaticos">
+  <a href="//lunaticos.cidoku.net/prev?id=4">
+    <img class="normal" src="/static/icons/jeringa0.png">
+    <img class="hover" src="/static/icons/jeringa1.png">
+  </a>
+  Parte del <a href="//lunaticos.cidoku.net/">Anillo de los Lunáticos</a>
+  <a href="//lunaticos.cidoku.net/next?id=4">
+    <img class="normal btn-right" src="/static/icons/jeringa0.png">
+    <img class="hover btn-right" src="/static/icons/jeringa1.png">
+  </a>
+</p>

@@ -1,70 +1,27 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { getCollection } from 'astro:content';
+import BaseLayout from "@/layouts/base.astro"
+import Lunaticos from "@/components/lunaticos.astro"
+import PostsList from "@/components/postsList.astro"
 
-const posts = await getCollection('blog');
-posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
-
-const pageTitle = "EdMateo's Shitty Site";
-const pageDescription = "Este sitio es el refugio personal de un tal Mateo, donde comparte basura y sus vivencias.";
+const pageDescription = "Este sitio es el refugio personal de EdMateo, donde comparte basura y sus vivencias.";
 ---
 
-<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
-  <p>"La vida es como una caja de bombones", y a veces la vida nos da un respiro cuando menos lo esperamos. Yo pensaba que este sitio se acabaría en unos meses, pero ¡sorpresa! Mi mami intervino y me dio el empujón que necesita. Aunque las circunstancias sigan siendo tan impredecibles como siempre, <b>este bodrio en la web sigue vivo!!</b> (al menos hasta 2026).
+<BaseLayout pageDescription={pageDescription}>
+  <p>Bienvenido a mi <b>bodrio en la web</b>, un rincón donde escupo ideas, pensamientos y en general, cualquier huevonada sin temor a la censura de una big-tech judía que controle mis pensamientos. <a href="https://github.com/ImnotEdMateo/website">Este sitio es de código abierto</a>, si algo no te gusta, puedes forkearlo, selfhostearlo o llenarme el repo de PRs. Nada eso...</p>
 
+  <Lunaticos />
+
+  <h2>Posts Recientes</h2>
+  <PostsList limit={5} />
+
+  <div style="display: flex; align-items: baseline; gap: 0.5em;">
+    <h2 style="margin: 0;">Chimbadas que Hosteo</h2><small><a href="http://status.edmateo.site">¿Se cayó algo?</a></small>
+  </div>
   <ul>
-    <li>Gracias mami por dejarme postear mierda otro año más. 🥹</li>
-    <li>Gracias a todos los que me dan ideas y apoyan esto.</li>
-    <li>Gracias a ti por leer esto.</li>
+    <li><b><a href="https://4get.edmateo.site">Instancia de 4get</a></b>: Metabuscador que no apesta. <b>No guardo logs</b>: no me importa si quieres buscar cómo hacer una bomba.</li>
+    <li><b><a href="https://usb.edmateo.site">USB (Upload Server for Bullshit)</a></b>: Subidor de archivos completamente gratis. Podrás subir archivos y se borrarán en una hora. <a href="https://github.com/imnotEdMateo/usb">LO DESARROLLÉ YO</a>.</li>
+    <li><b><a href="https://files.edmateo.site">Repertorio de Archivos</a></b>: Index de mierda que uso para para preservar, disfrutar, acceder rápido... Cualquier cosa en general.</li>
+    <li><b><a href="https://compliance.conversations.im/server/edmateo.site">Servidor de XMPP</a></b>: Para mensajes y llamadas privadas. <b>También tenemos un <a href="xmpp:chat@chat.edmateo.site?join">MUC</a></b> con mucho cancer textual.</li>
+    <li><b><a href="http://edmatka4yo6zt5mgc5pcm2cdhhooewjjh22caoadlydz2c4d2lfw24qd.onion">Sitio en TOR</a></b>: Está desactualizado, pero es lo suficientemente ligero para correr sin problemas en las conexiones lentas de TOR.</li>
   </ul>
-
-  <p>Recuerda, este sitio web es <b>Software Libre</b> y está disponible en <a href="https://github.com/ImnotEdMateo/website">GitHub</a>.</p>
-  
-  <p><a href="//ring.cidoku.net/prev?id=4">Anterior</a> -Parte del <a href="//ring.cidoku.net/">Anillo de los Lunáticos</a>- <a href="//ring.cidoku.net/next?id=4">Siguiente</a></p>
-
-  <marquee behavior="" direction="" style="margin: 20px 0;" scrollamount="10"> 
-    <b>
-      <a href="xmpp:chat@chat.edmateo.site?join">ÚNETE AL MUC DE XMPP</a>
-      <span>|</span>
-      <a href="http://usb.edmateo.site">SUBE TU MIERDA A MI USB</a>
-      <span>|</span>
-      <a href="http://files.edmateo.site">ARCHIVOS PÚBLICOS ACÁ</a>
-    </b>
-  </marquee>
-
-  <a href='https://compliance.conversations.im/server/edmateo.site'><img src='https://compliance.conversations.im/badge/edmateo.site'></a> 
-
-  <section>
-    <h2>Posts recientes</h2>
-    <ul>
-      {posts.slice(0, 4).map(post => (
-      <li>
-        <span>[{post.data.pubDate.toLocaleDateString('es-ES', {
-            day: 'numeric',
-            month: 'short',
-            year: 'numeric'
-          })}] - </span>
-          <a href={`/post/${post.slug}`}>
-            {post.data.title}
-          </a>
-      </li>
-      ))}
-    </ul>
-  </section>
-
-  <section>
-    <h2>Actualizaciones</h2>
-    <ul>
-      <li>[01/02/2025] - He rediseñado el sitio, bueno, escribí todo de cero pero se entiende la idea.</li>
-      <li>[11/12/2024] - He montado un servidor de XMPP!!! Registros abiertos por este dominio.</li>
-      <li>[02/06/2024] - Oficialmente, Google ya indexó mi sitio en su motor de búsqueda.</li>
-      <li>[04/05/2024] - El sitio se ha adaptado a pantallas pequeñas.</li>
-      <li>[01/05/2024] - Se ha reescrito todo el sitio a AstroJS.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Un Vídeo</h2>
-    <iframe style="aspect-ratio: 16 / 9;" allowfullscreen src="https://www.vidlii.com/embed?v=ShNMVhop0Aq" frameborder="0" width="640" height="380"></iframe>
-  </section>
 </BaseLayout>

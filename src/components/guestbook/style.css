@@ -1,6 +1,10 @@
+#guestbook-form * {
+  box-sizing: border-box; /* clave para que todo respete el ancho */
+}
+
 #guestbook-form {
   font-family: monospace;
-  max-width: 600px;
+  max-width: 100%;
   margin: 20px 0;
 }
 
@@ -14,18 +18,24 @@
   margin-bottom: 8px;
   font-family: monospace;
   font-size: 14px;
+  width: 100%; 
 }
 
-.greentext {
-  color: #b8bb26;
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 8px;
 }
 
-#guestbook-form input {
-  width: 200px;
+.input-row input {
+  flex: 1 1 200px;
+  width: auto;
+  margin-bottom: 0;
 }
 
 #guestbook-form textarea {
-  width: 95%;
+  width: 100%;
   height: 100px;
   resize: vertical;
   margin-bottom: 8px;

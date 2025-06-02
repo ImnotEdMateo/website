@@ -1,6 +1,6 @@
 [
-  { "id": 1, "url": "http://lyricaltokarev.com/", "img": "/static/buttons/lyricaltokarevbutton.gif", "name": "Lyrical Tokarev~ 世界最後の日", "desc": "IP Logger muy peligroso, no entrar."},
-  { "id": 2, "url": "http://cidoku.net", "img": "/static/buttons/cidokunet.gif", "name": "The Cidoku Network", "desc": "Solo se necesitan 4 colores."},
-  { "id": 3, "url": "https://pjqnv.neocities.org/", "img": "/static/buttons/pjqnv.gif", "name": "La Caverna de PjQNV", "desc": "Opiniones rancias y proyectos caseros, todo compilado en un sitio muy bonito."},
-  { "id": 4, "url": "https://virgolandia.neocities.org", "img": "/static/buttons/cartero.png", "name": "Virgolandia", "desc": "Pendejo lleva esperando una OrangePI desde hace 20 años."}
+  { "id": 1, "url": "https://pjqnv.neocities.org/", "img": "/static/buttons/pjqnv.gif", "name": "La Caverna de PjQNV", "desc": "Opiniones rancias y proyectos caseros, todo compilado en un sitio muy bonito."},
+  { "id": 2, "url": "http://lyricaltokarev.com/", "img": "/static/buttons/lyricaltokarev.gif", "name": "Lyrical Tokarev~ 世界最後の日", "desc": "IP Logger muy peligroso, no entrar."},
+  { "id": 3, "url": "https://virgolandia.neocities.org", "img": "/static/buttons/virgolandia.gif", "name": "Virgolandia", "desc": "A este negro es al único que le confío el admin de mi XMPP."},
+  { "id": 4, "url": "http://cidoku.net", "img": "/static/buttons/cidokunet.gif", "name": "cidoku.net", "desc": "Solo se necesitan 4 colores."}
 ]
