@@ -112,6 +112,10 @@
   margin-right: 0.5em;
 }
 
+.greentext {
+  color: #b8bb26;
+}
+
 @media screen and (max-width: 992px) {
   .entry-box {
     width: auto;
