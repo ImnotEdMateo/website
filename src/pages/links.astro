@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@/layouts/base.astro';
+import Links from '@/components/link.astro';
+
+const pageTitle = "Enlaces";
+const pageDescription = "Repertorio de enlaces recopilados por su servidor, EdMateo.";
+---
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
+  <p>
+  En esta sección, podrás encontrar mi repertorio de enlaces, recopilados por la experiencia de <a href="/about">un bobo</a> en Internet. Ya sea información valiosa, sitios curiosos o herramientas útiles, tal vez algo te sirva.
+  </p>
+  <h2 id="hommies">Hommies</h2>
+  <Links data="hommies" />
+  <h2 id="usefulInfo">Información Interesante</h2>
+  <Links data="usefulInfo" />
+  <h2 id="coolSites">Chanda d' Sitios</h2>
+  <Links data="coolSites" />
+  <h2 id="darknet">Sitios de la darknet</h3>
+  <Links data="darknetSites" />
+</BaseLayout>
