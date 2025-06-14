@@ -16,6 +16,69 @@ const parseMessage = msg => msg.replace(/>>(\d+)/g, (m, id) => `<a href="/guestb
 export const prerender = false;
 ---
 
+<style>
+  .entry-box {
+    margin-top: 20px;
+    width: fit-content;
+    max-width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #504945;
+    background-color: #282828; 
+    color: #ebdbb2;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .importantshit {
+    color: #ebdbb2;
+  }
+
+  .entry-header {
+    margin-bottom: 5px;
+    display: flex;
+    color: #928374;
+    word-break: break-all;
+  }
+
+  .entry-content {
+    margin-top: 8px;
+    word-break: break-word;
+    font-size: 13px;
+  }
+
+  .namekajweb {
+    display: inline-block;
+    margin-right: 0.5em;
+  }
+
+  @media screen and (max-width: 992px) {
+    .entry-box {
+      width: auto;
+      margin-right: 5px;
+    }
+    
+    .entry-header {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .datekajid {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+    }
+
+    .date {
+      flex-grow: 1;
+    }
+
+    .post-number {
+      margin-left: auto; 
+    }
+  }
+</style>
+
 <div>
   {entries.map(({ ID, CreatedAt, Name, Website, Message }) => {
     const { formattedDate, formattedTime } = formatDate(CreatedAt);

@@ -74,6 +74,11 @@ footer a:hover {
   color: #458588;
 }
 
+main p {
+  margin-block: 1em;
+  margin-block: 1lh;
+}
+
 article img {
   max-width: 100%;
   height: auto;
