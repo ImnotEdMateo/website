@@ -36,24 +36,24 @@
   },
   {
     "id": 6,
-    "url": "https://nadeko.net/",
-    "img": "/static/buttons/nadekodotnet.png",
-    "name": "nadeko.net",
-    "desc": "Fijxu (webmaster de nadeko.net) se dedica al self-hosting de varios servicios enfocados a la privacidad abiertos a todo el mundo."
-  },
-  {
-    "id": 7,
     "url": "https://www.tailsgetstrolled.org/",
     "img": "/static/buttons/tgt.gif",
     "name": "Tails Gets Trolled",
     "desc": "Una obra magna, cuyo valor es apreciado por unos pocos. desde que leí Tails Gets Trolled, soy más feliz conmigo mismo."
   },
   {
-    "id": 8,
+    "id": 7,
     "url": "https://fauux.neocities.org/",
     "img": "/static/buttons/fauux-btn.gif",
     "name": "Wired Sounds for Wired People",
     "desc": "¿Te gusta Lain? Pues disfruta de las melodías que tiene este sitio para ofrecer."
+  },
+  {
+    "id": 8,
+    "url": "https://nadeko.net/",
+    "img": "/static/buttons/nadekodotnet.png",
+    "name": "nadeko.net",
+    "desc": "Fijxu (webmaster de nadeko.net) se dedica al self-hosting de varios servicios enfocados a la privacidad abiertos a todo el mundo."
   },
   {
     "id": 9,
@@ -63,18 +63,24 @@
   },
   {
     "id": 10,
+    "url": "https://justfuckingusehtml.com/es-CO",
+    "name": "Usa HTML, perro hijueputa",
+    "desc": "Lee esto antes de querer hacer un sitio web."
+  },
+  {
+    "id": 11,
     "url": "https://her.st",
     "name": "her.st",
     "desc": "Blog muy interesante acerca de minimalismo digital, selfhosting y eso..."
   },
   {
-    "id": 11,
+    "id": 12,
     "url": "https://lolcat.ca/",
     "name": "lolcat's website",
     "desc": "El mrk que creo 4get..."
   },
   {
-    "id": 12,
+    "id": 13,
     "url": "https://sergio-m.neocities.org/",
     "name": "sergio-m.neocities.org",
     "desc": "Hincha de Millos promedio."
