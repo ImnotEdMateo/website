@@ -41,7 +41,7 @@ En el caso de que solo queramos crear un blog simple, que no use *server side re
    
 4. Crea un fichero `.conf` en `/etc/apache2/sites-avaiable/` y usa esta configuración:
 
-    ~~~apache
+    ~~~apache title="website.conf"
     # Esto muestra el sitio en HTTPS, ejemplo: http://tudominio.org, no redirecciona
     <VirtualHost *:80>
       ServerName tudominio.org
@@ -83,7 +83,7 @@ En el caso de que solo queramos crear un blog simple, que no use *server side re
 
    **NOTA:** Recuerda cambiar `tudominio.org` por el dominio que vas a usar para alojar el sitio, puedes cambiarlo rápidamente usando **VIM**:
 
-     ~~~vim
+     ~~~diff
      :%s/tudominio.org/[acá debe ir tu dominio]/g
      ~~~
 
@@ -105,7 +105,7 @@ Para poder tener *server side rendering*, *server islands* y toda la mierda que 
 
 1. Cambia tu archivo `astro.config.mjs` para que utilice el adaptador de *node.js*, algo así:
 
-    ~~~javascript
+    ~~~javascript title="astro.config.mjs" ins={5-8}
     import { defineConfig } from 'astro/config';
     import node from '@astrojs/node';
 
@@ -149,7 +149,7 @@ Para poder tener *server side rendering*, *server islands* y toda la mierda que 
 
 7. Crea un fichero `.conf` en `/etc/apache2/sites-avaiable/` y usa esta configuración:
 
-    ~~~bash
+    ~~~apache title="website.conf"
     <VirtualHost *:80>
       ServerName tudominio.org
       ProxyPreserveHost On
@@ -180,7 +180,7 @@ Para poder tener *server side rendering*, *server islands* y toda la mierda que 
 
     **NOTA:** Recuerda cambiar el dominio `tudominio.org` por el dominio o subdominio que vayas a usar. Con **VIM**, es muy facil cambiar esto:
 
-    ~~~vim
+    ~~~diff
     :%s/tudominio.org/[acá debe ir tu dominio]/g
     ~~~
 
