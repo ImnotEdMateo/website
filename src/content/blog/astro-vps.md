@@ -105,7 +105,7 @@ Para poder tener *server side rendering*, *server islands* y toda la mierda que 
 
 1. Cambia tu archivo `astro.config.mjs` para que utilice el adaptador de *node.js*, algo así:
 
-    ~~~javascript title="astro.config.mjs" ins={5-8}
+    ~~~javascript title="astro.config.mjs" ins={2, 5-8}
     import { defineConfig } from 'astro/config';
     import node from '@astrojs/node';
 
