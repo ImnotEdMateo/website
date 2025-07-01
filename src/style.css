@@ -42,7 +42,8 @@ main, footer {
 
 code {
   background-color: #32302f;
-  color: #ebdbb2;
+  color: #fbf1c7;
+  margin: 0;
   padding: 0.2em 0.4em;
   border-radius: 4px;
   font-family: monospace;

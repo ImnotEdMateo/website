@@ -34,7 +34,7 @@ Soy muy vago para comentar código, entonces voy a explicar que hace cada cosa:
 
 Todo esta cháchara para al final del día, tener un output así:
 
-```plaintext title="a.out"
+```ansi
 q
 ww
 eee
