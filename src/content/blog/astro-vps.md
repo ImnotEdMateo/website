@@ -39,7 +39,7 @@ En el caso de que solo queramos crear un blog simple, que no use *server side re
     sudo a2enmod actions
     ~~~
    
-4. Crea un fichero `.conf` en `/etc/apache2/sites-avaiable/` y usa esta configuración:
+4. Crea un fichero `.conf` en `/etc/apache2/sites-available/` y usa esta configuración:
 
     ~~~apache title="website.conf"
     # Esto muestra el sitio en HTTPS, ejemplo: http://tudominio.org, no redirecciona
@@ -147,7 +147,7 @@ Para poder tener *server side rendering*, *server islands* y toda la mierda que 
     sudo a2enmod headers
     ~~~
 
-7. Crea un fichero `.conf` en `/etc/apache2/sites-avaiable/` y usa esta configuración:
+7. Crea un fichero `.conf` en `/etc/apache2/sites-available/` y usa esta configuración:
 
     ~~~apache title="website.conf"
     <VirtualHost *:80>
