@@ -17,10 +17,12 @@ if (!post) {
   return Astro.rewrite('/404');
 }
 
-const formattedDate = post.data.pubDate.toLocaleDateString('es-ES', {
+const formattedDate = post.data.pubDate.toLocaleString('es-ES', {
   day: 'numeric',
   month: 'long',
-  year: 'numeric'
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit'
 });
 
 const { Content } = await render(post);
@@ -30,18 +32,15 @@ const pageDescription = post.data.description;
 
 // Extraemos el autor
 const author = post.data.author || '';
-const shouldShowAuthor = author !== 'Mateo' && author !== 'EdMateo';
 ---
 
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
   <article>
     <h4>
+      Escrito por <span class="green">{author}</span> un 
       <time datetime={post.data.pubDate.toISOString()}>
-        Escrito el {formattedDate}
+        {formattedDate}
       </time>
-      {shouldShowAuthor && (
-        <> por <span class="green">{author}</span></>
-      )}
     </h4>
 
     <Content />
