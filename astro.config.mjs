@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import node from '@astrojs/node';
 import path from 'path';
-
 import expressiveCode from 'astro-expressive-code';
 
 export default defineConfig({
@@ -21,6 +20,7 @@ export default defineConfig({
   },
 
   integrations: [expressiveCode({
-    themes: ['gruvbox-dark-medium']
+    themes: ['gruvbox-dark-soft'],
+    defaultLocale: 'es-ES'
   })]
 });
