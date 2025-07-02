@@ -50,6 +50,16 @@ code {
   font-size: 0.95em;
 }
 
+blockquote {
+  color: #98971a;
+  border-left: 2px solid #789922;
+  padding-left: 8px;
+  margin-left: 0;
+  font-style: normal;
+  background-color: transparent;
+}
+
+
 main h1 {
   text-align: center;
 }
