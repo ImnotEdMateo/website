@@ -1,7 +1,7 @@
 ---
 title: Mina fea, o traba lindo.
 author: 'Cucumber69'
-description: Aprende a evitar que tu sistema Linux con SystemD se congele al cerrar la tapa del portátil modificando logind.conf de manera sencilla.
+description: 'Un ensayo irónico y filosófico sobre una de las preguntas más profundas de nuestra era: ¿mina fea o traba lindo? Reflexión desde la razón y el miedo al juicio social.'
 pubDate: 2025-07-06T23:59:00-05:00
 ---
 
