@@ -1,13 +1,26 @@
 [
   {
     "id": 1,
+    "url": "http://zsxjtsgzborzdllyp64c6pwnjz5eic76bsksbxzqefzogwcydnkjy3yd.onion/",
+    "name": "Shadow Wiki",
+    "img": "/static/buttons/shadow_wiki.png",
+    "desc": "Una Wiki con extensos análisis vacíos de software que nadie usa, además de decir las obviedades que ya todo el mundo sabe de la privacidad."
+  },
+  {
+    "id": 2,
     "url": "http://interstellar.i2p",
     "name": "interstellar.i2p",
     "img": "/static/buttons/interstellar.jpeg",
     "desc": "Posiblemente esté inactivo cuando lo visites, no es raro, la actividad en linea de esta persona está ligada con su sitio, si su PC se apaga, el sitio se cae... simplemente poético."
   },
   {
-    "id": 2,
+    "id": 3,
+    "url": "http://sabladem4rxv5p34qcpz6sxitmftvmzmlzi4cjmmh5a3phcvdi3k2wad.onion/",
+    "name": "MayVaneDay Studios",
+    "desc": "Sitio personal de escritora anónima."
+  },
+  {
+    "id": 4,
     "url": "http://sidripyo57kem4tcpslb7pxglsesmyzkczj7bfmnxv7kg4z5wuemxfqd.onion/",
     "name": "SIDRIP Alliance",
     "desc": "Una banda bien chistosa de metal que encontré en un repertorio de enlaces."
