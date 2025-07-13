@@ -1,0 +1,34 @@
+---
+import "@/style.css";
+import "@/quizatro.css";
+import Footer from "@/components/footer.astro";
+import { ViewTransitions } from "astro:transitions";
+
+const siteName = "QuizAtrO";
+---
+
+
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href={`https://edmateo.site${Astro.url.pathname}`} />
+    <ViewTransitions />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Quizatro is an educational card game inspired by Balatro, where you answer questions to play poker hands. If you fail, the opposite happens. A fast-paced mix of strategy, chaos, and English learning — study hard or fold fast!">
+    <title>QuizAtrO</title>
+  </head>
+  <body>
+    <main>
+      <img 
+      src="https://files.edmateo.site/QuizAtrO/logo.png" 
+      alt="QUIZATRO LOGO" 
+      style="width: 50%; display: block; margin: 0 auto;">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

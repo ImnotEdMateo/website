@@ -1,0 +1,229 @@
+---
+import BaseLayout from "@/layouts/quizatro.astro"
+---
+
+<BaseLayout>
+  <h2>Es Cómo Póker, pero Irreal</h2>
+
+  <p style="text-align: center;"><b>QuizAtrO</b> es un juego de cartas educativo inspirado en <a href="https://www.playbalatro.com/">Balatro</a>.</p>
+
+  <ul>
+    <li><a href="#como_jugar">¿Cómo Jugar?</a></li>
+    <li><a href="#poker_hands">Manos de Póker</a></li>
+    <li><a href="#boss_blinds">Boss Blinds</a></li>
+    <li><a href="#jokers">Comodines</a></li>
+  </ul>
+
+  <a href="/quizatro">English Version</a>
+
+  <h3 class="#como_jugar">¿Cómo Jugar?</h3>
+
+  <p>Tu objetivo es pasar la mayor cantidad de <b>ciegas</b> posible. Para pasar una ciega, necesitas hacer las <a href="#poker_hands">manos de Póker</a> que pide la ciega. En teoría es facil, ¿no?</p>
+  <p>Por cada ciega solo podrás jugar <b>3 manos</b> y <b>4 descartes</b>. Además, cada vez que quieras hacer estos movimientos deberás sacar una <b>carta de pregunta</b>. Si respondes bien, jugarás o descartarás esa mano, sino, se hace lo contrario.</p>
+  <p>Cada jugador inicia con una mano de <b>8 cartas</b>. Cada vez que se juege o descarte una carta, se repondrán esas cartas en la mano del jugador.</p>
+  <p>Después de cada ciega, se le dará al jugador <b class="yellow">3 dólares</b> para gastar en la tienda. En la tienda podrá comprar hasta <b>2 <a href="#jokers">comodines</a></b>; cuyo efecto puede ayudar al jugador a terminar la ronda</p>
+
+  <h3 id="poker_hands">Manos de Póker</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Mano</th>
+        <th>Descripción</th>
+        <th><img src="https://files.edmateo.site/QuizAtrO/Small_Blind.webp" alt="Small Blind" width="40px"></th>
+        <th><img src="https://files.edmateo.site/QuizAtrO/Big_Blind.webp" alt="Big Blind" width="40px"></th>
+        <th><a href="#boss_blinds">Boss Blind</a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>High Card</td>
+        <td>Cuando no es posible otra mano. Se usa la carta más alta (Ace cuenta como alto).</td>
+        <td>5</td>
+        <td>7</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>Pair</td>
+        <td>Dos cartas del mismo rango.</td>
+        <td>4</td>
+        <td>6</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>Two Pair</td>
+        <td>Dos pares distintos.</td>
+        <td>3</td>
+        <td>5</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>Three of a Kind</td>
+        <td>Tres cartas del mismo rango.</td>
+        <td>3</td>
+        <td>4</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Straight</td>
+        <td>Cinco cartas en orden, no mismo palo. El Ace puede ser alto o bajo.</td>
+        <td>2</td>
+        <td>3</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Flush</td>
+        <td>Cinco cartas del mismo palo.</td>
+        <td>2</td>
+        <td>3</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Full House</td>
+        <td>Tres del mismo rango + par.</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td>Four of a Kind</td>
+        <td>Cuatro cartas del mismo rango.</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Straight Flush</td>
+        <td>Cinco cartas consecutivas del mismo palo.</td>
+        <td>1</td>
+        <td>2</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>Royal Flush</td>
+        <td>Straight Flush de A-K-Q-J-10 del mismo palo (se considera Straight Flush).</td>
+        <td>1</td>
+        <td>1</td>
+        <td>1</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 id="boss_blinds">Ciegas Jefe</h3>
+
+  <p>A diferencia de las ciegas anteriores, en una ciega jefe, no basta con hacer las manos de poker, debes regirte a una norma escogida al azar que dificulta tu ronda.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Icono</th>
+        <th>Nombre</th>
+        <th>Descripción</th>
+      </tr>
+      <tr>
+        <td><img src="https://files.edmateo.site/QuizAtrO/The_Psychic.webp" alt="The Needle"></td>
+        <td>El Psíquico</td>
+        <td>Debes jugar 5 cartas. (no todas las cartas necesitan anotar)</td>
+      </tr>
+      <tr>
+        <td><img src="https://files.edmateo.site/QuizAtrO/The_Manacle.webp" alt="The Manacle"></td>
+        <td>El Grillete</td>
+        <td>-1 de <span class="yellow">tamaño de mano</span></td>
+      </tr>
+      <tr>
+        <td><img src="https://files.edmateo.site/QuizAtrO/The_Plant.webp" alt="The Plant"></td>
+        <td>La Planta</td>
+        <td>Las cartas de figuras no se pueden usar para formar manos</td>
+      </tr>
+      <tr>
+        <td><img src="https://files.edmateo.site/QuizAtrO/The_Needle.webp" alt="The Needle"></td>
+        <td>La Aguja</td>
+        <td>Juega solo una mano</td>
+      </tr>
+      <tr>
+        <td><img src="https://files.edmateo.site/QuizAtrO/The_Mark.webp" alt="The Needle"></td>
+        <td>La Marca</td>
+        <td>Todas las cartas de figuras boca abajo</td>
+      </tr>
+    </thead>
+  </table>
+
+  <h3 id="jokers">Comodines</h3>
+
+  <table border="1" style="width: 100%; text-align: left; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th>Img</th>
+        <th>Name</th>
+        <th>Descripción</th>
+        <th><span class="yellow">$</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <img src="https://files.edmateo.site/QuizAtrO/Baron.webp" alt="Baron" width="64">
+        </td>
+        <td>Baron</td>
+        <td>Si aún hay una carta de figura en la mano al jugar una mano mayor a <b>Flush</b>. Gana al instante la ronda.</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://files.edmateo.site/QuizAtrO/Hack.png" alt="Comediante" width="64">
+        </td>
+        <td>Comediante</td>
+        <td>Si la mano jugada es una <b>Escalera sin figuras</b>. Gana al instante la ronda.</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://files.edmateo.site/QuizAtrO/bw.png" alt="Comodin en blanco y negro" width="64">
+        </td>
+        <td>Comodín en Blanco y Negro</td>
+        <td><span class="red">Corazones</span> y <span class="red">Diamantes</span> cuentan como un mismo palo. <br/><span class="green">Espadas</span> y <span class="green">tréboles</span> cuentan como un mismo palo.</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://files.edmateo.site/QuizAtrO/Luchador.webp" alt="Luchador" width="64">
+        </td>
+        <td>Luchador</td>
+        <td>Vende esta carta para descativar el efecto de la ciega jefe presente.</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://files.edmateo.site/QuizAtrO/Misprint.webp" alt="Mala impresión" width="64">
+        </td>
+        <td>Mala Impresión</td>
+        <td>Probabilidad de 1/6 de que la mano jugada sea contada como un <b>Royal Flush</b></td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://files.edmateo.site/QuizAtrO/Pareidolia.webp" alt="Pareidolia" width="64">
+        </td>
+        <td>Pareidolia</td>
+        <td>Todas las cartas son consideradas <b>figuras</b>.</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://files.edmateo.site/QuizAtrO/Seltzer.webp" alt="Refresco" width="64">
+        </td>
+        <td>Refresco</td>
+        <td>Esta carta te hace ganar la ciega siguiente al instante, luego, se hace inútil.</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>
+          <img src="https://files.edmateo.site/QuizAtrO/joker-otro.png" alt="Comodín hecho a Mano" width="64">
+        </td>
+        <td>Comodín hecho a Mano</td>
+        <td>Todas las cartas de Pregunta boca arriba.</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
+
+</BaseLayout>
