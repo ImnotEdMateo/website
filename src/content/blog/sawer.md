@@ -1,7 +1,7 @@
 ---
 title: Guía Textual y poco Detallada de como Matar a Sawer en Cry of Fear.
 author: 'EdMateo'
-description: 'La mala pa' Sawer.'
+description: "La mala pa' Sawer."
 pubDate: 2025-07-13T19:13:00-05:00
 ---
 
