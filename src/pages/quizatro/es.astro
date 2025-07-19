@@ -10,7 +10,7 @@ import BaseLayout from "@/layouts/quizatro.astro"
   <ul>
     <li><a href="#como_jugar">¿Cómo Jugar?</a></li>
     <li><a href="#poker_hands">Manos de Póker</a></li>
-    <li><a href="#boss_blinds">Boss Blinds</a></li>
+    <li><a href="#blinds">Ciegas</a></li>
     <li><a href="#jokers">Comodines</a></li>
   </ul>
 
@@ -18,7 +18,7 @@ import BaseLayout from "@/layouts/quizatro.astro"
 
   <h3 class="#como_jugar">¿Cómo Jugar?</h3>
 
-  <p>Tu objetivo es pasar la mayor cantidad de <b>ciegas</b> posible. Para pasar una ciega, necesitas hacer las <a href="#poker_hands">manos de Póker</a> que pide la ciega. En teoría es facil, ¿no?</p>
+  <p>Tu objetivo es vencer a la <a href="#boss_blind">ciega jefe</a>. Para pasar una ciega, necesitas acumular la puntuación que te pida la <a href="#blind">ciega</a>. En teoría es facil, ¿no?</p>
   <p>Por cada ciega solo podrás jugar <b>3 manos</b> y <b>4 descartes</b>. Además, cada vez que quieras hacer estos movimientos deberás sacar una <b>carta de pregunta</b>. Si respondes bien, jugarás o descartarás esa mano, sino, se hace lo contrario.</p>
   <p>Cada jugador inicia con una mano de <b>8 cartas</b>. Cada vez que se juege o descarte una carta, se repondrán esas cartas en la mano del jugador.</p>
   <p>Después de cada ciega, se le dará al jugador <b class="yellow">3 dólares</b> para gastar en la tienda. En la tienda podrá comprar hasta <b>2 <a href="#jokers">comodines</a></b>; cuyo efecto puede ayudar al jugador a terminar la ronda</p>
@@ -29,86 +29,64 @@ import BaseLayout from "@/layouts/quizatro.astro"
       <tr>
         <th>Mano</th>
         <th>Descripción</th>
-        <th><img src="https://files.edmateo.site/QuizAtrO/Small_Blind.webp" alt="Small Blind" width="40px"></th>
-        <th><img src="https://files.edmateo.site/QuizAtrO/Big_Blind.webp" alt="Big Blind" width="40px"></th>
-        <th><a href="#boss_blinds">Boss Blind</a></th>
+        <th>Puntaje</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>High Card</td>
-        <td>Cuando no es posible otra mano. Se usa la carta más alta (Ace cuenta como alto).</td>
-        <td>5</td>
-        <td>7</td>
-        <td>9</td>
+        <td>Carta mas Alta</td>
+        <td>Cuando no es posible otra mano. Se usa esta.</td>
+        <td>50</td>
       </tr>
       <tr>
-        <td>Pair</td>
-        <td>Dos cartas del mismo rango.</td>
-        <td>4</td>
-        <td>6</td>
-        <td>8</td>
+        <td>Par</td>
+        <td>Dos cartas de misma categoría.</td>
+        <td>70</td>
       </tr>
       <tr>
-        <td>Two Pair</td>
+        <td>Doble par</td>
         <td>Dos pares distintos.</td>
-        <td>3</td>
-        <td>5</td>
-        <td>7</td>
+        <td>100</td>
       </tr>
       <tr>
-        <td>Three of a Kind</td>
-        <td>Tres cartas del mismo rango.</td>
-        <td>3</td>
-        <td>4</td>
-        <td>6</td>
+        <td>Tercia</td>
+        <td>Tres cartas de misma categoría.</td>
+        <td>150</td>
       </tr>
       <tr>
-        <td>Straight</td>
-        <td>Cinco cartas en orden, no mismo palo. El Ace puede ser alto o bajo.</td>
-        <td>2</td>
-        <td>3</td>
-        <td>5</td>
+        <td>Escalera</td>
+        <td>Cinco cartas en orden, no mismo palo.</td>
+        <td>250</td>
       </tr>
       <tr>
-        <td>Flush</td>
+        <td>Color</td>
         <td>Cinco cartas del mismo palo.</td>
-        <td>2</td>
-        <td>3</td>
-        <td>5</td>
+        <td>270</td>
       </tr>
       <tr>
         <td>Full House</td>
-        <td>Tres del mismo rango + par.</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
+        <td>Tercia + par.</td>
+        <td>300</td>
       </tr>
       <tr>
-        <td>Four of a Kind</td>
-        <td>Cuatro cartas del mismo rango.</td>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
+        <td>Póker</td>
+        <td>Cuatro cartas de misma categoría.</td>
+        <td>350</td>
       </tr>
       <tr>
-        <td>Straight Flush</td>
+        <td>Escalera Corrida</td>
         <td>Cinco cartas consecutivas del mismo palo.</td>
-        <td>1</td>
-        <td>2</td>
-        <td>2</td>
+        <td>450</td>
       </tr>
       <tr>
-        <td>Royal Flush</td>
-        <td>Straight Flush de A-K-Q-J-10 del mismo palo (se considera Straight Flush).</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
+        <td>Escalera Real</td>
+        <td>Straight Flush de A-K-Q-J-10 del mismo palo.</td>
+        <td>600</td>
       </tr>
     </tbody>
   </table>
 
-  <h3 id="boss_blinds">Ciegas Jefe</h3>
+  <h3 id="blinds">Ciegas</h3>
 
   <p>A diferencia de las ciegas anteriores, en una ciega jefe, no basta con hacer las manos de poker, debes regirte a una norma escogida al azar que dificulta tu ronda.</p>
 
@@ -118,11 +96,26 @@ import BaseLayout from "@/layouts/quizatro.astro"
         <th>Icono</th>
         <th>Nombre</th>
         <th>Descripción</th>
+        <th>Puntaje</th>
       </tr>
+      <tr>
+        <td><img src="https://files.edmateo.site/QuizAtrO/Small_Blind.webp" alt="Small_Blind"></td> 
+        <td>Ciega Pequeña</td> 
+        <td>Sin efectos especiales.</td>
+        <td>300</td>
+      </tr>
+      <tr>
+        <td><img src="https://files.edmateo.site/QuizAtrO/Big_Blind.webp" alt="Big_Blind"></td> 
+        <td>Ciega Grande</td> 
+        <td>Sin efectos especiales.</td>
+        <td>450</td>
+      </tr>
+      <th align="center" colspan="4" id="boss_blind">Ciegas Jefe</th>
       <tr>
         <td><img src="https://files.edmateo.site/QuizAtrO/The_Psychic.webp" alt="The Needle"></td>
         <td>El Psíquico</td>
         <td>Debes jugar 5 cartas. (no todas las cartas necesitan anotar)</td>
+        <td rowspan="5">600</td>
       </tr>
       <tr>
         <td><img src="https://files.edmateo.site/QuizAtrO/The_Manacle.webp" alt="The Manacle"></td>
@@ -163,8 +156,8 @@ import BaseLayout from "@/layouts/quizatro.astro"
         <td>
           <img src="https://files.edmateo.site/QuizAtrO/Baron.webp" alt="Baron" width="64">
         </td>
-        <td>Baron</td>
-        <td>Si aún hay una carta de figura en la mano al jugar una mano mayor a <b>Flush</b>. Gana al instante la ronda.</td>
+        <td>Barón</td>
+        <td>Cada rey (K) restante en la mano, da <span class="red">x1.5</span> a la puntuacion.</td>
         <td>2</td>
       </tr>
       <tr>
@@ -172,7 +165,7 @@ import BaseLayout from "@/layouts/quizatro.astro"
           <img src="https://files.edmateo.site/QuizAtrO/Hack.png" alt="Comediante" width="64">
         </td>
         <td>Comediante</td>
-        <td>Si la mano jugada es una <b>Escalera sin figuras</b>. Gana al instante la ronda.</td>
+        <td>Si la mano jugada es una <b>Escalera sin figuras</b>. Se multiplica la puntuación final <span class="red">x2</span>.</td>
         <td>3</td>
       </tr>
       <tr>
@@ -196,7 +189,7 @@ import BaseLayout from "@/layouts/quizatro.astro"
           <img src="https://files.edmateo.site/QuizAtrO/Misprint.webp" alt="Mala impresión" width="64">
         </td>
         <td>Mala Impresión</td>
-        <td>Probabilidad de 1/6 de que la mano jugada sea contada como un <b>Royal Flush</b></td>
+        <td>Probabilidad de 1/6 de que la mano jugada sea contada como un <b>Royal Flush</b>.</td>
         <td>2</td>
       </tr>
       <tr>
@@ -212,7 +205,7 @@ import BaseLayout from "@/layouts/quizatro.astro"
           <img src="https://files.edmateo.site/QuizAtrO/Seltzer.webp" alt="Refresco" width="64">
         </td>
         <td>Refresco</td>
-        <td>Esta carta te hace ganar la ciega siguiente al instante, luego, se hace inútil.</td>
+        <td>Multiplica <span class="red">x2</span>. Solo por la siguiente ronda</td>
         <td>2</td>
       </tr>
       <tr>
