@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@/layouts/base.astro';
+
+const pageTitle = "Aves";
+const pageDescription = "Retratando la cruda realidad urbana de los pájaros.";
+---
+<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
+  <iframe id="myFrame" src="https://picgeon.edmateo.site" style="width:100%; border:none;" scrolling="no"></iframe>
+  <span style="display: block; text-align: center;">Miniaturas Generadas por <a href="https://github.com/ImnotEdMateo/picgeon">PicGeon</a>.</span>
+
+<script>
+  window.addEventListener("message", (event) => {
+    if (event.data.type === "resize" && typeof event.data.height === "number") {
+      document.getElementById("myFrame").style.height = event.data.height + "px";
+    }
+  });
+</script>
+</BaseLayout>
