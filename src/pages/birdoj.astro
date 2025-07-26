@@ -9,15 +9,17 @@ const pageDescription = "Retratando la cruda realidad urbana de los pájaros.";
   <span style="display: block; text-align: center;">Miniaturas Generadas por <a href="https://github.com/ImnotEdMateo/picgeon">PicGeon</a>.</span>
 
 <script>
-  function sendHeight() {
-    const height = document.documentElement.scrollHeight;
-    parent.postMessage({ type: "resize", height }, "https://edmateo.site"); // cambia al origen real
-  }
+  window.addEventListener("message", (event) => {
+    // Asegúrate de validar el origen por seguridad
+    if (event.origin !== "https://picgeon.edmateo.site") return;
 
-  window.addEventListener("load", sendHeight);
+    // Encuentra el iframe que muestra la galería
+    const iframe = document.getElementById("galeria");
 
-  new ResizeObserver(() => {
-    sendHeight();
-  }).observe(document.documentElement);
+    // Si el mensaje contiene una altura válida, ajústala
+    if (event.data.type === "resize" && event.data.height) {
+      iframe.style.height = event.data.height + "px";
+    }
+  });
 </script>
 </BaseLayout>
