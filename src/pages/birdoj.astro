@@ -1,26 +1,25 @@
 ---
+import { PUBLIC_PICGEON_URL } from "astro:env/client";
 import BaseLayout from '@/layouts/base.astro';
 
 const pageTitle = "Aves";
 const pageDescription = "Retratando la cruda realidad urbana de los pájaros.";
 ---
 <BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
-  <iframe id="galeria" src="https://picgeon.edmateo.site" style="width:100%; border:none;" scrolling="no"></iframe>
+  <iframe id="galeria" src={PUBLIC_PICGEON_URL} style="width:100%; border:none;" scrolling="no"></iframe>
   <span style="display: block; text-align: center;">Miniaturas Generadas por <a href="https://github.com/ImnotEdMateo/picgeon">PicGeon</a>.</span>
-  <span style="display: block; text-align: center;">Si no puedes verlo entra a <a href="https://picgeon.edmateo.site">PicGeon</a> o al <a href="https://files.edmateo.site/AVES">Directorio</a>.</span>
+  <span style="display: block; text-align: center;">Si no puedes verlo entra a <a href={PUBLIC_PICGEON_URL}>PicGeon</a> o al <a href="https://files.edmateo.site/AVES">Directorio</a>.</span>
 
-<script>
-  window.addEventListener("message", (event) => {
-    // Asegúrate de validar el origen por seguridad
-    if (event.origin !== "https://picgeon.edmateo.site") return;
+  <script type="module">
+    const PUBLIC_PICGEON_URL = "{PUBLIC_PICGEON_URL}";
 
-    // Encuentra el iframe que muestra la galería
-    const iframe = document.getElementById("galeria");
+    window.addEventListener("message", (event) => {
+      if (event.origin !== PUBLIC_PICGEON_URL) return;
 
-    // Si el mensaje contiene una altura válida, ajústala
-    if (event.data.type === "resize" && event.data.height) {
-      iframe.style.height = event.data.height + "px";
-    }
-  });
-</script>
+      const iframe = document.getElementById("galeria");
+      if (event.data.type === "resize" && event.data.height) {
+        iframe.style.height = event.data.height + "px";
+      }
+    });
+  </script>
 </BaseLayout>
