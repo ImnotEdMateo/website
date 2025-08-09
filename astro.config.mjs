@@ -27,7 +27,6 @@ export default defineConfig({
   env: {
     schema: {
       PUBLIC_RADIO_URL: envField.string({ context: 'client', access: 'public'}),
-      PUBLIC_PICGEON_URL: envField.string({ context: 'client', access: 'public'}),
       GUESTBOOK_URL: envField.string({ context: 'server', access: 'public'}),
     }
   }
