@@ -4,6 +4,18 @@ const { data } = Astro.props;
 const items = await getCollection(data);
 ---
 
+<ul>
+  {items.length > 0 && items.map((item) => (
+    <li key={item.data.url}>
+      <a href={item.data.url}>
+        {item.data.img && <img src={item.data.img} alt={`88x31 de ${item.data.name}`} />}
+      </a>
+      <a href={item.data.url}>{item.data.name}</a>
+      <span>{item.data.desc}</span>
+    </li>
+  ))}
+</ul>
+
 <style>
   ul {
     padding-left: 0;
@@ -29,17 +41,4 @@ const items = await getCollection(data);
   a {
     word-break: keep-all;
   }
-
 </style>
-
-<ul>
-  {items.length > 0 && items.map((item) => (
-    <li key={item.data.url}>
-      <a href={item.data.url}>
-        {item.data.img && <img src={item.data.img} alt={`88x31 de ${item.data.name}`} />}
-      </a>
-      <a href={item.data.url}>{item.data.name}</a>
-      <span>{item.data.desc}</span>
-    </li>
-  ))}
-</ul>
