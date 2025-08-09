@@ -1,5 +1,41 @@
 ---
 ---
+
+<form id="guestbook-form">
+  <div class="input-row">
+    <input type="text" name="name" placeholder="Nombre (Opcional)" />
+    <input type="text" name="website" placeholder="Sitio web (opcional)" />
+  </div>
+  <textarea name="message" placeholder="Tu mensaje" required></textarea>
+  <button type="submit">Enviar</button>
+</form>
+
+<script>
+  const form = document.getElementById("guestbook-form");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    const response = await fetch("https://guestbook-api.edmateo.site", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      form.reset();
+      location.reload();
+    } else {
+      alert("Hubo un error al enviar la entrada");
+    }
+  });
+</script>
+
 <style>
   #guestbook-form * {
     box-sizing: border-box;
@@ -81,38 +117,3 @@
     opacity: 1;
   }
 </style>
-
-<form id="guestbook-form">
-  <div class="input-row">
-    <input type="text" name="name" placeholder="Nombre (Opcional)" />
-    <input type="text" name="website" placeholder="Sitio web (opcional)" />
-  </div>
-  <textarea name="message" placeholder="Tu mensaje" required></textarea>
-  <button type="submit">Enviar</button>
-</form>
-
-<script>
-  const form = document.getElementById("guestbook-form");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-
-    const response = await fetch("https://guestbook-api.edmateo.site", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (response.ok) {
-      form.reset();
-      location.reload();
-    } else {
-      alert("Hubo un error al enviar la entrada");
-    }
-  });
-</script>

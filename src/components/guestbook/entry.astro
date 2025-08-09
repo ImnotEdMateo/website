@@ -18,6 +18,51 @@ const parseMessage = msg => msg.replace(/>>(\d+)/g, (m, id) => `<a href="/guestb
 export const prerender = false;
 ---
 
+<div>
+  {entries.map(({ ID, CreatedAt, Name, Website, Message }) => {
+    const { formattedDate, formattedTime } = formatDate(CreatedAt);
+    return (
+      <div class="entry-box" id={`entry-${ID}`} key={ID}>
+        <div class="entry-header">
+          <div class="namekajweb">
+            <strong><span class="importantshit">{Name}</span></strong>
+            {Website && (
+              <>
+                {" desde "}
+                <a href={normalizeUrl(Website)} target="_blank" rel="noopener noreferrer">
+                  {Website}
+                </a>
+              </>
+            )}
+          </div>
+          <div class="datekajid">
+            <span class="date">
+              escrito el <strong><span class="importantshit">{formattedDate}</span></strong> a las{" "}
+              <strong><span class="importantshit">{formattedTime}</span></strong>
+            </span>
+            <a href={`javascript:quote(${ID})`} class="post-number reply-link">No.{ID}</a>
+          </div>
+        </div>
+        <div class="entry-content">
+          {Message.split("\n").map((line, index) => (
+            <div key={index} class={line.startsWith(">") ? "green" : ""} set:html={parseMessage(line)}></div>
+          ))}
+        </div>
+      </div>
+    );
+  })}
+</div>
+
+<script>
+  window.quote = id => {
+    const field = document.querySelector('#guestbook-form textarea[name="message"]');
+    if(field) {
+      field.value += `>>${id}\n`;
+      field.focus();
+    }
+  }
+</script>
+
 <style>
   .entry-box {
     margin-top: 20px;
@@ -80,48 +125,3 @@ export const prerender = false;
     }
   }
 </style>
-
-<div>
-  {entries.map(({ ID, CreatedAt, Name, Website, Message }) => {
-    const { formattedDate, formattedTime } = formatDate(CreatedAt);
-    return (
-      <div class="entry-box" id={`entry-${ID}`} key={ID}>
-        <div class="entry-header">
-          <div class="namekajweb">
-            <strong><span class="importantshit">{Name}</span></strong>
-            {Website && (
-              <>
-                {" desde "}
-                <a href={normalizeUrl(Website)} target="_blank" rel="noopener noreferrer">
-                  {Website}
-                </a>
-              </>
-            )}
-          </div>
-          <div class="datekajid">
-            <span class="date">
-              escrito el <strong><span class="importantshit">{formattedDate}</span></strong> a las{" "}
-              <strong><span class="importantshit">{formattedTime}</span></strong>
-            </span>
-            <a href={`javascript:quote(${ID})`} class="post-number reply-link">No.{ID}</a>
-          </div>
-        </div>
-        <div class="entry-content">
-          {Message.split("\n").map((line, index) => (
-            <div key={index} class={line.startsWith(">") ? "green" : ""} set:html={parseMessage(line)}></div>
-          ))}
-        </div>
-      </div>
-    );
-  })}
-</div>
-
-<script>
-  window.quote = id => {
-    const field = document.querySelector('#guestbook-form textarea[name="message"]');
-    if(field) {
-      field.value += `>>${id}\n`;
-      field.focus();
-    }
-  }
-</script>

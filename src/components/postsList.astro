@@ -7,9 +7,7 @@ const { limit } = Astro.props;
 posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 const slicedPosts = typeof limit === 'number' ? posts.slice(0, limit) : posts;
-
 ---
-
 
 <ul>
   {slicedPosts.map((post) => (
