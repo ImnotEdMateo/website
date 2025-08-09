@@ -1,5 +1,7 @@
 ---
-const response = await fetch("https://guestbook-api.edmateo.site/");
+import { GUESTBOOK_URL } from "astro:env/server";
+
+const response = await fetch(GUESTBOOK_URL);
 const entries = await response.json();
 
 const formatDate = iso => {

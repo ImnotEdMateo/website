@@ -1,100 +1,70 @@
 ---
+import { PUBLIC_RADIO_URL } from "astro:env/client"
 import BaseLayout from "@/layouts/base.astro"
 import List from "@/components/radioList.astro"
 
 const pageTitle = "EdMateo's Radio"
 const pageDescription = "The most autistic music at EdMateo's Radio"
+const radioLive = `${PUBLIC_RADIO_URL}/live`
 ---
 
-<style>
-  .radio-player {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .radio-player img {
-    width: 180px;
-    height: auto;
-  }
-</style>
-
-<BaseLayout pageTitle={pageTitle} pageDescription={pageDescription}>
-  <div class="radio-player" style="text-align: center;">
-    <img src="/static/radio.gif" />
-    <div style="text-align: center; margin-top: 20px;">
-      <div style="display: inline-block; width: 300px;">
-        <b><p id="radioSong" style="margin: 5px 0;">Espera...</p></b>
-        <audio id="radio-audio" controls style="width: 100%;">
-          <source src="https://radio.edmateo.site/live" type="audio/mpeg" />
-          Tu navegador no soporta el elemento de audio.
-        </audio>
-        <marquee style="color: #bdae93; font-size: 14px; margin-top: 10px; display: block; width: 100%;">
-          {pageDescription}
-        </marquee>
-      </div>
+<BaseLayout {pageTitle} {pageDescription}>
+  <div class="radio-player">
+    <img src="/static/radio.gif" alt="Radio animation" />
+    <div class="radio-box">
+      <p id="radioSong" class="song-title">Espera...</p>
+      <audio id="radio-audio" controls style="width: 100%;">
+        <source src={radioLive} type="audio/mpeg" />
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+      <marquee>{pageDescription}</marquee>
     </div>
   </div>
-  <p><b>EdMateo's Radio</b> es un proyecto bien autista que he creado para compartir mis gustos musicales paupérrimos al internet. Si te gusta la mierda, esto es lo que deberías escuchar en lugar de seguir pagando la suscripcion del <a href="https://stallman.org/spotify.html"><b>MALDITO</b> Spotify</a>. La radio está abierta a todo el mundo, no debes pagar ni nada; como si yo manteniera a un hijo (ambos igual de inútiles).</p>
-  <p>Si no quieres escuchar desde este sitio web, también puedes reproducir la radio directamente desde cualquier reproductor multimedia que soporte transmisiones en linea (vlc, mpv, etc.). Solo pon la url <b><a href="https://radio.edmateo.site/live">https://radio.edmateo.site/live</a></b> en tu reproductor, o en su defecto, abre el enlace directamente en tu navegador.</p>
+
+  <p><b>EdMateo's Radio</b> es un proyecto bien autista que he creado para compartir mis gustos musicales paupérrimos al internet. Si te gusta la mierda, esto es lo que deberías escuchar en lugar de seguir pagando la suscripción del <a href="https://stallman.org/spotify.html"><b>MALDITO</b> Spotify</a>. La radio está abierta a todo el mundo, no debes pagar ni nada; este proyecto lo mantengo como a un hijo (ambos igual de inútiles).</p>
+  <p>Si no quieres escuchar desde este sitio web, también puedes reproducir la radio directamente desde cualquier reproductor multimedia que pueda reproducir por el <i>protocolo http</i> (AIMP, vlc, mpv, etc.). Solo pon la url <a href={radioLive}><b>{radioLive}</b></a> en tu reproductor, o en su defecto, abre el link directamente en tu navegador.</p>
+
   <h2>Programación Estimada</h2>
-  <p>La programación de la radio está divida en <i>6 bloques</i> principales, cada uno asociado a un momento del día. Cada bloque cuenta con una playlist en aleatorio que se emite por todo el bloque... Nada eso.</p>
+  <p>La programación de la radio está dividida en <i>6 bloques</i>, cada uno asociado a un momento del día, reproducirán una playlist en aleatorio hasta que se pase al siguiente. <b>LA ZONA HORARIA ES UTC-5</b> </p>
 
-  <details><summary><b>Amanecer (4:00 - 6:00)</b></summary>
-    <List data="sunrise" />
+  {[
+    ["Amanecer (4:00 - 6:00)", "sunrise"],
+    ["Mañana (6:00 - 11:30)", "morning"],
+    ["Tarde (11:30 - 17:30)", "afternoon"],
+    ["Noche (17:30 - 00:00)", "night"],
+    ["Madrugada (00:00 - 3:00)", "lateNight"]
+  ].map(([title, data]) => (
+    <details><summary><b>{title}</b></summary><List data={data} /></details>
+  ))}
+
+  <details>
+    <summary><b>C U R S E D (03:00 - 4:00)</b></summary>
+    <p>Aquí es un poco diferente... <strong>Ustedes</strong> tendrán que descubrir por su propia cuenta qué canción está sonando. Si saben de qué canción se trata, <a href="/about#contacto">ya saben donde decírmelo</a>. Las canciones encontradas se pondrán acá, mucha suerte. <b class="green">:)</b></p>
   </details>
-
-  <details><summary><b>Mañana (6:00 - 11:30)</b></summary>
-    <List data="morning" />
-  </details>
-
-  <details><summary><b>Tarde (11:30 - 17:30)</b></summary>
-    <List data="afternoon" />
-  </details>
-
-  <details><summary><b>Noche (17:30 - 00:00)</b></summary>
-    <List data="night" />
-  </details>
-
-  <details><summary><b>Madrugada (00:00 - 3:00)</b></summary>
-    <List data="lateNight" />
-  </details>
-
-  <details><summary><b>C U R S E D (03:00 - 4:00)</b></summary>
-    <span>Aquí es un poco diferente... <strong>Ustedes</strong> tendrán que descubrir por su propia cuenta qué canción está sonando. Si saben de que canción se trata, <a href="/about/#contacto">Ya saben donde decírmelo</a>. Las canciones encontradas se pondrán acá, mucha suerte. :)</span>
-  </details>
-
 </BaseLayout>
 
 <script>
+  import { PUBLIC_RADIO_URL } from "astro:env/client"
+
   const fetchRadioSong = async () => {
     try {
-      const response = await fetch('https://radio.edmateo.site/status-json.xsl');
-      const { icestats: { source } } = await response.json();
+      const res = await fetch(`${PUBLIC_RADIO_URL}/status-json.xsl`);
+      const { icestats: { source } } = await res.json();
       const sources = Array.isArray(source) ? source : [source];
+      const getTitle = (src) => src?.title?.trim() || '';
 
-      // Primero, buscamos si existe el mountpoint /live con título definido
-      const liveSource = sources.find(({ listenurl }) => listenurl.includes('/live'));
-      let finalTitle = '';
-
-      if (liveSource && liveSource.title && liveSource.title.trim() !== '') {
-        finalTitle = liveSource.title;
-      } else {
-        // Si no hay título en /live, usamos el mountpoint /stream
-        const streamSource = sources.find(({ listenurl }) => listenurl.includes('/stream'));
-        if (streamSource && streamSource.title) {
-          // Se asume que el título viene con el formato "Artista - Canción"
-          const [artist, song] = streamSource.title.split(' - ');
-          finalTitle = (artist && song) ? `${song.trim()} - ${artist.trim()}` : streamSource.title;
-        } else {
-          finalTitle = "Nada";
+      let title = getTitle(sources.find(s => s.listenurl.includes('/live')));
+      if (!title) {
+        const stream = sources.find(s => s.listenurl.includes('/stream'));
+        if (stream?.title) {
+          const [artist, song] = stream.title.split(' - ');
+          title = song && artist ? `${song.trim()} - ${artist.trim()}` : stream.title;
         }
       }
 
-      document.getElementById('radioSong').textContent = `Sonando: ${finalTitle}`;
-    } catch (error) {
-      console.error('Error fetching radio song:', error);
+      document.getElementById('radioSong').textContent = `Sonando: ${title || 'Nada'}`;
+    } catch (err) {
+      console.error('Error fetching radio song:', err);
       document.getElementById('radioSong').textContent = 'Error fetching song information';
     }
   };
@@ -102,3 +72,36 @@ const pageDescription = "The most autistic music at EdMateo's Radio"
   fetchRadioSong();
   setInterval(fetchRadioSong, 10000);
 </script>
+
+<style>
+  .radio-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .radio-player img {
+    width: 180px;
+    height: auto;
+  }
+
+  .radio-box {
+    display: inline-block;
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  .song-title {
+    margin: 5px 0;
+    font-weight: bold;
+  }
+
+  marquee {
+    color: #bdae93;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+  }
+</style>
