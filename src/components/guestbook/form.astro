@@ -1,7 +1,8 @@
 ---
+const guestbookUrl = import.meta.env.GUESTBOOK_URL;
 ---
 
-<form id="guestbook-form">
+<form id="guestbook-form" data-url={guestbookUrl}>
   <div class="input-row">
     <input type="text" name="name" placeholder="Nombre (Opcional)" />
     <input type="text" name="website" placeholder="Sitio web (opcional)" />
@@ -12,6 +13,7 @@
 
 <script>
   const form = document.getElementById("guestbook-form");
+  const GUESTBOOK_URL = form.dataset.url; // Lee la variable inyectada desde Astro
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -19,11 +21,9 @@
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    const response = await fetch("https://guestbook-api.edmateo.site", {
+    const response = await fetch(GUESTBOOK_URL, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
 
