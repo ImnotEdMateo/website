@@ -12,8 +12,26 @@ const formatDate = iso => {
   };
 };
 
-const normalizeUrl = url => /^https?:\/\//i.test(url) ? url : `http://${url}`;
-const parseMessage = msg => msg.replace(/>>(\d+)/g, (m, id) => `<a href="/guestbook#entry-${id}">${m}</a>`);
+// Acepta solo http/https, descarta cualquier otra cosa peligrosa
+const normalizeUrl = url => {
+  try {
+    const u = new URL(url.startsWith("http") ? url : `http://${url}`);
+    if (u.protocol === "http:" || u.protocol === "https:") return u.href;
+  } catch {}
+  return null;
+};
+
+// Divide el mensaje en partes: texto o link tipo >>id
+const parseMessage = msg => {
+  const parts = msg.split(/(>>\d+)/g);
+  return parts.map(part => {
+    const match = /^>>(\d+)$/.exec(part);
+    if (match) {
+      return { type: "link", id: match[1], text: part };
+    }
+    return { type: "text", text: part };
+  });
+};
 
 export const prerender = false;
 ---
@@ -21,15 +39,17 @@ export const prerender = false;
 <div>
   {entries.map(({ ID, CreatedAt, Name, Website, Message }) => {
     const { formattedDate, formattedTime } = formatDate(CreatedAt);
+    const safeWebsite = Website && normalizeUrl(Website);
+
     return (
-      <div class="entry-box" id={`entry-${ID}`} key={ID}>
+      <div class="entry-box" id={`entry-${ID}`}>
         <div class="entry-header">
           <div class="namekajweb">
             <strong><span class="importantshit">{Name}</span></strong>
-            {Website && (
+            {safeWebsite && (
               <>
                 {" desde "}
-                <a href={normalizeUrl(Website)} target="_blank" rel="noopener noreferrer">
+                <a href={safeWebsite} target="_blank" rel="noopener noreferrer">
                   {Website}
                 </a>
               </>
@@ -45,7 +65,13 @@ export const prerender = false;
         </div>
         <div class="entry-content">
           {Message.split("\n").map((line, index) => (
-            <div key={index} class={line.startsWith(">") ? "green" : ""} set:html={parseMessage(line)}></div>
+            <div class={line.startsWith(">") ? "green" : ""}>
+              {parseMessage(line).map((chunk, i) =>
+                chunk.type === "link"
+                  ? <a href={`/guestbook#entry-${chunk.id}`}>{chunk.text}</a>
+                  : chunk.text
+              )}
+            </div>
           ))}
         </div>
       </div>
