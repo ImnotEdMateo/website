@@ -16,13 +16,12 @@ const fullTitle = pageTitle
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href={`https://edmateo.site${Astro.url.pathname}`} />
-    <ViewTransitions />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={pageDescription}>
     <title>{fullTitle}</title>
+    <ViewTransitions />
+    <link rel="canonical" href={`https://edmateo.site${Astro.url.pathname}`} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="description" content={pageDescription}>
+    <meta name="generator" content={Astro.generator} />
   </head>
   <body>
     <Header />
