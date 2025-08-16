@@ -1,5 +1,7 @@
 ---
-const { radioUrl, description } = Astro.props
+import { PUBLIC_RADIO_URL } from "astro:env/client"
+const radioLive = `${PUBLIC_RADIO_URL}/live`
+const pageDescription = Astro.props
 ---
 
 <div class="radio-player">
@@ -7,10 +9,10 @@ const { radioUrl, description } = Astro.props
   <div class="radio-box">
     <p id="radioSong" class="song-title">Espera...</p>
     <audio id="radio-audio" controls style="width: 100%;">
-      <source src={radioUrl} type="audio/mpeg" />
+      <source src={radioLive} type="audio/mpeg" />
       Tu navegador no soporta el elemento de audio.
     </audio>
-    <marquee>{description}</marquee>
+    <marquee>The most autistic music at EdMateo's Radio</marquee>
   </div>
 </div>
 
