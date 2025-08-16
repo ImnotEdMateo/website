@@ -1,0 +1,48 @@
+---
+const { radioUrl, description } = Astro.props
+---
+
+<div class="radio-player">
+  <img src="/static/radio.gif" alt="Radio animation" />
+  <div class="radio-box">
+    <p id="radioSong" class="song-title">Espera...</p>
+    <audio id="radio-audio" controls style="width: 100%;">
+      <source src={radioUrl} type="audio/mpeg" />
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+    <marquee>{description}</marquee>
+  </div>
+</div>
+
+<style>
+  .radio-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .radio-player img {
+    width: 180px;
+    height: auto;
+  }
+
+  .radio-box {
+    display: inline-block;
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  .song-title {
+    margin: 5px 0;
+    font-weight: bold;
+  }
+
+  marquee {
+    color: #bdae93;
+    font-size: 14px;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+  }
+</style>
