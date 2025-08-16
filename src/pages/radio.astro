@@ -2,6 +2,7 @@
 import { PUBLIC_RADIO_URL } from "astro:env/client"
 import BaseLayout from "@/layouts/base.astro"
 import List from "@/components/radioList.astro"
+import Player from "@/components/radioPlayer.astro"
 
 const pageTitle = "EdMateo's Radio"
 const pageDescription = "The most autistic music at EdMateo's Radio"
@@ -9,17 +10,7 @@ const radioLive = `${PUBLIC_RADIO_URL}/live`
 ---
 
 <BaseLayout {pageTitle} {pageDescription}>
-  <div class="radio-player">
-    <img src="/static/radio.gif" alt="Radio animation" />
-    <div class="radio-box">
-      <p id="radioSong" class="song-title">Espera...</p>
-      <audio id="radio-audio" controls style="width: 100%;">
-        <source src={radioLive} type="audio/mpeg" />
-        Tu navegador no soporta el elemento de audio.
-      </audio>
-      <marquee>{pageDescription}</marquee>
-    </div>
-  </div>
+  <Player />
 
   <p><b>EdMateo's Radio</b> es un proyecto bien autista que he creado para compartir mis gustos musicales paupérrimos al internet. Si te gusta la mierda, esto es lo que deberías escuchar en lugar de seguir pagando la suscripción del <a href="https://stallman.org/spotify.html"><b>MALDITO</b> Spotify</a>. La radio está abierta a todo el mundo, no debes pagar ni nada; este proyecto lo mantengo como a un hijo (ambos igual de inútiles).</p>
   <p>Si no quieres escuchar desde este sitio web, también puedes reproducir la radio directamente desde cualquier reproductor multimedia que pueda reproducir por el <i>protocolo http</i> (AIMP, vlc, mpv, etc.). Solo pon la url <a href={radioLive}><b>{radioLive}</b></a> en tu reproductor, o en su defecto, abre el link directamente en tu navegador.</p>
@@ -72,36 +63,3 @@ const radioLive = `${PUBLIC_RADIO_URL}/live`
   fetchRadioSong();
   setInterval(fetchRadioSong, 10000);
 </script>
-
-<style>
-  .radio-player {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .radio-player img {
-    width: 180px;
-    height: auto;
-  }
-
-  .radio-box {
-    display: inline-block;
-    width: 300px;
-    margin-top: 20px;
-  }
-
-  .song-title {
-    margin: 5px 0;
-    font-weight: bold;
-  }
-
-  marquee {
-    color: #bdae93;
-    font-size: 14px;
-    margin-top: 10px;
-    display: block;
-    width: 100%;
-  }
-</style>
