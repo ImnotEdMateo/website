@@ -57,38 +57,31 @@
   },
   {
     "id": 9,
-    "url": "https://sergio-m.neocities.org/",
-    "img": "/static/buttons/sergio-m.gif",
-    "name": "sergio-m.neocities.org",
-    "desc": "Hincha de Millos promedio."
-  },
-  {
-    "id": 10,
     "url": "https://sizeof.cat",
     "img": "/static/buttons/sizeofcat.jpg",
     "name": "sizeof(cat)",
     "desc": "Bitácora de un Catalán sobre tecnología"
   },
   {
-    "id": 11,
+    "id": 10,
     "url": "http://corriendocontijeras.ct.ws",
     "name": "CCT (Corriendo Con Tijeras)",
     "desc": "El ingeniero menos dañado."
   },
   {
-    "id": 12,
+    "id": 11,
     "url": "https://justfuckingusehtml.com/es-CO",
     "name": "Usa HTML, perro hijueputa",
     "desc": "Lee esto antes de querer hacer un sitio web."
   },
   {
-    "id": 13,
+    "id": 12,
     "url": "https://her.st",
     "name": "her.st",
     "desc": "Blog muy interesante acerca de minimalismo digital, selfhosting y eso..."
   },
   {
-    "id": 14,
+    "id": 13,
     "url": "https://lolcat.ca/",
     "name": "lolcat's website",
     "desc": "El mrk que creo 4get..."
