@@ -21,6 +21,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /srv/www/website
+          sudo git restore .
           sudo git pull origin main
           sudo npm install
           sudo npm run build
