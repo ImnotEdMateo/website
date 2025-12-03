@@ -1,28 +1,34 @@
 [
-  
   {
-    "id": "1",
+    "id": 1,
+    "img": "/static/buttons/diccionariocolombia.png",
+    "url": "https://diccionariocolombia.com/",
+    "name": "Diccionario Colombia",
+    "desc": "Compilación de frases, palabras y jergas usadas en Colombia. Es abierta y cualquiera puede contribuir."
+  },
+  {
+    "id": 2,
     "url": "https://landchad.net",
     "img": "/static/buttons/landchad.gif",
     "name": "LandChad.net",
     "desc": "Iniciar un sitio web es algo que se puede hacer en una tarde tranquila con algo de dinero."
   },
   {
-    "id": "2",
+    "id": 3,
     "img": "/static/buttons/scihub.png",
     "url": "https://www.sci-hub.st/",
     "name": "Sci-Hub",
-    "desc": "Es un \"centro de ciencias\" que provee acceso gratis y sin restricción a millones de documentos científicos. ¿Es piratería? Quiza..."
+    "desc": "Es un \"centro de ciencias\" que provee acceso gratis y sin restricción a millones de documentos científicos. ¿Es piratería? Quiza... Pero hay que ser sinceros, ¿pagarías por leer un artículo que solo usarás pa' un solo trabajo?"
   },
   {
-    "id": "3",
+    "id": 4,
     "url": "http://wiby.me/",
     "img": "/static/buttons/wiby.gif",
     "name": "Wiby",
     "desc": "Un motor de búsqueda diseñado para revivir la esencia de la web antigua."
   },
   {
-    "id": "4",
+    "id": 5,
     "url": "http://www.corporabida.8m.net/index.htm",
     "name": "Corporación Instituto la Rábida",
     "desc": "Antiguo sitio web de un colegio en Bogotá, Colombia, que fue abandonado y cuya estructura hoy está en ruinas. Sorprendentemente, este sitio sigue activo, aunque no ha sido actualizado desde 2009."
