@@ -94,4 +94,19 @@ article img {
 
 /* Color classes */
 
-.red{color:#fb4934}.orange{color:#fe8019}.yellow{color:#fabd2f}.green{color:#b8bb26}.blue{color:#83a598}.purple{color:#d3869b}
+.red{color:#fb4934!important}
+a.red:hover{color:#cc241d!important}
+
+.orange{color:#fe8019!important}
+a.orange:hover{color:#d65d0e!important}
+
+.yellow{color:#fabd2f!important}
+a.yellow:hover{color:#d79921!important}
+
+.green{color:#b8bb26!important}
+a.green:hover{color:#98971a!important}
+
+.purple{color:#d3869b!important}
+a.purple:hover{color:#b16286!important}
+
+.blue{color:#83a598}
