@@ -18,20 +18,77 @@ const radioLive = `${PUBLIC_RADIO_URL}/live`
   <h2>Programación Estimada</h2>
   <p>La programación de la radio está dividida en <i>6 bloques</i>, cada uno asociado a un momento del día, reproducirán una playlist en aleatorio hasta que se pase al siguiente. <b>LA ZONA HORARIA ES UTC-5</b> </p>
 
-  {[
-    ["Amanecer (4:00 - 6:00)", "sunrise"],
-    ["Mañana (6:00 - 11:30)", "morning"],
-    ["Tarde (11:30 - 17:30)", "afternoon"],
-    ["Noche (17:30 - 00:00)", "night"],
-    ["Madrugada (00:00 - 3:00)", "lateNight"]
-  ].map(([title, data]) => (
-    <details><summary><b>{title}</b></summary><List data={data} /></details>
-  ))}
-
-  <details>
-    <summary><b>C U R S E D (03:00 - 4:00)</b></summary>
-    <p>Aquí es un poco diferente... <strong>Ustedes</strong> tendrán que descubrir por su propia cuenta qué canción está sonando. Si saben de qué canción se trata, <a href="/about#contacto">ya saben donde decírmelo</a>. Las canciones encontradas se pondrán acá, mucha suerte. <b class="green">:)</b></p>
-  </details>
+  <table align="center" border="4" cellpadding="6" bordercolor="#fbf1c7">
+    <tbody>
+      <tr>
+        <th>Hora</th>
+        <th>Franja</th>
+        <th>Playlist</th>
+      </tr>
+      <tr>
+        <td>04:00-06:00</td>
+        <td>Amanecer</td>
+        <td><a href="//files.edmateo.site/Tracks/amanecer">amanecer</a></td>
+      </tr>
+      <tr>
+        <td>06:00-06:30</td>
+        <td rowspan="3">Mañana</td>
+        <td><a href="//files.edmateo.site/Tracks/manana/alt">itomorning-alt</a></td>
+      </tr>
+      <tr>
+        <td>06:30-09:00</td>
+        <td><a href="//files.edmateo.site/Tracks/manana/fusion">fusion</a></td>
+      </tr>
+      <tr>
+        <td>09:00-11:30</td>
+        <td><a href="//files.edmateo.site/Tracks/manana/rap">morning-rap</a></td>
+      </tr>
+      <tr>
+        <td>11:30-16:00</td>
+        <td rowspan="2">Tarde</td>
+        <td><a href="//files.edmateo.site/Tracks/tarde/tardetarde">rapsito</a></td>
+      </tr>
+      <tr>
+        <td>16:00-19:00</td>
+        <td><a href="//files.edmateo.site/Tracks/tarde/casi-noche">casi-noche</a></td>
+      </tr>
+      <tr>
+        <td>19:00-20:00</td>
+        <td rowspan="6">Noche</td>
+        <td><a href="//files.edmateo.site/Tracks/noche/rap">night-rap</a></td>
+      </tr>
+      <tr>
+        <td>20:00-20:20</td>
+        <td><a href="//files.edmateo.site/Tracks/noche/transincel">trans-incelcore</a></td>
+      </tr>
+      <tr>
+        <td>20:20-21:40</td>
+        <td><a href="//files.edmateo.site/Tracks/noche/incelcore">incelcore</a></td>
+      </tr>
+      <tr>
+        <td>21:40-22:20</td>
+        <td><a href="//files.edmateo.site/Tracks/noche/rocksito">rocksito</a></td>
+      </tr>
+      <tr>
+        <td>22:20-22:50</td>
+        <td><a href="//files.edmateo.site/Tracks/noche/alt">night-alt</a></td>
+      </tr>
+      <tr>
+        <td>22:50-00:00</td>
+        <td><a href="//files.edmateo.site/Tracks/noche/jazzito">jazzito</a></td>
+      </tr>
+      <tr>
+        <td>00:00-03:00</td>
+        <td>Madrugada</td>
+        <td><a href="//files.edmateo.site/Tracks/madrugada">madrugada</a></td>
+      </tr>
+      <tr>
+        <td>03:00-04:00</td>
+        <td><img src="/static/cursed.gif" alt="cursed"></td>
+        <td>Si lo descubres; <a href="/about#contacto">contáctame</a> <span class="red">:)</span></td>
+      </tr>
+    </tbody>
+  </table>
 </BaseLayout>
 
 <script>
