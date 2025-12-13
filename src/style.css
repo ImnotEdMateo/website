@@ -110,3 +110,18 @@ a.green:hover{color:#98971a!important}
 a.purple:hover{color:#b16286!important}
 
 .blue{color:#83a598}
+
+/* TABLE */
+
+table {
+  text-align: center;
+}
+
+th {
+  background-color: #282828;
+}
+
+table img {
+  width: 88px;
+  height: auto;
+}
