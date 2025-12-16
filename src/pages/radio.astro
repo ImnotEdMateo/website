@@ -1,5 +1,5 @@
 ---
-import { PUBLIC_RADIO_URL } from "astro:env/client"
+import { PUBLIC_RADIO_URL, PUBLIC_FILES_URL } from "astro:env/client"
 import BaseLayout from "@/layouts/base.astro"
 import List from "@/components/radioList.astro"
 import Player from "@/components/radioPlayer.astro"
@@ -10,13 +10,13 @@ const radioLive = `${PUBLIC_RADIO_URL}/live`
 ---
 
 <BaseLayout {pageTitle} {pageDescription}>
-  <Player />
+  <Player {pageDescription} />
 
   <p><b>EdMateo's Radio</b> es un proyecto bien autista que he creado para compartir mis gustos musicales paupérrimos al internet. Si te gusta la mierda, esto es lo que deberías escuchar en lugar de seguir pagando la suscripción del <a href="https://stallman.org/spotify.html"><b>MALDITO</b> Spotify</a>. La radio está abierta a todo el mundo, no debes pagar ni nada; este proyecto lo mantengo como a un hijo (ambos igual de inútiles).</p>
-  <p>Si no quieres escuchar desde este sitio web, también puedes reproducir la radio directamente desde cualquier reproductor multimedia que pueda reproducir por el <i>protocolo http</i> (AIMP, vlc, mpv, etc.). Solo pon la url <a href={radioLive}><b>{radioLive}</b></a> en tu reproductor, o en su defecto, abre el link directamente en tu navegador.</p>
+  <p>Si no quieres escuchar desde este sitio web, también puedes reproducir la radio directamente desde cualquier reproductor multimedia que pueda reproducir por el <i>protocolo http</i> (AIMP, vlc, mpv, etc.). Solo pon la url <a href={radioLive}><b>http:{radioLive}</b></a> en tu reproductor, o en su defecto, abre el link directamente en tu navegador.</p>
 
   <h2>Programación Estimada</h2>
-  <p>La programación de la radio está dividida en <i>6 bloques</i>, cada uno asociado a un momento del día, reproducirán una playlist en aleatorio hasta que se pase al siguiente. <b>LA ZONA HORARIA ES <span class="yellow">UTC-5</span></b>.</p>
+  <p>La programación de la radio está dividida en <i>6 bloques</i>, cada uno asociado a un momento del día, reproducirán playlist(s) en aleatorio hasta que se pase al siguiente. <b>LA ZONA HORARIA ES <span class="yellow">UTC-5</span></b>.</p>
 
   <table align="center" border="4" cellpadding="6" bordercolor="#fbf1c7">
     <tbody>
@@ -28,59 +28,59 @@ const radioLive = `${PUBLIC_RADIO_URL}/live`
       <tr>
         <td>04:00 06:00</td>
         <td>Amanecer</td>
-        <td><a href="//files.edmateo.site/Tracks/amanecer">amanecer</a></td>
+        <td><a href={`${PUBLIC_FILES_URL}/Tracks/amanecer`}>amanecer</a></td>
       </tr>
       <tr>
         <td>06:00 06:30</td>
         <td rowspan="3">Mañana</td>
-        <td><a href="//files.edmateo.site/Tracks/manana/alt">itomorning-alt</a></td>
+        <td><a href={`${PUBLIC_FILES_URL}/Tracks/manana/alt`}>itomorning-alt</a></td>
       </tr>
       <tr>
         <td>06:30 09:00</td>
-        <td><a href="//files.edmateo.site/Tracks/manana/fusion">fusion</a></td>
+        <td><a href={`${PUBLIC_FILES_URL}/Tracks/manana/fusion`}>fusion</a></td>
       </tr>
       <tr>
         <td>09:00 11:30</td>
-        <td><a href="//files.edmateo.site/Tracks/manana/rap">morning-rap</a></td>
+        <td><a href={`${PUBLIC_FILES_URL}/Tracks/manana/rap`}>morning-rap</a></td>
       </tr>
       <tr>
         <td>11:30 16:00</td>
         <td rowspan="2">Tarde</td>
-        <td><a href="//files.edmateo.site/Tracks/tarde/tardetarde">rapsito</a></td>
+        <td><a href={`${PUBLIC_FILES_URL}/Tracks/tarde/tardetarde`}>rapsito</a></td>
       </tr>
       <tr>
         <td>16:00 19:00</td>
-        <td><a href="//files.edmateo.site/Tracks/tarde/casi-noche">casi-noche</a></td>
+        <td><a href={`${PUBLIC_FILES_URL}/Tracks/tarde/casi-noche`}>casi-noche</a></td>
       </tr>
       <tr>
         <td>19:00 20:00</td>
         <td rowspan="6">Noche</td>
-        <td><a href="//files.edmateo.site/Tracks/noche/rap">night-rap</a></td>
+        <td><a href={`${PUBLIC_FILES_URL}/Tracks/noche/rap`}>night-rap</a></td>
       </tr>
       <tr>
         <td>20:00 20:20</td>
-        <td><a href="//files.edmateo.site/Tracks/noche/transincel">trans-incelcore</a></td>
+        <td><a href={`${PUBLIC_FILES_URL}/Tracks/noche/transincel`}>trans-incelcore</a></td>
       </tr>
       <tr>
         <td>20:20 21:40</td>
-        <td><a href="//files.edmateo.site/Tracks/noche/incelcore">incelcore</a></td>
+        <td><a href={`${PUBLIC_FILES_URL}/Tracks/noche/incelcore`}>incelcore</a></td>
       </tr>
       <tr>
         <td>21:40 22:20</td>
-        <td><a href="//files.edmateo.site/Tracks/noche/rocksito">rocksito</a></td>
+        <td><a href={`${PUBLIC_FILES_URL}/Tracks/noche/rocksito`}>rocksito</a></td>
       </tr>
       <tr>
         <td>22:20 22:50</td>
-        <td><a href="//files.edmateo.site/Tracks/noche/alt">night-alt</a></td>
+        <td><a href={`${PUBLIC_FILES_URL}/Tracks/noche/alt`}>night-alt</a></td>
       </tr>
       <tr>
         <td>22:50 00:00</td>
-        <td><a href="//files.edmateo.site/Tracks/noche/jazzito">jazzito</a></td>
+        <td><a href={`${PUBLIC_FILES_URL}/Tracks/noche/jazzito`}>jazzito</a></td>
       </tr>
       <tr>
         <td>00:00 03:00</td>
         <td>Madrugada</td>
-        <td><a href="//files.edmateo.site/Tracks/madrugada">madrugada</a></td>
+        <td><a href={`${PUBLIC_FILES_URL}/Tracks/madrugada`}>madrugada</a></td>
       </tr>
       <tr>
         <td>03:00 04:00</td>
