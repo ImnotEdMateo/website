@@ -1,0 +1,37 @@
+---
+export const prerender = false;
+---
+
+<p id="radioSong">Espera...</p>
+
+<script>
+import { PUBLIC_RADIO_URL } from "astro:env/client";
+
+const el = document.getElementById('radioSong');
+
+const formatTitle = (raw = 'Nada') => {
+  const [artist, ...song] = raw.split(' - ');
+  return song.length ? `${song.join(' - ')} - ${artist}` : raw;
+};
+
+const fetchRadioSong = async () => {
+  try {
+    const res = await fetch(`${PUBLIC_RADIO_URL}/status-json.xsl`);
+    const title = (await res.json())?.icestats?.source?.title;
+    el.textContent = `Sonando: ${formatTitle(title)}`;
+  } catch (e) {
+    console.error(e);
+    el.textContent = 'Error obteniendo información de la radio';
+  }
+};
+
+fetchRadioSong();
+setInterval(fetchRadioSong, 10_000);
+</script>
+
+<style>
+  #radioSong {
+    margin: 5px 0;
+    font-weight: bold;
+  }
+</style>
