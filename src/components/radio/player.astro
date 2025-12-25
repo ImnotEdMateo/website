@@ -1,5 +1,6 @@
 ---
 import { PUBLIC_RADIO_URL } from "astro:env/client"
+import DisplaySong from "@/components/radio/displaySong.astro"
 
 const { pageDescription } = Astro.props
 const radioLive = `${PUBLIC_RADIO_URL}/live`
@@ -8,7 +9,7 @@ const radioLive = `${PUBLIC_RADIO_URL}/live`
 <div class="radio-player">
   <img src="/static/radio.gif" alt="Radio animation" />
   <div class="radio-box">
-    <p id="radioSong" class="song-title">Espera...</p>
+    <DisplaySong server:defer></DisplaySong>
     <audio id="radio-audio" controls style="width: 100%;">
       <source src={radioLive} type="audio/mpeg" />
       Tu navegador no soporta el elemento de audio.
@@ -37,6 +38,11 @@ const radioLive = `${PUBLIC_RADIO_URL}/live`
   }
 
   .song-title {
+    margin: 5px 0;
+    font-weight: bold;
+  }
+
+  #radioSong {
     margin: 5px 0;
     font-weight: bold;
   }

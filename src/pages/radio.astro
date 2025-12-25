@@ -1,8 +1,7 @@
 ---
 import { PUBLIC_RADIO_URL, PUBLIC_FILES_URL } from "astro:env/client"
 import BaseLayout from "@/layouts/base.astro"
-import List from "@/components/radioList.astro"
-import Player from "@/components/radioPlayer.astro"
+import Player from "@/components/radio/player.astro"
 
 const pageTitle = "EdMateo's Radio"
 const pageDescription = "The most autistic music at EdMateo's Radio"
@@ -90,33 +89,3 @@ const radioLive = `${PUBLIC_RADIO_URL}/live`
     </tbody>
   </table>
 </BaseLayout>
-
-<script>
-  import { PUBLIC_RADIO_URL } from "astro:env/client"
-
-  const fetchRadioSong = async () => {
-    try {
-      const res = await fetch(`${PUBLIC_RADIO_URL}/status-json.xsl`);
-      const { icestats: { source } } = await res.json();
-      const sources = Array.isArray(source) ? source : [source];
-      const getTitle = (src) => src?.title?.trim() || '';
-
-      let title = getTitle(sources.find(s => s.listenurl.includes('/live')));
-      if (!title) {
-        const stream = sources.find(s => s.listenurl.includes('/stream'));
-        if (stream?.title) {
-          const [artist, song] = stream.title.split(' - ');
-          title = song && artist ? `${song.trim()} - ${artist.trim()}` : stream.title;
-        }
-      }
-
-      document.getElementById('radioSong').textContent = `Sonando: ${title || 'Nada'}`;
-    } catch (err) {
-      console.error('Error fetching radio song:', err);
-      document.getElementById('radioSong').textContent = 'Error fetching song information';
-    }
-  };
-
-  fetchRadioSong();
-  setInterval(fetchRadioSong, 10000);
-</script>
