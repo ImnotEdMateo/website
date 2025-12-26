@@ -10,7 +10,7 @@ const radioLive = `${PUBLIC_RADIO_URL}/live`
   <img src="/static/radio.gif" alt="Radio animation" />
   <div class="radio-box">
     <DisplaySong server:defer></DisplaySong>
-    <audio id="radio-audio" controls style="width: 100%;">
+    <audio id="radio-audio" controls="controls" preload="none" style="width: 100%;">
       <source src={radioLive} type="audio/mpeg" />
       Tu navegador no soporta el elemento de audio.
     </audio>
