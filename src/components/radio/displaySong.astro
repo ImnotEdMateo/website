@@ -8,6 +8,7 @@ export const prerender = false;
 import { PUBLIC_RADIO_URL } from "astro:env/client";
 
 const el = document.getElementById('radioSong');
+const baseTitle = document.title; 
 
 const formatTitle = (raw = 'Nada') => {
   const [artist, ...song] = raw.split(' - ');
@@ -18,10 +19,17 @@ const fetchRadioSong = async () => {
   try {
     const res = await fetch(`${PUBLIC_RADIO_URL}/status-json.xsl`);
     const title = (await res.json())?.icestats?.source?.title;
-    el.textContent = `Sonando: ${formatTitle(title)}`;
+
+    if (!title) throw new Error('Sin título');
+
+    const formatted = formatTitle(title);
+
+    el.textContent = `Sonando: ${formatted}`;
+    document.title = `${formatted} | ${baseTitle}`;
   } catch (e) {
     console.error(e);
     el.textContent = 'Error obteniendo información de la radio';
+    document.title = baseTitle;
   }
 };
 
