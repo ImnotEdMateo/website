@@ -1,7 +1,9 @@
-import { z, defineCollection } from 'astro:content';
-import { file } from 'astro/loaders';
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
+import { file, glob } from 'astro/loaders';
 
-const blogCollection = defineCollection({
+const blog = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: z.object({
     title: z.string(),
     author: z.string(),
@@ -21,6 +23,6 @@ const usefulInfo = defineCollections("links", "usefulInfo");
 const darknetSites = defineCollections("links", "darknetSites");
 
 export const collections = {
-  blog: blogCollection,
-  hommies, coolSites, usefulInfo, darknetSites,
+  blog,
+  hommies, coolSites, usefulInfo, darknetSites
 };

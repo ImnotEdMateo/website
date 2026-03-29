@@ -82,13 +82,21 @@ footer a:hover {
   color: #458588;
 }
 
-main p {
+article p {
+  margin: 0;
   margin-block: 1em;
   margin-block: 1lh;
+  text-indent: 1em;
+}
+
+article p:first-of-type {
+  text-indent: 0;
 }
 
 article img {
-  max-width: 100%;
+  display: block;
+  margin: auto;
+  max-width: 300px;
   height: auto;
 }
 

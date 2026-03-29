@@ -2,7 +2,7 @@
 import "@/style.css";
 import Footer from "@/components/footer.astro";
 import Header from "@/components/header.astro";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 const siteName = "EdMateo's Shitty Site";
 const { pageTitle = "", pageDescription = "" } = Astro.props;
@@ -17,10 +17,10 @@ const fullTitle = pageTitle
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{fullTitle}</title>
-    <ViewTransitions />
     <link rel="canonical" href={`https://edmateo.site${Astro.url.pathname}`} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="description" content={pageDescription}>
+    <ClientRouter />
     <meta name="generator" content={Astro.generator} />
   </head>
   <body>
