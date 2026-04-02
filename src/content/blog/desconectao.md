@@ -39,7 +39,6 @@ Moana se da el lujo de aprovechar todo el poder adquisitivo que tiene (((Disney)
 
 Si quieren dejar de sentirse en la sociedad del cansancio, desconecten un rato sus mentes. El ocio y el arte es el mejor disipador del burnout. Además, disfruten de las cosas pequeñas y lindas de la vida, agradezcan por haberse parado, ah, y hagan calistenia. Esas, son las bases que tengo para vivir mejor, para narrar experiencias así. Me siento feliz, y tú deberías también.
 
-[^1]: Fuguet, A. (2008). Andrés Caicedo. Mi cuerpo es una celda: una autobiografía. Bogotá: Editorial Norma. 
+[^1]: Wikipedia contributors. (s. f.). *Andrés Caicedo*. Wikipedia, la enciclopedia libre. https://es.wikipedia.org/wiki/Andr%C3%A9s_Caicedo#Suicidio
 
-[^2]: GARCÍA MÁRQUEZ, Gabriel; ZULETA, Estanislao; RUSSELL, Bertrand; ROUX, Rodolfo Ramón de. Ensayos educativos: lecturas pedagógicas. Bogotá: Alcaldía Mayor de Bogotá Secretaría de Educación 2010. 91 p. ISBN 9789588312774.
-
+[^2]: Bertrand Russell (2010). Las funciones de un maestro. En G. García Márquez, E. Zuleta, B. Russell, & R. R. de Roux, Ensayos educativos: lecturas pedagógicas (pp. 73–82). Secretaría de Educación de Bogotá.
