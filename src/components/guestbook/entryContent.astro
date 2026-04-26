@@ -14,11 +14,21 @@ const lines = parseMessage(message);
         ? "orange"
         : ""
     }>
-      {line.chunks.map(chunk =>
-        chunk.type === "link"
-          ? <a href={`/guestbook#entry-${chunk.id}`}>{chunk.text}</a>
-          : chunk.text
-      )}
+    {line.chunks.map(chunk => {
+      if (chunk.type === "link") {
+        return <a href={`/guestbook#entry-${chunk.id}`}>{chunk.text}</a>;
+      }
+
+      if (chunk.type === "url") {
+        return (
+          <a href={chunk.url} target="_blank" rel="noopener noreferrer">
+            {chunk.text}
+          </a>
+        );
+      }
+
+      return chunk.text;
+    })}
     </div>
   ))}
 </div>
