@@ -1,0 +1,24 @@
+---
+import { parseMessage } from "@/lib/guestbook/parser";
+
+const { message } = Astro.props;
+const lines = parseMessage(message);
+---
+
+<div class="entry-content">
+  {lines.map(line => (
+    <div class={
+      line.type === "greentext"
+        ? "green"
+        : line.type === "orangetext"
+        ? "orange"
+        : ""
+    }>
+      {line.chunks.map(chunk =>
+        chunk.type === "link"
+          ? <a href={`/guestbook#entry-${chunk.id}`}>{chunk.text}</a>
+          : chunk.text
+      )}
+    </div>
+  ))}
+</div>

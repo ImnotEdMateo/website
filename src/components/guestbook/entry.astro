@@ -1,82 +1,55 @@
 ---
-import { GUESTBOOK_URL } from "astro:env/server";
+import type { GuestbookEntry } from "@/lib/guestbook/types";
+import { normalizeUrl, formatDate } from "@/lib/guestbook/format/";
+import EntryContent from "./entryContent.astro";
 
-const response = await fetch(GUESTBOOK_URL);
-const entries = await response.json();
+interface Props {
+  entry: GuestbookEntry;
+}
 
-const formatDate = iso => {
-  const d = new Date(iso);
-  return {
-    formattedDate: d.toLocaleDateString("es-ES", { day: "2-digit", month: "2-digit", year: "numeric" }),
-    formattedTime: d.toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" })
-  };
-};
+const { entry } = Astro.props as Props;
 
-// Acepta solo http/https, descarta cualquier otra cosa peligrosa
-const normalizeUrl = url => {
-  try {
-    const u = new URL(url.startsWith("http") ? url : `http://${url}`);
-    if (u.protocol === "http:" || u.protocol === "https:") return u.href;
-  } catch {}
-  return null;
-};
+const { ID, CreatedAt, Name, Website, Message } = entry;
 
-// Divide el mensaje en partes: texto o link tipo >>id
-const parseMessage = msg => {
-  const parts = msg.split(/(>>\d+)/g);
-  return parts.map(part => {
-    const match = /^>>(\d+)$/.exec(part);
-    if (match) {
-      return { type: "link", id: match[1], text: part };
-    }
-    return { type: "text", text: part };
-  });
-};
-
-export const prerender = false;
+const { date, time } = formatDate(CreatedAt);
+const safeWebsite = Website ? normalizeUrl(Website) : null;
 ---
 
-<div>
-  {entries.map(({ ID, CreatedAt, Name, Website, Message }) => {
-    const { formattedDate, formattedTime } = formatDate(CreatedAt);
-    const safeWebsite = Website && normalizeUrl(Website);
+<div class="entry-box" id={`entry-${ID}`}>
+  <div class="entry-header">
+    
+    <div class="namekajweb">
+      <strong>
+        <span class="importantshit">{Name}</span>
+      </strong>
 
-    return (
-      <div class="entry-box" id={`entry-${ID}`}>
-        <div class="entry-header">
-          <div class="namekajweb">
-            <strong><span class="importantshit">{Name}</span></strong>
-            {safeWebsite && (
-              <>
-                {" desde "}
-                <a href={safeWebsite} target="_blank" rel="noopener noreferrer">
-                  {Website}
-                </a>
-              </>
-            )}
-          </div>
-          <div class="datekajid">
-            <span class="date">
-              escrito el <strong><span class="importantshit">{formattedDate}</span></strong> a las{" "}
-              <strong><span class="importantshit">{formattedTime}</span></strong>
-            </span>
-            <a href={`javascript:quote(${ID})`} class="post-number reply-link">No.{ID}</a>
-          </div>
-        </div>
-        <div class="entry-content">
-          {Message.split("\n").map((line, index) => (
-            <div class={line.startsWith(">") ? "green" : ""}>
-              {parseMessage(line).map((chunk, i) =>
-                chunk.type === "link"
-                  ? <a href={`/guestbook#entry-${chunk.id}`}>{chunk.text}</a>
-                  : chunk.text
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  })}
+      {safeWebsite && (
+        <>
+          {" desde "}
+          <a href={safeWebsite} target="_blank" rel="noopener noreferrer">
+            {Website}
+          </a>
+        </>
+      )}
+    </div>
+    <span class="fkinspace">&nbsp;</span>
+    <div class="datekajid">
+      <span class="date">
+        escrito el{" "}
+        <strong><span class="importantshit">{date}</span></strong>
+        {" "}a las{" "}
+        <strong><span class="importantshit">{time}</span></strong>
+      </span>
+
+      <a href={`javascript:quote(${ID})`} class="post-number reply-link">
+        No.{ID}
+      </a>
+    </div>
+
+  </div>
+
+  {/* 🔥 ahora delegas completamente el mensaje */}
+  <EntryContent message={Message} />
 </div>
 
 <script>
@@ -121,10 +94,13 @@ export const prerender = false;
 
   .namekajweb {
     display: inline-block;
-    margin-right: 0.5em;
   }
 
   @media screen and (max-width: 992px) {
+    .fkinspace {
+      display: none;
+    }
+
     .entry-box {
       width: auto;
       margin-right: 5px;
