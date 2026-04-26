@@ -9,12 +9,9 @@ const pageDescription = "Ahora puedes dejar tus mensajes de odio aquí, en este 
 
 <BaseLayout {pageTitle} {pageDescription}>
   <p>Desde hace mucho tenía ganas de montar un libro de firmas, así para saber si este sitio lo mira alguien o si solo divago con mis pensamientos. Este GuestBook lo programé yo mismo, es <a href="https://github.com/ImnotEdMateo/guestbook">abierto</a> y <strong>funciona con base de datos</strong>.</p>
-  <GuestForm />
-  <Entries server:defer>
-    <div slot="fallback" class="hidden" style="background-color: #fabd2f;">
-      <h1 style="padding: 20px">
-        DEBES ACTIVAR JAVASCRIPT PARA PODER VER LAS ENTRADAS
-      </h1>
-    </div>
-  </Entries>
+  <div class="hidden" style="background-color: #fabd2f;">
+    <h1 style="padding: 20px">
+      EL GUESTBOOK NO SE ENCUENTRA DISPONIBLE DE MOMENTO. SE ESTÁN AÑADIENDO MEJORAS
+    </h1>
+  </div>
 </BaseLayout>
