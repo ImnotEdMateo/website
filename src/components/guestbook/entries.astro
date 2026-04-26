@@ -1,0 +1,12 @@
+---
+import Entry from "./entry.astro";
+import { fetchEntriesByRange } from "@/lib/guestbook/api";
+
+const entries = await fetchEntriesByRange(133, 99);
+---
+
+<div class="entries">
+  {entries.map(entry => (
+    <Entry entry={entry} />
+  ))}
+</div>

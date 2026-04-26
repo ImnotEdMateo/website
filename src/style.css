@@ -102,6 +102,9 @@ article img {
 
 /* Color classes */
 
+.hidden{color:#1d2021!important}
+a.hidden:hover{color:#fbf1c7!important}
+
 .red{color:#fb4934!important}
 a.red:hover{color:#cc241d!important}
 
