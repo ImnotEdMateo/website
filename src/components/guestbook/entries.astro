@@ -2,7 +2,7 @@
 import Entry from "./entry.astro";
 import { fetchEntriesByRange } from "@/lib/guestbook/api";
 
-const entries = await fetchEntriesByRange(133, 99);
+const entries = await fetchEntriesByRange(133, 0);
 ---
 
 <div class="entries">
