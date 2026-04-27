@@ -1,8 +1,9 @@
 import type { MessageChunk } from "../types";
+import type { InlineParser } from "./index";
 
 const URL_REGEX = /(https?:\/\/[^\s)]+)/g;
 
-export function parseLinks(chunks: MessageChunk[]): MessageChunk[] {
+export const parseLinks: InlineParser = (chunks) => {
   const result: MessageChunk[] = [];
 
   for (const chunk of chunks) {
@@ -30,4 +31,4 @@ export function parseLinks(chunks: MessageChunk[]): MessageChunk[] {
   }
 
   return result;
-}
+};

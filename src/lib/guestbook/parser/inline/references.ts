@@ -1,22 +1,34 @@
 import type { MessageChunk } from "../types";
+import type { InlineParser } from "./index";
 
-export function parseReferences(text: string): MessageChunk[] {
-  const parts = text.split(/(>>\s*\d+)/g);
+export const parseReferences: InlineParser = (chunks) => {
+  const result: MessageChunk[] = [];
 
-  return parts.map(part => {
-    const match = /^>>\s*(\d+)$/.exec(part);
-
-    if (match) {
-      return {
-        type: "link",
-        id: Number(match[1]),
-        text: part
-      };
+  for (const chunk of chunks) {
+    if (chunk.type !== "text") {
+      result.push(chunk);
+      continue;
     }
 
-    return {
-      type: "text",
-      text: part
-    };
-  });
-}
+    const parts = chunk.text.split(/(>> ?\d+)/g);
+
+    for (const part of parts) {
+      const match = /^>> ?(\d+)$/.exec(part);
+
+      if (match) {
+        result.push({
+          type: "link",
+          id: Number(match[1]),
+          text: part
+        });
+      } else if (part) {
+        result.push({
+          type: "text",
+          text: part
+        });
+      }
+    }
+  }
+
+  return result;
+};
