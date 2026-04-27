@@ -1,17 +1,18 @@
 ---
 import BaseLayout from '@/layouts/base.astro';
 import Entries from '@/components/guestbook/entries.astro';
-import GuestForm from '@/components/guestbook/form.astro'
+import GuestForm from '@/components/guestbook/form.astro';
 
 const pageTitle = "GuestBook";
 const pageDescription = "Ahora puedes dejar tus mensajes de odio aquí, en este GuestBook programado por mí mismo";
 ---
-
 <BaseLayout {pageTitle} {pageDescription}>
-  <p>Desde hace mucho tenía ganas de montar un libro de firmas, así para saber si este sitio lo mira alguien o si solo divago con mis pensamientos. Este GuestBook lo programé yo mismo, es <a href="https://github.com/ImnotEdMateo/guestbook">abierto</a> y <strong>funciona con base de datos</strong>.</p>
-  <div class="hidden" style="background-color: #fabd2f;">
-    <h1 style="padding: 20px">
-      EL GUESTBOOK NO SE ENCUENTRA DISPONIBLE DE MOMENTO. SE ESTÁN AÑADIENDO MEJORAS
-    </h1>
-  </div>
+  <p>
+    Desde hace mucho tenía ganas de montar un libro de firmas, así para saber
+    si este sitio lo mira alguien o si solo divago con mis pensamientos. Este
+    GuestBook lo programé yo mismo, es <a href="https://github.com/ImnotEdMateo/guestbook">abierto</a>
+    y <strong>funciona con base de datos</strong>.
+  </p>
+  <GuestForm />
+  <Entries />
 </BaseLayout>

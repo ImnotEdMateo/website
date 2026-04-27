@@ -1,12 +1,83 @@
 ---
 import Entry from "./entry.astro";
-import { fetchEntriesByRange } from "@/lib/guestbook/api";
+import { fetchEntries } from "@/lib/guestbook/api";
 
-const entries = await fetchEntriesByRange(133, 0);
+const LATEST = 20;
+
+const { entries, meta } = await fetchEntries({ latest: LATEST, page: 1 });
 ---
 
-<div class="entries">
-  {entries.map(entry => (
-    <Entry entry={entry} />
-  ))}
+<div
+  id="entries-container"
+  class="entries"
+  data-total-pages={meta.total_pages}
+  data-latest={LATEST}
+>
+  {entries.map((entry) => <Entry entry={entry} />)}
 </div>
+
+<div id="scroll-sentinel" style="height:1px; margin-top: 2rem;" aria-hidden="true"></div>
+
+<p id="scroll-status" role="status" aria-live="polite" style="text-align:center; min-height:1.5rem;"></p>
+
+<script>
+  const container  = document.getElementById("entries-container")!;
+  const sentinel   = document.getElementById("scroll-sentinel")!;
+  const status     = document.getElementById("scroll-status")!;
+
+  const totalPages = Number(container.dataset.totalPages);
+  const latest     = Number(container.dataset.latest);
+
+  let currentPage = 1;
+  let loading     = false;
+  let exhausted   = currentPage >= totalPages;
+
+  async function loadMore(): Promise<void> {
+    if (loading || exhausted) return;
+
+    loading = true;
+    status.textContent = "Cargando más entradas…";
+
+    try {
+      const res = await fetch(`/api/entries?page=${currentPage + 1}&latest=${latest}`);
+
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+      const { html, meta } = await res.json();
+      currentPage++;
+
+      container.insertAdjacentHTML("beforeend", html);
+
+      exhausted = currentPage >= meta.total_pages;
+
+      if (exhausted) {
+        status.textContent = "— Fin del libro de firmas —";
+        observer.disconnect();
+      } else {
+        status.textContent = "";
+      }
+    } catch (err) {
+      console.error("[guestbook] Error cargando entradas:", err);
+      status.textContent = "No se pudieron cargar más entradas.";
+    } finally {
+      loading = false;
+    }
+  }
+
+  const observer = new IntersectionObserver(
+    ([entry]) => { if (entry.isIntersecting) loadMore(); },
+    { rootMargin: "300px" }
+  );
+
+  if (!exhausted) observer.observe(sentinel);
+
+  window.quote = (id: number) => {
+    const field = document.querySelector<HTMLTextAreaElement>(
+      '#guestbook-form textarea[name="message"]'
+    );
+    if (field) {
+      field.value += `>>${id}\n`;
+      field.focus();
+    }
+  };
+</script>

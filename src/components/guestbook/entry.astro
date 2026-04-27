@@ -8,21 +8,17 @@ interface Props {
 }
 
 const { entry } = Astro.props as Props;
-
 const { ID, CreatedAt, Name, Website, Message } = entry;
-
 const { date, time } = formatDate(CreatedAt);
 const safeWebsite = Website ? normalizeUrl(Website) : null;
 ---
 
 <div class="entry-box" id={`entry-${ID}`}>
   <div class="entry-header">
-    
     <div class="namekajweb">
       <strong>
         <span class="importantshit">{Name}</span>
       </strong>
-
       {safeWebsite && (
         <>
           {" desde "}
@@ -40,27 +36,13 @@ const safeWebsite = Website ? normalizeUrl(Website) : null;
         {" "}a las{" "}
         <strong><span class="importantshit">{time}</span></strong>
       </span>
-
       <a href={`javascript:quote(${ID})`} class="post-number reply-link">
         No.{ID}
       </a>
     </div>
-
   </div>
-
-  {/* 🔥 ahora delegas completamente el mensaje */}
   <EntryContent message={Message} />
 </div>
-
-<script>
-  window.quote = id => {
-    const field = document.querySelector('#guestbook-form textarea[name="message"]');
-    if(field) {
-      field.value += `>>${id}\n`;
-      field.focus();
-    }
-  }
-</script>
 
 <style>
   .entry-box {
