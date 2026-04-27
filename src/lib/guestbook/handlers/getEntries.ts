@@ -8,13 +8,10 @@ export const GET: APIRoute = async ({ url }) => {
   const latest = Number(url.searchParams.get("latest") ?? "20");
 
   const { entries, meta } = await fetchEntries({ latest, page });
-
   const container = await AstroContainer.create();
 
   const htmlFragments = await Promise.all(
-    entries.map((entry) =>
-      container.renderToString(Entry, { props: { entry } })
-    )
+    entries.map((entry) => container.renderToString(Entry, { props: { entry } }))
   );
 
   return new Response(
