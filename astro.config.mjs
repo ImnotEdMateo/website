@@ -28,7 +28,8 @@ export default defineConfig({
     schema: {
       PUBLIC_RADIO_URL: envField.string({ context: 'client', access: 'public'}),
       PUBLIC_FILES_URL: envField.string({ context: 'client', access: 'public'}),
-      GUESTBOOK_URL: envField.string({ context: 'server', access: 'public'}),
+      GUESTBOOK_URL: envField.string({ context: 'server', access: 'secret'}),
+      GUESTBOOK_API_KEY: envField.string({ context: 'server', access: 'secret'}),
     }
   }
 });

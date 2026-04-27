@@ -1,8 +1,6 @@
 ---
-const guestbookUrl = import.meta.env.GUESTBOOK_URL;
 ---
-
-<form id="guestbook-form" data-url={guestbookUrl}>
+<form id="guestbook-form">
   <div class="input-row">
     <input type="text" name="name" placeholder="Nombre (Opcional)" />
     <input type="text" name="website" placeholder="Sitio web (opcional)" />
@@ -14,58 +12,42 @@ const guestbookUrl = import.meta.env.GUESTBOOK_URL;
 <script is:inline>
   const STORAGE_KEY = "guestbook_draft";
   const fields = ["name", "website", "message"];
-
   let form = null;
 
-  // obtener form una sola vez por página
   document.addEventListener("DOMContentLoaded", () => {
     form = document.getElementById("guestbook-form");
     if (!form) return;
 
-    // restaurar draft
     const saved = sessionStorage.getItem(STORAGE_KEY);
-
     if (saved) {
       try {
         const data = JSON.parse(saved);
-
         for (const field of fields) {
           const el = form.querySelector(`[name="${field}"]`);
-          if (el && data[field]) {
-            el.value = data[field];
-          }
+          if (el && data[field]) el.value = data[field];
         }
       } catch {}
     }
   });
 
-  // guardar en cada input (sin buscar DOM constantemente)
   document.addEventListener("input", (e) => {
     if (!form) return;
-
     const target = e.target;
-
     if (!(target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement)) return;
     if (!fields.includes(target.name)) return;
-
     const data = Object.fromEntries(new FormData(form).entries());
-
     sessionStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   });
 
-  // submit
   document.addEventListener("submit", async (e) => {
     const target = e.target;
-
     if (!(target instanceof HTMLFormElement)) return;
     if (target.id !== "guestbook-form") return;
-
     e.preventDefault();
 
-    const url = target.dataset.url;
     const data = Object.fromEntries(new FormData(target).entries());
 
-    const response = await fetch(url, {
+    const response = await fetch("/api/guestbook", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

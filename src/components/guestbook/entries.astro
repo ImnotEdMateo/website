@@ -39,7 +39,7 @@ const { entries, meta } = await fetchEntries({ latest: LATEST, page: 1 });
     status.textContent = "Cargando más entradas…";
 
     try {
-      const res = await fetch(`/api/entries?page=${currentPage + 1}&latest=${latest}`);
+      const res = await fetch(`/api/guestbook?page=${currentPage + 1}&latest=${latest}`);
 
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
