@@ -13,6 +13,14 @@ const pageDescription = "Ahora puedes dejar tus mensajes de odio aquí, en este 
     GuestBook lo programé yo mismo, es <a href="https://github.com/ImnotEdMateo/guestbook">abierto</a>
     y <strong>funciona con base de datos</strong>.
   </p>
-  <GuestForm />
+  <GuestForm server:defer>
+    <div slot="fallback" class="hidden" style="background-color: #fabd2f; padding: 20px;">
+      <h1>
+        EL GUESTBOOK PODRÍA NO FUNCIONAR
+      </h1>
+      <p>Si ves este mensaje, es probable que <strong>no tengas JavaScript activado</strong>. Por <strong>(((seguridad)))</strong> No podrás mandar entradas, ni ver más de las últimas 20 entradas más recientes.Tampoco recomiendo activar Javascript si estás usando http. Por ahora estás jodido. Algún día lo arreglaré, téngame fé.</p>
+      <strong><i>EdMateo</i></strong>
+    </div>
+  </GuestForm>
   <Entries />
 </BaseLayout>
