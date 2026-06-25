@@ -35,6 +35,12 @@
   },
   {
     "id": 6,
+    "url": "https://www.radio-browser.info/",
+    "name": "RadioBrowser",
+    "desc": "Sitio web comunitario dedicado a recopilar la mayor cantidad de estaciones de radio online."
+  },
+  {
+    "id": 7,
     "url": "https://justfuckingusehtml.com/es-CO",
     "name": "Usa HTML, perro hijueputa",
     "desc": "Lee esto antes de querer hacer un sitio web."
