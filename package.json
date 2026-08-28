@@ -9,9 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/node": "^10.0.4",
-    "@astrojs/rss": "^4.0.18",
-    "astro": "^6.1.1",
-    "astro-expressive-code": "^0.41.2"
+    "@astrojs/node": "^11.1.4",
+    "@astrojs/rss": "^4.0.19",
+    "astro": "^7.2.9",
+    "astro-expressive-code": "^0.44.1",
+    "lightningcss-linux-x64-musl": "^1.33.0"
   }
 }
