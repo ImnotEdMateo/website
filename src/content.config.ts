@@ -12,17 +12,30 @@ const blog = defineCollection({
   }),
 });
 
-const defineCollections = (listType: string, path: string) => defineCollection({
-  loader: file(`src/content/${listType}-lists/${path}.json`),
+const links = z.object({
+  id: z.string(),
+  url: z.string(),
+  img: z.string().optional(),
+  name: z.string(),
+  desc: z.string(),
 });
 
+const defineLinkCollection = (listType: string, path: string) =>
+  defineCollection({
+    loader: file(`src/content/${listType}-lists/${path}.json`),
+    schema: links,
+  });
+
 // LINKS COLLECTIONS
-const hommies = defineCollections("links", "hommies");
-const coolSites = defineCollections("links", "coolSites");
-const usefulInfo = defineCollections("links", "usefulInfo");
-const darknetSites = defineCollections("links", "darknetSites");
+const hommies = defineLinkCollection('links', 'hommies');
+const coolSites = defineLinkCollection('links', 'coolSites');
+const usefulInfo = defineLinkCollection('links', 'usefulInfo');
+const darknetSites = defineLinkCollection('links', 'darknetSites');
 
 export const collections = {
   blog,
-  hommies, coolSites, usefulInfo, darknetSites
+  hommies,
+  coolSites,
+  usefulInfo,
+  darknetSites,
 };

@@ -1,14 +1,22 @@
 ---
 import { getCollection } from 'astro:content';
+import { getImageWidth } from '@/utils/sort-link';
+import { sortLinks } from '../utils/sort-link';
+
 const { data } = Astro.props;
-const items = await getCollection(data);
+const items = (await getCollection(data)).sort(sortLinks);
 ---
 
 <ul>
   {items.length > 0 && items.map((item) => (
-    <li key={item.data.url}>
+    <li>
       <a href={item.data.url} target="_blank">
-        {item.data.img && <img src={item.data.img} alt={`88x31 de ${item.data.name}`} />}
+        {item.data.img && (
+          <img
+            src={item.data.img}
+            alt={`88x31 de ${item.data.name}`}
+          />
+        )}
       </a>
       <a href={item.data.url} target="_blank">{item.data.name}</a>
       <span>{item.data.desc}</span>
