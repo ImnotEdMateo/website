@@ -6,6 +6,7 @@ import expressiveCode from 'astro-expressive-code';
 export default defineConfig({
   site: 'https://edmateo.site',
   output: 'server',
+  compressHTML: false,
 
   adapter: node({
     mode: 'standalone',
