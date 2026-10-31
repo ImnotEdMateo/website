@@ -1,3 +1,4 @@
+
 ---
 import type { GuestbookEntry } from "@/lib/guestbook/types";
 import { normalizeUrl, formatDate } from "@/lib/guestbook/format/";
@@ -9,103 +10,152 @@ interface Props {
 
 const { entry } = Astro.props as Props;
 const { ID, CreatedAt, Name, Website, Message } = entry;
+
 const { date, time } = formatDate(CreatedAt);
 const safeWebsite = Website ? normalizeUrl(Website) : null;
 ---
 
-<div class="entry-box" id={`entry-${ID}`}>
-  <div class="entry-header">
-    <div class="namekajweb">
-      <strong>
-        <span class="importantshit">{Name}</span>
-      </strong>
+<article class="entry-box" id={`entry-${ID}`}>
+  <header class="entry-header">
+
+    <div class="entry-author">
+      <strong class="importantshit">{Name}</strong>
+
       {safeWebsite && (
-        <>
-          {" desde "}
-          <a href={safeWebsite} target="_blank" rel="noopener noreferrer">
+        <span class="website">
+          desde{" "}
+          <a
+            href={safeWebsite}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {Website}
           </a>
-        </>
+        </span>
       )}
     </div>
-    <span class="fkinspace"></span>
-    <div class="datekajid">
+
+    <div class="entry-meta">
       <span class="date">
         escrito el{" "}
-        <strong><span class="importantshit">{date}</span></strong>
+        <strong class="importantshit">{date}</strong>
         {" "}a las{" "}
-        <strong><span class="importantshit">{time}</span></strong>
+        <strong class="importantshit">{time}</strong>
       </span>
-      <a href={`javascript:quote(${ID})`} class="post-number reply-link">
+
+      <a
+        href={`javascript:quote(${ID})`}
+        class="post-number reply-link"
+      >
         No.{ID}
       </a>
     </div>
-  </div>
+
+  </header>
+
   <EntryContent message={Message} />
-</div>
+</article>
 
 <style>
   .entry-box {
+    box-sizing: border-box;
     margin-top: 20px;
+    padding: 10px 15px;
+
     width: fit-content;
     max-width: 100%;
-    padding: 10px 15px;
+
     border: 1px solid #504945;
-    background-color: #282828; 
-    color: #ebdbb2;
+    background-color: #282828;
+    color: #fbf1c7;
+
     font-size: 14px;
     line-height: 1.5;
   }
 
-  .importantshit {
-    color: #ebdbb2;
+  /* Author and website */
+
+  .entry-author {
+    min-width: 0;
+    overflow-wrap: anywhere;
   }
+
+  .importantshit {
+    color: #fbf1c7;
+    font-weight: 700;
+  }
+
+  .website {
+    margin-left: 0.25em;
+  }
+
+  /* Header layout */
 
   .entry-header {
-    margin-bottom: 5px;
     display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.25em;
+
+    margin-bottom: 5px;
     color: #928374;
-    word-break: break-all;
   }
 
-  .entry-content {
+  .entry-meta {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75em;
+    margin-left: auto;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .post-number {
+    flex-shrink: 0;
+  }
+
+  .date {
+    min-width: 0;
+    color: #928374;
+    overflow-wrap: anywhere;
+  }
+
+  /* Entry content */
+
+  .entry-box :global(.entry-content) {
     margin-top: 8px;
-    word-break: break-word;
+    overflow-wrap: break-word;
     font-size: 13px;
   }
 
-  .namekajweb {
-    display: inline-block;
-  }
+  /* Tablet and mobile */
 
   @media screen and (max-width: 992px) {
-    .fkinspace {
-      display: none;
-    }
-
     .entry-box {
       width: auto;
       margin-right: 5px;
     }
-    
+
     .entry-header {
       flex-direction: column;
+      align-items: stretch;
+      gap: 4px;
+    }
+
+    .entry-meta {
+      margin-left: 0;
     }
   }
 
   @media screen and (max-width: 600px) {
-    .datekajid {
-      display: flex;
-      justify-content: space-between; 
-      align-items: center;
+    .entry-meta {
+      width: 100%;
+      gap: 0.5em;
     }
 
     .date {
       flex-grow: 1;
-    }
-
-    .post-number {
-      margin-left: auto; 
     }
   }
 </style>
