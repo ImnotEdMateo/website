@@ -5,7 +5,7 @@ const { message } = Astro.props;
 const lines = parseMessage(message);
 ---
 
-<div class="entry-content">
+<div class="entry-content" style="font-size: 13px">
   {lines.map(line => (
     <div class={
       line.type === "greentext"

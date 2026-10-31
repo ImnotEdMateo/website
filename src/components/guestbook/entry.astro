@@ -17,40 +17,34 @@ const safeWebsite = Website ? normalizeUrl(Website) : null;
 
 <article class="entry-box" id={`entry-${ID}`}>
   <header class="entry-header">
+    <div class="entry-info">
+      <span class="entry-author">
+        <strong class="importantshit">{Name}</strong>
 
-    <div class="entry-author">
-      <strong class="importantshit">{Name}</strong>
+        {safeWebsite && (
+          <span class="website">
+            desde{" "}
+            <a href={safeWebsite} target="_blank" rel="noopener noreferrer">
+              {Website}
+            </a>
+          </span>
+        )}
+      </span>
 
-      {safeWebsite && (
-        <span class="website">
-          desde{" "}
-          <a
-            href={safeWebsite}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {Website}
-          </a>
-        </span>
-      )}
-    </div>
-
-    <div class="entry-meta">
       <span class="date">
         escrito el{" "}
         <strong class="importantshit">{date}</strong>
-        {" "}a las{" "}
+        a las{" "}
         <strong class="importantshit">{time}</strong>
       </span>
-
-      <a
-        href={`javascript:quote(${ID})`}
-        class="post-number reply-link"
-      >
-        No.{ID}
-      </a>
     </div>
 
+    <a
+      href={`javascript:quote(${ID})`}
+      class="post-number reply-link"
+    >
+      No.{ID}
+    </a>
   </header>
 
   <EntryContent message={Message} />
@@ -85,51 +79,42 @@ const safeWebsite = Website ? normalizeUrl(Website) : null;
     font-weight: 700;
   }
 
-  .website {
-    margin-left: 0.25em;
-  }
-
   /* Header layout */
-
   .entry-header {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
-    gap: 0.25em;
+    gap: 12px;
 
     margin-bottom: 5px;
     color: #928374;
+    min-width: 0;
   }
 
-  .entry-meta {
+  .entry-info {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
-    justify-content: space-between;
-    gap: 0.75em;
-    margin-left: auto;
+    column-gap: 0.35em;
     min-width: 0;
-    max-width: 100%;
+  }
+
+  .entry-author,
+  .date {
+    overflow-wrap: anywhere;
+  }
+
+  .entry-author {
+    display: inline;
   }
 
   .post-number {
     flex-shrink: 0;
+    margin-left: auto;
   }
 
-  .date {
-    min-width: 0;
-    color: #928374;
-    overflow-wrap: anywhere;
+  .importantshit {
+    color: #ebdbb2;
   }
-
-  /* Entry content */
-
-  .entry-box :global(.entry-content) {
-    margin-top: 8px;
-    overflow-wrap: break-word;
-    font-size: 13px;
-  }
-
-  /* Tablet and mobile */
 
   @media screen and (max-width: 992px) {
     .entry-box {
@@ -138,24 +123,23 @@ const safeWebsite = Website ? normalizeUrl(Website) : null;
     }
 
     .entry-header {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 4px;
+      gap: 4px 8px;
     }
 
-    .entry-meta {
-      margin-left: 0;
+    .entry-info {
+      flex-direction: column;
+      align-items: flex-start;
+      column-gap: 0;
     }
   }
 
   @media screen and (max-width: 600px) {
-    .entry-meta {
-      width: 100%;
-      gap: 0.5em;
+    .entry-header {
+      align-items: baseline;
     }
 
-    .date {
-      flex-grow: 1;
+    .post-number {
+      align-self: center;
     }
   }
 </style>
